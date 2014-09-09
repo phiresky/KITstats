@@ -7,6 +7,16 @@ var config = {
 	"container":"#outp"
 };
 
+function mostlyequals(a,b) {
+	var ignore = /[^A-Za-z0-9]/g;
+	return a.join('').replace(ignore,'')===b.join('').replace(ignore,'');
+	//return a.every((cell,inx)=>cell===b[inx]);
+}
+
+function toTable(arr,header=false) {
+	return arr.map(tr => $("<tr>").append(tr.map(td => $(header?"<th>":"<td>").text(td))));
+}
+
 $(()=> {
 	var status = $("#status");
 	function log(x) { status.text(x);}
@@ -16,6 +26,7 @@ $(()=> {
 		console.log(data);
 		var statistics:string[][][][] = [];
 		var statnames:string[] = []; 
+		var headlines:string[][][] = [];
 		data.forEach((page:string[][]) => {
 			var header = page[0][0];
 			var match = header.match(/Statistik (\d+) - \((.*)\)/)
@@ -23,15 +34,29 @@ $(()=> {
 			var statid = +match[1];
 			statnames[statid] = match[2];
 			page.shift(); //remove header
-			if(statistics[statid]===undefined) statistics[statid] = [];
-			statistics[statid].push(page);
+			if(statistics[statid]===undefined) statistics[statid] = [page];
+			else {
+				if(statistics[statid].length===1) {
+					// find headers
+					var firstpage = statistics[statid][0];
+					headlines[statid]=[];
+					while(mostlyequals(firstpage[0],page[0])) {
+						headlines[statid].push(firstpage.shift());
+						page.shift();
+					}
+				}
+				statistics[statid].push(page.slice(headlines[statid].length));
+			}
 		});
+		window['_a']=statistics;
 		log("Loaded "+statistics.length+" Statistics");
 		var drawtable = function(inx) {
-			$("<table class=table>").append(
-				statistics[inx].reduce((a,b) => a.concat(b), [])
-					.map(tr => $("<tr>").append(tr.map(td => $("<td>").text(td))))
-			).replaceAll($('> table',config.container));
+			$("<table class=table>")
+				.append(
+					toTable(headlines[inx]||[],true)
+				).append(
+					toTable(statistics[inx].reduce((a,b) => a.concat(b), []))
+				).replaceAll($('> table',config.container));
 		};
 		$("<select>").append(
 			statnames.map((name,inx)=>$("<option>").val(""+inx).text(inx+": "+name))

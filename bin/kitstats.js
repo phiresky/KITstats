@@ -6,6 +6,21 @@ var config = {
     "container": "#outp"
 };
 
+function mostlyequals(a, b) {
+    var ignore = /[^A-Za-z0-9]/g;
+    return a.join('').replace(ignore, '') === b.join('').replace(ignore, '');
+    //return a.every((cell,inx)=>cell===b[inx]);
+}
+
+function toTable(arr, header) {
+    if (typeof header === "undefined") { header = false; }
+    return arr.map(function (tr) {
+        return $("<tr>").append(tr.map(function (td) {
+            return $(header ? "<th>" : "<td>").text(td);
+        }));
+    });
+}
+
 $(function () {
     var status = $("#status");
     function log(x) {
@@ -17,6 +32,7 @@ $(function () {
         console.log(data);
         var statistics = [];
         var statnames = [];
+        var headlines = [];
         data.forEach(function (page) {
             var header = page[0][0];
             var match = header.match(/Statistik (\d+) - \((.*)\)/);
@@ -26,18 +42,26 @@ $(function () {
             statnames[statid] = match[2];
             page.shift(); //remove header
             if (statistics[statid] === undefined)
-                statistics[statid] = [];
-            statistics[statid].push(page);
+                statistics[statid] = [page];
+            else {
+                if (statistics[statid].length === 1) {
+                    // find headers
+                    var firstpage = statistics[statid][0];
+                    headlines[statid] = [];
+                    while (mostlyequals(firstpage[0], page[0])) {
+                        headlines[statid].push(firstpage.shift());
+                        page.shift();
+                    }
+                }
+                statistics[statid].push(page.slice(headlines[statid].length));
+            }
         });
+        window['_a'] = statistics;
         log("Loaded " + statistics.length + " Statistics");
         var drawtable = function (inx) {
-            $("<table class=table>").append(statistics[inx].reduce(function (a, b) {
+            $("<table class=table>").append(toTable(headlines[inx] || [], true)).append(toTable(statistics[inx].reduce(function (a, b) {
                 return a.concat(b);
-            }, []).map(function (tr) {
-                return $("<tr>").append(tr.map(function (td) {
-                    return $("<td>").text(td);
-                }));
-            })).replaceAll($('> table', config.container));
+            }, []))).replaceAll($('> table', config.container));
         };
         $("<select>").append(statnames.map(function (name, inx) {
             return $("<option>").val("" + inx).text(inx + ": " + name);
