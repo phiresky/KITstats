@@ -23,21 +23,33 @@ function toTable(arr,header=false) {
 	return arr.map(tr => $("<tr>").append(tr.map(td => $(header?"<th>":"<td>").text(td))));
 }
 
+function makeQuery(eq:string):Operand {
+	console.log("making query "+eq);
+	var queue = EqParser.EqParser.parse(eq);
+	var args:Operand[] = [];
+	while(queue.length > 0) {
+		if(queue[0].is(EqParser.TokenType.OPERATOR)) {
+			var c = args.length;
+			if(c<2) throw new Error("Invalid argument count: "+c);
+			var arg2 = args.pop(), arg1 = args.pop();
+			var op = queue.shift().val;
+			args.push(doOperator(arg1, op, arg2));
+		} else args.push(Operand.make(cont, queue.shift()));
+	}
+	if(args.length > 1) throw new Error("Invalid arguments remaining at end");
+	if(args.length == 0) args = [new NoFilter()];
+	return args.pop();
+}
+
 var data:string[][][] = [];
 var cont:Contingency;
 
 $(()=> {
-	Category.categories = [
-		new Category("gender",[new Filter("female"),new Filter("male")]),
-		new Category("subject",[new Filter("Informatik"),new Filter("Maschinenbau")]),
-		new DiscreteCategory("semester","sem",1,10)
-	];
 
 	var status = $("#status");
 	function log(x) { status.text(x);}
 	var parsedata = function(data:string[][][]) {
 		console.log("parsing");
-		_b=data;
 		var statistics:string[][][][] = [];
 		var statnames:string[] = []; 
 		data.forEach((page:string[][]) => {
@@ -66,7 +78,8 @@ $(()=> {
 		).change(function(evt){drawtable(this.value)})
 			.replaceAll($('> select', config.container));
 		drawtable(0);
-		cont = KITParser.parse(statnames, statistics);
+		cont = new Contingency();
+		KITParser.parse(cont, statnames, statistics);
 	};
 	var getpageddata = function(pattern:string, inx:number) {
 		var fname = sprintf(pattern,inx);
@@ -105,23 +118,7 @@ $(()=> {
 
 	$("#parseeq").click(event => {
 		var eq = $("#equation").val();	
-		var queue = EqParser.EqParser.parse(eq);
-		var args:Operand[] = [];
-		while(queue.length > 0) {
-			if(queue[0].is(EqParser.TokenType.OPERATOR)) {
-				var c = args.length;
-				if(c<2) throw new Error("Invalid argument count: "+c);
-				var arg2 = args.pop(), arg1 = args.pop();
-				var op = queue.shift().val + arg2.type;
-				var opfn = arg1.operator[op];
-				if(!opfn)
-					throw new Error("Could not find operator "+op+" for "+arg1.type);
-				args.push(opfn.apply(arg1, [arg2]));
-			} else args.push(Operand.make(queue.shift()));
-		}
-		if(args.length > 1) throw new Error("Invalid arguments remaining at end");
-		if(args.length == 0) args = [findFilter("")];
-		var query:Filter = <any>args.pop();
-		console.log(query.name+"="+cont.get(query.name));
+		var query = makeQuery(eq);
+		console.log("="+query.doQuery(cont));
 	});
 });

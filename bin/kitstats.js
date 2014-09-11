@@ -64,7 +64,7 @@ var EqParser;
             var token;
             var regexes = [
                 [/^[0-9]+/, 9 /* NUMBER */],
-                [/^[a-z][a-z0-9]*(:[a-z0-9.]+)?/i, 7 /* IDENTIFIER */],
+                [/^[a-z][a-z0-9]*(:[a-z0-9_]+)?/i, 7 /* IDENTIFIER */],
                 [/^[+*/&-]/, 8 /* OPERATOR */],
                 [/^\(/, 2 /* LPAREN */],
                 [/^\[/, 1 /* LBRACKET */],
@@ -147,13 +147,22 @@ var __extends = this.__extends || function (d, b) {
 var Operand = (function () {
     function Operand(type) {
         this.type = type;
-        this.operator = {};
     }
-    Operand.make = function (token) {
-        if (token.is(7 /* IDENTIFIER */))
-            return findFilter(token.val);
+    Operand.make = function (cont, token) {
+        if (token.is(7 /* IDENTIFIER */)) {
+            var split = token.val.split(":");
+            if (split.length !== 2)
+                throw new Error("invalid identifier " + token.val);
+            return cont.findFilter(split[0], split[1]);
+        }
         if (token.is(9 /* NUMBER */))
             return new NumberOp(+token.val);
+    };
+    Operand.prototype.doQuery = function (cont) {
+        throw new Error("No doQuery on " + this.type);
+    };
+    Operand.prototype.getQuery = function () {
+        throw new Error("No getQuery on " + this.type);
     };
     return Operand;
 })();
@@ -167,56 +176,52 @@ var NumberOp = (function (_super) {
     return NumberOp;
 })(Operand);
 
-var Filter = (function (_super) {
-    __extends(Filter, _super);
-    function Filter(name) {
-        var _this = this;
+var SingleFilter = (function (_super) {
+    __extends(SingleFilter, _super);
+    function SingleFilter(category, value) {
         _super.call(this, "filter");
-        this.name = name;
-        this.operator['&filter'] = function (b) {
-            return new CombinedFilter(_this, b);
-        };
+        this.category = category;
+        this.value = value;
     }
-    return Filter;
+    SingleFilter.prototype.getQuery = function () {
+        return this.category + ":" + this.value;
+    };
+    SingleFilter.prototype.doQuery = function (cont) {
+        return cont.get(this);
+    };
+    return SingleFilter;
+})(Operand);
+var NoFilter = (function (_super) {
+    __extends(NoFilter, _super);
+    function NoFilter() {
+        _super.call(this, "filter");
+    }
+    NoFilter.prototype.getQuery = function () {
+        return "";
+    };
+    NoFilter.prototype.doQuery = function (cont) {
+        cont.get(this);
+    };
+    return NoFilter;
 })(Operand);
 
 /// A category is a set of filters creating the whole group eg (male ∪ female)
-var Category = (function () {
-    function Category(name, values) {
-        this.name = name;
-        this.values = values;
-    }
-    Category.find = function (name) {
-        for (var i = 0; i < Category.categories.length; i++) {
-            if (Category.categories[i].name === name)
-                return Category.categories[i];
-        }
-        throw new Error("Unknown category " + name);
-    };
-    Category.prototype.findValue = function (name) {
-        for (var i = 0; i < this.values.length; i++) {
-            if (this.values[i].name === name)
-                return this.values[i];
-        }
-        throw new Error("Unknown value " + name + " in category " + this.name);
-    };
-    return Category;
-})();
-
-var DiscreteFilter = (function (_super) {
-    __extends(DiscreteFilter, _super);
-    function DiscreteFilter(index) {
-        var _this = this;
-        _super.call(this, index + "");
-        this.index = index;
-        console.log("created " + index);
-        this.operator['+number'] = function (num) {
-            return new DiscreteFilter(_this.index + num.val);
-        };
-    }
-    return DiscreteFilter;
-})(Filter);
-
+/*class Category {
+constructor(public name:string, public values:Filter[]) {}
+static categories:Category[];
+static find(name:string) {
+for(var i=0;i<Category.categories.length;i++) {
+if(Category.categories[i].name===name) return Category.categories[i];
+}
+throw new Error("Unknown category "+name);
+}
+findValue(name:string) {
+for(var i=0;i<this.values.length;i++) {
+if(this.values[i].name===name) return this.values[i];
+}
+throw new Error("Unknown value "+name+" in category "+this.name);
+}
+}*/
 var CombinedFilter = (function (_super) {
     __extends(CombinedFilter, _super);
     function CombinedFilter() {
@@ -224,41 +229,66 @@ var CombinedFilter = (function (_super) {
         for (var _i = 0; _i < (arguments.length - 0); _i++) {
             filters[_i] = arguments[_i + 0];
         }
-        _super.call(this, "");
+        _super.call(this, "filter");
         this.filters = filters;
-        this.name = filters.map(function (f) {
-            return f.name;
+    }
+    CombinedFilter.prototype.getQuery = function () {
+        return this.filters.map(function (f) {
+            return f.getQuery();
         }).join("&");
-    }
-    return CombinedFilter;
-})(Filter);
-
-var DiscreteCategory = (function (_super) {
-    __extends(DiscreteCategory, _super);
-    function DiscreteCategory(name, prefix, min, max) {
-        _super.call(this, name, []);
-        this.name = name;
-    }
-    DiscreteCategory.prototype.findValue = function (name) {
-        return new DiscreteFilter(+name);
     };
-    return DiscreteCategory;
-})(Category);
+    CombinedFilter.prototype.doQuery = function () {
+        return cont.get(this);
+    };
+    return CombinedFilter;
+})(Operand);
 
-function findFilter(fullname) {
-    return new Filter(fullname);
-    /*var name = fullname.split(":");
-    if(name.length !== 2) {
-    throw new Error("Unknown Filter "+name);
+var OperandVector = (function (_super) {
+    __extends(OperandVector, _super);
+    function OperandVector(filters) {
+        _super.call(this, "vector");
+        this.filters = filters;
+        console.log(filters);
     }
-    var filter = Category.find(name[0]).findValue(name[1]);
-    if(filter === undefined) throw new Error("Unknown Filter "+name);
-    return filter;*/
+    OperandVector.prototype.doQuery = function (cont) {
+        return this.filters.map(function (filter) {
+            return filter.doQuery(cont);
+        });
+    };
+    return OperandVector;
+})(Operand);
+
+var operators = {
+    "filter&filter": function (v1, v2) {
+        return new CombinedFilter(v1, v2);
+    },
+    "filter&vector": function (v1, v2) {
+        return new OperandVector(v2.filters.map(function (f) {
+            return doOperator(v1, "&", f);
+        }));
+    },
+    "vector&filter": function (v1, v2) {
+        return new OperandVector(v1.filters.map(function (f) {
+            return doOperator(f, "&", v2);
+        }));
+    }
+};
+
+function doOperator(v1, op, v2) {
+    var opfn = operators[v1.type + op + v2.type];
+    if (!opfn)
+        throw new Error("Can't apply " + op + " to " + v1.type + " and " + v2.type);
+    return opfn(v1, v2);
 }
 var TUtil = {
     nth_col: function (data, col) {
         return data.map(function (row) {
             return row[col];
+        });
+    },
+    no_nth_col: function (data, col) {
+        return data.map(function (row) {
+            return row.slice(0, col).concat(row.slice(col + 1));
         });
     },
     /// submatrix from x to x2 (upper exclusive)
@@ -272,9 +302,7 @@ var TUtil = {
 var KITParser = (function () {
     function KITParser() {
     }
-    KITParser.parse = function (statnames, data) {
-        var ct = new Contingency();
-
+    KITParser.parse = function (ct, statnames, data) {
         //Gesamtstatistik (1)
         var s1 = data[0][0];
         s1 = s1.slice(2, 11); //ignore studienkolleg for now
@@ -282,63 +310,131 @@ var KITParser = (function () {
             return r[0].length > 0;
         });
         var yfilter = TUtil.nth_col(s1, 0).map(function (x) {
-            return "Status:" + x;
+            return new SingleFilter("Status", x);
         });
-        var xfilter = ["", "gender:male", "gender:female", "foreign:no&gender:male", "foreign:no&gender:female", "foreign:no", "foreign:yes&gender:male", "foreign:yes&gender:female", "foreign:yes"];
+        var xfilter = ["", "gender:male", "gender:female", "foreign:no&gender:male", "foreign:no&gender:female", "foreign:no", "foreign:yes&gender:male", "foreign:yes&gender:female", "foreign:yes"].map(function (x) {
+            return makeQuery(x);
+        });
         ct.putAll(xfilter, yfilter, s1, 1, 0);
 
         // Abschlussziele
         var s2 = data[1][0];
         ct.putAllCat("Fachsemester", "Abschlussziel", s2.slice(1));
+
+        // Studienfach
+        var s3 = data[2].reduce(function (p1, p2) {
+            return p1.concat(p2);
+        });
+        while (s3[s3.length - 1][1] !== "Insgesamt")
+            s3.pop();
+        s3 = s3.filter(function (row) {
+            return row[1].trim().length > 0;
+        }); //ignore fakultät
+        s3 = TUtil.no_nth_col(s3, 5);
+        console.log(s3);
+        _a = s3;
+        var yfilter = s3.slice(1).map(function (row) {
+            return new SingleFilter("Fach", row[1]).getQuery();
+        });
+        var xfilter = [new NoFilter()].concat(["status:rückmelder", "status:erstimmatr.", "status:neuimmatr-1fsem", "neuimmatr-hsem"].map(function (x) {
+            return new SingleFilter(x.split(":")[0], x.split(":")[1]);
+        })).concat([
+            "foreign:no&gender:male", "foreign:no&gender:female", "foreign:no", "foreign:yes&gender:male", "foreign:yes&gender:female", "foreign:yes",
+            "status:beurlaubt"].map(function (x) {
+            return makeQuery(x);
+        }));
+        console.log(xfilter);
         return ct;
     };
     return KITParser;
 })();
 var Contingency = (function () {
     function Contingency() {
-        this.jargon = {
-            "insgesamt": ""
+        this.val_jargon = {
+            "insgesamt": "",
+            "gesamt": ""
         };
-        this.dict = {};
+        this.cat_jargon = {};
+        this.dict = Object.create(null);
+        // map from category to values
+        this.cats = Object.create(null);
     }
-    Contingency.prototype.put = function (filters, data) {
-        this.dict[this.normalize(filters)] = data;
+    Contingency.prototype.put = function (filter, data) {
+        var query = this.normalize(filter.getQuery(), true);
+        this.dict[query] = data;
     };
 
     Contingency.prototype.putAll = function (xfilters, yfilters, data, xoffset, yoffset) {
         for (var y = 0; y < yfilters.length; y++)
             for (var x = 0; x < xfilters.length; x++) {
-                this.put(xfilters[x] + "&" + yfilters[y], +data[y + yoffset][x + xoffset]);
+                this.put(doOperator(xfilters[x], "&", yfilters[y]), +data[y + yoffset][x + xoffset]);
             }
     };
 
     Contingency.prototype.putAllCat = function (xcategory, ycategory, data) {
         var xfilters = [], yfilters = [];
         for (var y = 1; y < data.length; y++) {
-            yfilters[y - 1] = ycategory + ":" + data[y][0];
+            yfilters[y - 1] = this.findFilter(ycategory, data[y][0]);
         }
         for (var x = 1; x < data.length; x++) {
-            xfilters[x - 1] = xcategory + ":" + data[0][x];
+            xfilters[x - 1] = this.findFilter(xcategory, data[0][x]);
         }
         this.putAll(xfilters, yfilters, data, 1, 1);
     };
 
-    Contingency.prototype.normalize = function (filters) {
+    Contingency.prototype.findFilter = function (category, value) {
+        if (value === "all")
+            return new OperandVector(this.getAll(category));
+        return new SingleFilter(category, value);
+        /*var name = fullname.split(":");
+        if(name.length !== 2) {
+        throw new Error("Unknown Filter "+name);
+        }
+        var filter = Category.find(name[0]).findValue(name[1]);
+        if(filter === undefined) throw new Error("Unknown Filter "+name);
+        return filter;*/
+    };
+
+    Contingency.prototype.getAll = function (category) {
         var _this = this;
+        return Object.keys(this.cats[category]).map(function (val) {
+            if (val === "all")
+                throw new Error("!3");
+            return _this.findFilter(category, val);
+        });
+    };
+
+    // normalize list and add values to this.cats
+    Contingency.prototype.normalize = function (filters, addvalstocats) {
+        var _this = this;
+        if (typeof addvalstocats === "undefined") { addvalstocats = false; }
         if (filters.length == 0)
             return "";
-        var split = filters.toLocaleLowerCase().split(/&+/).map(function (x) {
-            return _this.jargon[x] || x;
+        var split = filters.toLocaleLowerCase().split(/&+/).filter(function (x) {
+            return x.length > 0;
+        }).map(function (x) {
+            var sp = x.trim().split(":");
+            var cat = sp[0].replace(/[^a-z0-9]+/g, "_");
+            var val = sp[1].replace(/[^a-z0-9]+/g, "_");
+            if (_this.val_jargon.hasOwnProperty(sp[1]))
+                val = _this.val_jargon[sp[1]];
+            if (_this.cat_jargon.hasOwnProperty(sp[0]))
+                cat = _this.cat_jargon[sp[0]];
+            if (cat.length == 0 || val.length == 0)
+                return "";
+            if (addvalstocats) {
+                _this.cats[cat] = _this.cats[cat] || Object.create(null);
+                _this.cats[cat][val] = true;
+            }
+            return cat + ":" + val;
+        }).filter(function (x) {
+            return x.length > 0;
         });
-        if (split[0].length == 0)
-            split.shift();
-        if (split[split.length - 1].length == 0)
-            split.pop();
         return split.sort().join('&');
     };
 
-    Contingency.prototype.get = function (filters) {
-        return this.dict[this.normalize(filters)];
+    Contingency.prototype.get = function (filter) {
+        return this.dict[this.normalize(filter.getQuery())];
     };
     return Contingency;
 })();
@@ -371,23 +467,38 @@ function toTable(arr, header) {
     });
 }
 
+function makeQuery(eq) {
+    console.log("making query " + eq);
+    var queue = EqParser.EqParser.parse(eq);
+    var args = [];
+    while (queue.length > 0) {
+        if (queue[0].is(8 /* OPERATOR */)) {
+            var c = args.length;
+            if (c < 2)
+                throw new Error("Invalid argument count: " + c);
+            var arg2 = args.pop(), arg1 = args.pop();
+            var op = queue.shift().val;
+            args.push(doOperator(arg1, op, arg2));
+        } else
+            args.push(Operand.make(cont, queue.shift()));
+    }
+    if (args.length > 1)
+        throw new Error("Invalid arguments remaining at end");
+    if (args.length == 0)
+        args = [new NoFilter()];
+    return args.pop();
+}
+
 var data = [];
 var cont;
 
 $(function () {
-    Category.categories = [
-        new Category("gender", [new Filter("female"), new Filter("male")]),
-        new Category("subject", [new Filter("Informatik"), new Filter("Maschinenbau")]),
-        new DiscreteCategory("semester", "sem", 1, 10)
-    ];
-
     var status = $("#status");
     function log(x) {
         status.text(x);
     }
     var parsedata = function (data) {
         console.log("parsing");
-        _b = data;
         var statistics = [];
         var statnames = [];
         data.forEach(function (page) {
@@ -415,7 +526,8 @@ $(function () {
             drawtable(this.value);
         }).replaceAll($('> select', config.container));
         drawtable(0);
-        cont = KITParser.parse(statnames, statistics);
+        cont = new Contingency();
+        KITParser.parse(cont, statnames, statistics);
     };
     var getpageddata = function (pattern, inx) {
         var fname = sprintf(pattern, inx);
@@ -458,28 +570,8 @@ $(function () {
 
     $("#parseeq").click(function (event) {
         var eq = $("#equation").val();
-        var queue = EqParser.EqParser.parse(eq);
-        var args = [];
-        while (queue.length > 0) {
-            if (queue[0].is(8 /* OPERATOR */)) {
-                var c = args.length;
-                if (c < 2)
-                    throw new Error("Invalid argument count: " + c);
-                var arg2 = args.pop(), arg1 = args.pop();
-                var op = queue.shift().val + arg2.type;
-                var opfn = arg1.operator[op];
-                if (!opfn)
-                    throw new Error("Could not find operator " + op + " for " + arg1.type);
-                args.push(opfn.apply(arg1, [arg2]));
-            } else
-                args.push(Operand.make(queue.shift()));
-        }
-        if (args.length > 1)
-            throw new Error("Invalid arguments remaining at end");
-        if (args.length == 0)
-            args = [findFilter("")];
-        var query = args.pop();
-        console.log(query.name + "=" + cont.get(query.name));
+        var query = makeQuery(eq);
+        console.log("=" + query.doQuery(cont));
     });
 });
 //# sourceMappingURL=kitstats.js.map

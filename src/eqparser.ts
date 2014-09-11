@@ -38,7 +38,7 @@ export class EqParser {
 		var token:Token;
 		var regexes:any[][] = [
 			[/^[0-9]+/, TokenType.NUMBER],
-			[/^[a-z][a-z0-9]*(:[a-z0-9.]+)?/i, TokenType.IDENTIFIER],
+			[/^[a-z][a-z0-9]*(:[a-z0-9_]+)?/i, TokenType.IDENTIFIER],
 			[/^[+*/&-]/, TokenType.OPERATOR],
 			[/^\(/, TokenType.LPAREN],
 			[/^\[/, TokenType.LBRACKET],
