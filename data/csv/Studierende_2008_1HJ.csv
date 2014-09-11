@@ -1,0 +1,3974 @@
+,,"Studierenden-Statistik "
+,,"SS 2008"
+,,,
+§PAGEBREAK
+,"I n h a l t",,Seite
+,,,
+,Vorbemerkungen,,3
+,,,
+,Erläuterungen,,4
+,,,
+"Statistik 1",Gesamtstatistik,,5
+,,,
+"Statistik 2","Studierende nach Abschlusszielen",,6
+,,,
+"Statistik 3","Studierende nach dem 1. Studienfach - (1.Studiengang)",,7
+,,,
+"Statistik 4","Studienanfänger nach dem 1. Studienfach - (1. Studiengang)",,10
+,,,
+"Statistik 5","Studentinnen nach dem 1. Studienfach - (1. Studiengang)",,13
+,,,
+"Statistik 6","Studierende nach Fächergruppen",,16
+,,,
+"Statistik 7","Studienfachbelegung nach Abschlusszielen","Fakultät für Mathematik",19
+,,,
+,,"Fakultät für Physik",23
+,,,
+,,"Fakultät für Chemie- und Biowissenschaften",26
+,,,
+,,"Fakultät für Geistes- und Sozialwissenschaften",29
+,,,
+,,"Fakultät für Architektur",49
+,,,
+,,"Fakultät für Bauingenieur- Geo- und Umweltwissenschaften",54
+,,,
+,,"Fakultät für Maschinenbau",63
+,,,
+,,"Fakultät für Chemieingenieurwesen und Verfahrenstechnik",64
+,,,
+,,"Fakultät für Elektrotechnik und Informationstechnik",67
+,,,
+,,"Fakultät für Informatik",70
+,,,
+,,"Fakultät für Wirtschaftswissenschaften",71
+,,,
+,,Mechatronik,74
+,,,
+,,Informationswirtschaft,75
+,,,
+,,"International Department",76
+,,,
+,,Studienkolleg,81
+,,,
+"Statistik 8","Beurlaubte nach Beurlaubungsgrund",,82
+,,,
+"Statistik 9","Exmatrikulierte nach Exmatrikulationsgründen",,83,,
+,,,
+"Statistik 10","Studierende nach Nationalitäten",,84
+,,,
+"Statistik 11","Studierende nach Bundesländern",,92
+,,,
+,,
+§PAGEBREAK
+Vorbemerkung,,,,,,,
+,,,,,,,
+"Die vorliegende Auswertung der Studierendenzahlen des Sommersemesters 2008 basiert auf der Fortschreibung der Daten",,,,,,,,
+"aus den letzten Semestern (Rückmelder) und der Erfassung von Neuimmatrikulierten über einen Erhebungsbogen.",,,,,,,,
+,,,,,,,,
+"Obwohl den Auswertungsprogrammen umfangreiche Plausibilitätskontrollen vorgeschaltet sind und die Erhebungsbögen",,,,,,,,
+"vor der Übertragung auf Datenträger auf inhaltliche Fehler überprüft wurden, kann die Genauigkeit der Statistik durch",,,,,,,,
+"unvollständige oder falsche Angaben seitens der Studierenden bei der Einschreibung oder Rückmeldung  beeinträchtigt sein.",,,,,,,,
+"Die Datenfortschreibung berücksichtigt alle von den Studierenden dem Studienbüro bis zum Stichtag der Auswertung (31.05.)",,,,,,,,
+"mitgeteilten Änderungen (z.B. Studiengangwechsel, Änderung der angestrebten Abschlussprüfung u.a.m.).",,,,,,,,
+,,,,,,,,
+"Da die vorliegende Statistik möglichst allen Anforderungen der Benutzer entsprechen soll, sind wir dankbar, wenn uns",,,,,,,,
+"Änderungsvorschläge bezüglich Inhalt und Layout dieser Statistik mitgeteilt werden.",,,,,,,,
+,,,,,,,,
+"Die vorliegenden Auswertungen wurden aus der mit dem Programm HISSOS-GX verwalteten",,,,,,,,
+"Studierenden-Datenbank vorgenommen.",,,,,,,,
+,,,,,,,,
+"Abteilung I/2",,,"Hauptabteilung II",,,,,
+Studienbüro,,,"Informations- und Kommunikationstechnik",,,,,
+§PAGEBREAK
+Erläuterung
+"In den vorliegenden Statistiken wird unterschieden:",,,,,,,,
+,,,,,,,,
+,"""Kopfstatistik""","Jeder Studierende wird nur einmal als Person gezählt.",,,,,,
+,"(Stat. 1 - 6; 8 - 11)","Die Summe aller ausgewiesenen Studierenden ergibt die Zahl der an der Universität Karlsruhe (TH) eingeschrie-",,,,,,
+,,"benen Studierenden.",,,,,,
+,"""Fallstatistik""","Jeder Studierende wird mit den Studienfächern, für die er immatrikuliert ist, gezählt.",,,,,,
+,"(Stat. 7)","Studierende mit einer Fächerkombination sind in jedem ihrer angegebenen Fächer ausgewiesen.",,,,,,
+,,"Gleiche Personen kommen mehrfach vor (1., 2. und 3. Studienfach).",,,,,,
+,,,,,,,,
+Rückmelder,"Studierende, die im vorangegangenem Semester bereits an der Universität Karlsruhe (TH) eingeschrieben waren.",,,,,,,
+,,,,,,,,
+Erstimmatrikulierte,"Studierende, die erstmalig an einer Hochschule in Deutschland eingeschrieben sind (1. Studien- und 1. Fachsemester).",,,,,,,
+,,,,,,,,
+Neuimmatrikulierte,"Studierende, die zum angegebenen Semester neu an der Universität Karlsruhe eingeschrieben wurden",,,,,,,
+,"und bereits an einer Hochschule in Deutschland eingeschrieben waren.",,,,,,,
+1.Sem.,"Studierende, die neu an der Universität Karlsruhe (TH) im 1. Fach- und höheren Hochschulsemester eingeschrieben sind.",,,,,,,
+höh.Sem.,"Studierende, die neu an der Universität Karlsruhe (TH) im höh. Fach- und Hochschulsemester eingeschrieben sind.",,,,,,,
+,,,,,,,,
+Hochschulsemester,"Zahl der Semester, die ein Studierender an deutschen Hochschulen einschl. des laufenden Semesters eingeschrieben ist",,,,,,,
+,"(einschl. Urlaubssemester,  jedoch ohne Studienkolleg).",,,,,,,
+,,,,,,,,
+Fachsemester,"Zahl der Semester, die der Studierende im laufenden Semester, in dem zugehörigen Studienfach, einschl. eventuell ",,,,,,,
+,"aus anderen Studien- oder Ausbildungsgängen angerechneter Fachsemester, eingeschrieben ist."
+,"(ohne Urlaubssemester)"
+,
+ASP,Abschlussprüfung,,,,,,,
+§PAGEBREAK
+"Statistik 1 - (Gesamtstatistik)"
+Status,Insgesamt,davon,,,davon,,,,davon,,
+,,männlich,weiblich,,"Deutsche
+männlich","
+weiblich","
+Gesamt",,"Ausländer
+männlich","
+weiblich","
+Gesamt"
+,,,,,,,,,,,
+Erstimmatr.,257,179,78,,61,20,81,,118,58,176
+,1,0.696498054474708,0.303501945525292,,0.237354085603113,0.0778210116731518,0.315175097276265,,0.459143968871595,0.22568093385214,0.684824902723735
+,,,,,,,,,,,
+Neuimmatr.,186,115,71,,99,56,155,,16,15,31
+,1,0.618279569892473,0.381720430107527,,0.532258064516129,0.301075268817204,0.833333333333333,,0.0860215053763441,0.0806451612903226,0.166666666666667
+,,,,,,,,,,,
+Rückmelder,15942,11786,4156,,9781,3245,13026,,2005,911,2916
+,1,0.73930498055451,0.26069501944549,,0.613536570066491,0.203550370091582,0.817086940158073,,0.125768410488019,0.0571446493539079,0.182913059841927
+,,,,,,,,,,,
+beurlaubt,369,219,150,,190,112,302,,29,38,67
+,1,0.59349593495935,0.40650406504065,,0.514905149051491,0.303523035230352,0.818428184281843,,0.0785907859078591,0.102981029810298,0.181571815718157
+,,,,,,,,,,,
+insgesamt,16754,12299,4455,,10131,3433,13564,,2168,1022,3190
+,1,0.73409335084159,0.26590664915841,,0.746903568268947,0.253096431731053,0.809597708010028,,0.679623824451411,0.320376175548589,0.190402291989973
+davon,,,,,,,,,,,
+Zweitimmatr.,56,26,30,,26,30,56,,0,0,0
+,1,0.464285714285714,0.535714285714286,,0.464285714285714,0.535714285714286,1,,0,0,0
+Studienkolleg,137,90,47,,2,1,3,,88,46,134
+,1,0.656934306569343,0.343065693430657,,0.0145985401459854,0.0072992700729927,0.0218978102189781,,0.642335766423358,0.335766423357664,0.978102189781022
+,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 2 - (Studierende nach Abschlusszielen)"
+Abschlussziel,,Fachsemester,,,,,,,,,,,,,Gesamt,,,,,,,,,,,,,,
+,,1,2,3,4,5,6,7,8,9,10,11,12,>12,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Lizentiat,,,,,,,,,,,,,1,1,2,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"Promotion m.Abschluß",,58,61,45,61,60,44,28,9,5,11,5,7,26,420,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Staatsexamen,,10,14,2,14,7,15,7,13,6,18,8,5,2,121,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"Diplom (U)",,148,1810,121,2152,140,1935,309,1650,321,1599,269,888,1339,12681,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",,,11,,7,1,6,2,14,2,4,,3,6,56,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"Lehramt Gymnasien",,1,122,11,153,8,100,14,71,15,59,5,28,23,610,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",,13,1202,10,309,25,262,25,64,4,24,4,11,20,1973,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"Master (Magister)",,48,111,73,103,25,29,12,5,3,7,1,1,3,421,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Aufbaustudium,,57,68,10,16,9,10,1,6,1,,,1,3,182,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"kein Abschluss möglich",,3,10,4,14,10,38,20,69,24,85,3,8,,288,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+insgesamt,,338,3409,276,2829,285,2439,418,1901,381,1807,295,953,1423,16754,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 3 - (Studierende nach dem 1.Studienfach - [1.Studiengang]) ",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+Fakultät,Fach,(Fach-Schl.),Gesamt,,davon,"Rück-
+melder","Erst-
+immatr.","   Neuimmatrikuliert",,," Deutsche",,," Ausländer",,,,beurlaubt,,,
+,,,Fakultät,Fach,,,,1.FSem.,höh.Sem.,,männlich,weiblich,Gesamt,männlich,weiblich,Gesamt,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+"Fakultät für Mathematik",,,,,,,,,,,,,,,,,,,,,
+,Mathematik,(105),932,462,,445,3,1,4,,234,181,415,29,18,47,,9,,,
+,Technomathematik,(118),,131,,121,0,0,0,,96,23,119,11,1,12,,10,,,
+,Wirtschaftsmathematik,(276),,338,,313,0,0,2,,171,93,264,25,49,74,,23,,,
+,"Wissensch. Rechnen",(605),,1,,1,0,0,0,,1,0,1,0,0,0,,0,,,
+"Fakultät für Physik",,,,,,,,,,,,,,,,,,,,,
+,Geophysik,(128),1215,97,,65,13,15,1,,55,31,86,4,7,11,,3,,,
+,Meteorologie,(066),,99,,92,5,2,0,,52,44,96,0,3,3,,0,,,
+,Physik,(110),,1019,,924,50,20,5,,806,124,930,60,29,89,,20,,,
+"Fakultät für Chemie und Biowissenschaften",,,,,,,,,,,,,,,,,,,,,
+,Biologie,(026),1027,394,,377,4,5,4,,113,251,364,13,17,30,,4,,,
+,Chemie,(032),,507,,470,17,10,3,,272,175,447,28,32,60,2,7,,,
+,Lebensmittelchemie,(096),,126,,114,7,2,1,,24,92,116,1,9,10,,2,,,
+"Fakultät für Geistes- und Sozialwissenschaften",,,,,,,,,,,,,,,,,,,,,
+,Berufspädagogik,(270),1018,0,,0,0,0,0,,0,0,0,0,0,0,,0,,,
+,"Europ. Kult./Ideengeschichte",(627),,147,,139,2,1,0,,37,99,136,0,11,11,,5,,,
+,"Germanistik BA bis SS04
+und Lehramt",(067),,175,,169,1,1,2,,57,117,174,0,1,1,,2,,,
+,Germanistik,(667),,231,,212,2,7,0,,56,150,206,4,21,25,,10,,,
+,"Geschichte bis SS04",(068),,2,,2,0,0,0,,1,0,1,1,0,1,,0
+,Geschichte,(668),,77,,69,0,4,4,,38,36,74,1,2,3,,0
+,Literaturwissenschaft,(188),,7,,7,0,0,0,,2,5,7,0,0,0,,0,,,
+,Mediävistik,(106),,0,,0,0,0,0,,0,0,0,0,0,0,,0,,,
+,Musikwissenschaft,(114),,1,,1,0,0,0,,0,0,0,0,1,1,,0,,,
+,"Pädagogik bis SS04",(052),,1,,1,0,0,0,,0,0,0,1,0,1,,0
+,Pädagogik,(652),,142,,128,0,8,1,,14,117,131,3,8,11,,5
+,Philosophie,(127),,14,,13,0,1,0,,6,3,9,2,3,5,,0,,,
+,Soziologie,(149),,4,,4,0,0,0,,0,0,0,0,4,4,,0,,,
+,Sportpädagogik,(098),,80,,79,0,0,0,,52,28,80,0,0,0,,1
+,"Sportwissenschaft bis SS04",(029),,3,,3,0,0,0,,0,1,1,4,3,7,,0
+,Sportwissenschaft,(629),,134,,125,0,1,2,,72,55,127,2,0,2,,6
+"Fakultät für Architektur",,,,,,,,,,,,,,,,,,,,,
+,Architektur,(013),875,10,,10,0,0,0,,2,6,8,1,1,2,,0,,,
+,Altbauinstandsetzung,(613),,725,,665,4,1,2,,264,323,587,48,90,138,,53,,,
+,"Kunstgeschichte bis SS04",(092),,2,,2,0,0,0,,0,2,2,0,0,0,,0
+,Kunstgeschichte,(692),,138,,127,0,0,2,,13,108,121,2,15,17,,9
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 3 - (Studierende nach dem 1.Studienfach - [1.Studiengang]) ",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+Fakultät,Fach,"(Fach -Schl.)","          Gesamt",,davon,"Rück-
+melder","Erst-
+immatr.","   Neuimmatrikuliert",,," Deutsche",,," Ausländer",,,,beurlaubt,,,
+,,,Fakultät,Fach,,,,1.FSem.,höh.Sem.,,männlich,weiblich,Gesamt,männlich,weiblich,Gesamt,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+"Fakultät für Bauingenieur-, Geo- und Umweltwissenschaften",,,,,,,,,,,,,,,,,,,,,
+,"Angewandte Geowissenschaft",(039),1203,68,,65,0,0,1,,46,17,63,3,2,5,,2,,,
+,Bauingenieurwesen,(017),,732,,696,7,0,8,,409,149,558,113,61,174,,21,,,
+,"Geodäsie und Geoinformatik",(171),,86,,84,1,0,0,,50,23,73,10,3,13,,1,,,
+,Geographie,(050),,64,,62,0,0,0,,30,33,63,0,1,1,,2,,,
+,Geologie,(065),,42,,40,0,0,0,,22,16,38,3,1,4,,2,,,
+,Geoökologie,(283),,142,,130,0,0,2,,40,92,132,2,8,10,,10,,,
+,Mineralogie,(111),,9,,9,0,0,0,,3,4,7,0,2,2,,0,,,
+,Regionalwissenschaft,(134),,38,,36,0,0,1,,6,3,9,16,13,29,,1,,,
+,"Resources Engineering",(072),,22,,22,0,0,0,,1,0,1,11,10,21,,0,,,
+"Fakultät für Maschinenbau",,,,,,,,,,,,,,,,,,,,,
+,Maschinenbau,(104),2799,2799,,2729,31,4,13,,2009,184,2193,536,70,606,,22,,,
+"Fakultät für Chemieingenieurwesen und Verfahrenstechnik",,,,,,,,,,,,,,,,,,,,,
+,Bioingenieurwesen,(633),774,174,,170,1,0,0,,76,85,161,8,5,13,,3,,,
+,"Chemieingenieurwesen
+und Verfahrenstechnik",(033),,595,,570,8,4,5,,336,110,446,91,58,149,,8,,,
+,"Utilities and Waste - Sustainable Processing",(733),,5,,5,0,0,0,,0,0,0,3,2,5,,0,,,
+"Fakultät für Elektrotechnik und Informationstechnik",,,,,,,,,,,,,,,,,,,,,
+,"Elektrotechnik und Informationstechnik",(048),1602,1563,,1523,15,1,6,,1019,77,1096,391,76,467,,18,,,
+,"Electrical Engineering and Information Technologies",(648),,28,,28,0,0,0,,0,0,0,21,7,28,,0,,,
+,"Optics and Photonics",(748),,11,,11,0,0,0,,3,0,3,7,1,8,,0,,,
+"Fakultät für Informatik",,,,,,,,,,,,,,,,,,,,,
+,Informatik,(079),2080,2080,,2019,27,2,5,,1451,87,1538,422,120,542,,27,,
+"Fakultät für Wirtschaftswissenschaften",,,,,,,,,,,,,,,,,,,,
+,Volkswirtschaft,(175),2545,1,,1,0,0,0,,0,0,0,1,0,1,,0,,,
+,"Technische Volkswirtschaft",(600),,145,,142,0,1,0,,85,36,121,12,12,24,,2,,,
+,Wirtschaftsingenieurwesen,(179),,2399,,2309,3,8,7,,1720,388,2108,141,150,291,,72,,,
+"Fakultät für Maschinenbau + Elektrotechnik und Informationstechnik",,,,,,,,,,,,,,,,,,,,,
+,Mechatronik,(380),51,51,,51,0,0,0,,31,1,32,16,3,19,,0,,,
+"Fakultät für Informatik + Wirtschaftswissenschaften",,,,,,,,,,,,,,,,,,,,,
+,Informationswirtschaft,(610),473,473,,458,2,3,1,,341,61,402,27,44,71,,9,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 3 - (Studierende nach dem 1.Studienfach - [1.Studiengang]) ",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+Fakultät,Fach,"(Fach -Schl.)","          Gesamt",,davon,"Rück-
+melder","Erst-
+immatr.","   Neuimmatrikuliert",,," Deutsche",,," Ausländer",,,,beurlaubt,,,
+,,,Fakultät,Fach,,,,1.FSem.,höh.Sem.,,männlich,weiblich,Gesamt,männlich,weiblich,Gesamt,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+"International Department",,,,,,,,,,,,,,,,,,,,,
+,"Management of Product Development",(679),23,9,,9,0,0,0,,8,0,8,0,1,1,,0,,,
+,"Production and Operations Management",(680),,4,,4,0,0,0,,2,0,2,2,0,2,,0,,,
+,"Information Engineering",(682),,3,,3,0,0,0,,0,1,1,2,0,2,,0,,,
+,"Financial Engineering",(681),,4,,4,0,0,0,,2,1,3,0,1,1,,0,,,
+,"Integrated Circuit and System Technology",(683),,3,,3,0,0,0,,1,0,1,2,0,2,,0,,,
+"Keiner Fakultät angehörend",,,,,,,,,,,,,,,,,,,,,
+,Studienkolleg,(196),137,137,,81,54,1,1,,2,1,3,88,46,134,,0,,,
+,,,,,,,,,,,,,,,,,,,,,
+,insgesamt,,16754,,,15942,257,103,83,,10131,3433,13564,2168,1022,3190,,369,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 4 - (Studienanfänger nach dem 1.Studienfach - [1.Studiengang]) "
+Fakultät,Fach,,Insgesamt,,davon,Deutsche,,,Ausländer,,,,männlich,,,weiblich,,
+,,,Fakultät,Fach,,"Erst-
+immatr.",Neuimmatrikulierte,,Erst-immatr.,Neuimmatrikulierte,,,Erst-immatr.,Neuimmatrikulierte,,Erst-immatr.,Neuimmatrikulierte,
+,,,,,,,1.FSem.,höh.Sem.,,1.FSem.,höh.Sem.,,,1.FSem.,höh.Sem.,,1.FSem.,höh.Sem.
+"Fakultät für Mathematik",,,,,,,,,,,,,,,,,,
+,Mathematik,,10,8,,1,1,4,2,0,0,,2,1,3,1,0,1
+,Technomathematik,,,0,,0,0,0,0,0,0,,0,0,0,0,0,0,1
+,Wirtschaftsmathematik,,,2,,0,0,2,0,0,0,,0,0,1,0,0,1
+,"Wissensch. Rechnen",,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+"Fakultät für Physik",,,,,,,,,,,,,,,,,,
+,Physik,,111,75,,41,19,4,9,1,1,,49,17,5,1,3,0
+,Geophysik,,,29,,10,13,1,3,2,0,,8,11,1,5,4,0
+,Meteorologie,,,7,,5,2,0,0,0,0,,2,1,0,3,1,0
+"Fakultät für Chemie und Biowissenschaften",,,,,,,,,,,,,,,,,,
+,Chemie,,53,30,,14,10,3,3,0,0,,12,4,3,5,6,0
+,Biologie,,,13,,1,5,4,3,0,0,,3,2,1,1,3,3
+,Lebensmittelchemie,,,10,,7,2,1,0,0,0,,1,1,0,6,1,1
+"Fakultät für Geistes- und Sozialwissenschaften",,,,,,,,,,,,,,,,,,
+,Berufspädagogik,,37,0,,,,,,,,,0,0,0,0,0,0
+,"Europ. Kult./Ideengeschichte",,,3,,0,1,0,2,0,0,,0,0,0,2,1,0
+,"Germanistik BA bis SS04
+und Lehramt",,,4,,0,1,2,1,0,0,,0,0,0,1,1,2
+,Germanistik,,,9,,0,7,0,2,0,0,,1,2,0,1,5,0
+,"Geschichte bis SS04",,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,Geschichte,,,8,,0,4,4,0,0,0,,0,2,0,0,2,4
+,Literaturwissenschaft,,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,Mediävistik,,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,Musikwissenschaft,,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,"Pädagogik bis SS04",,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,Pädagogik,,,9,,0,8,1,0,0,0,,0,2,0,0,6,1
+,Philosophie,,,1,,0,0,0,0,1,0,,0,1,0,0,0,0
+,Soziologie,,,0,,0,0,0,0,0,0,,0,0,0,0,0,0,,,
+,Sportpädagogik,,,0,,0,0,0,0,0,0,,0,0,0,0,0,0,,,
+,"Sportwissenschaft bis SS04",,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,Sportwissenschaft,,,3,,0,1,2,0,0,0,,0,0,2,0,1,0
+"Fakultät für Architektur",,,,,,,,,,,,,,,,,,
+,Architektur,,9,7,,0,1,2,4,0,0,,1,1,1,3,0,1
+,Altbauinstandsetzung,,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,"Kunstgeschichte bis SS04",,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,Kunstgeschichte,,,2,,0,0,2,0,0,0,,0,0,0,0,0,2
+§PAGEBREAK
+"Statistik 4 - (Studienanfänger nach dem 1.Studienfach - [1.Studiengang]) "
+,,,,,,,,,,,,
+Fakultät,Fach,,Insgesamt,,davon,Deutsche,,,Ausländer,,,,männlich,,,weiblich,,
+,,,Fakultät,Fach,,Erst-immatr.,Neuimmatrikulierte,,Erst-immatr.,Neuimmatrikulierte,,,Erst-immatr.,Neuimmatrikulierte,,Erst-immatr.,Neuimmatrikulierte,
+,,,,,,,1.FSem.,höh.Sem.,,1.FSem.,höh.Sem.,,,1.FSem.,höh.Sem.,,1.FSem.,höh.Sem.
+"Fakultät für Bauingenieur-, Geo- und Umweltwissenschaften",,,,,,,,,,,,,,,,,,
+,"Angewandte Geowissenschaft",,20,1,,0,0,1,0,0,0,,0,0,0,0,0,1
+,Bauingenieurwesen,,,15,,0,0,2,7,0,6,,3,0,3,4,0,5
+,"Geodäsie und Geoinformatik",,,1,,0,0,0,1,0,0,,0,0,0,1,0,0
+,Geographie,,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,Geologie,,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,Geoökologie,,,2,,0,0,2,0,0,0,,0,0,1,0,0,1
+,Mineralogie,,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,Regionalwissenschaft,,,1,,0,0,0,0,0,1,,0,0,0,0,0,1
+,"Resources Engineering",,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+"Fakultät für Maschinenbau",,,,,,,,,,,,,,,,,,
+,Maschinenbau,,48,48,,0,4,8,31,0,5,,24,3,11,7,1,2
+"Fakultät für Chemieingenieurwesen und Verfahrenstechnik",,,,,,,,,,,,,,,,,,
+,Bioingenieurwesen,,18,1,,0,0,0,1,0,0,,1,0,0,0,0,0
+,"Chemieingenieurwesen
+und Verfahrenstechnik",,,17,,1,2,4,7,2,1,,3,3,5,5,1,0
+,"Utilities and Waste - Sustainable Processing",,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+"Fakultät für Elektrotechnik und Informationstechnik",,,,,,,,,,,,,,,,,,
+,"Elektrotechnik und Informationstechnik",,22,22,,0,1,4,15,0,2,,11,1,4,4,0,2
+,"Optics and Photonics",,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,"Electrical Engineering and Information Technologies",,,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+"Fakultät für Informatik",,,,,,,,,,,,,,,,,,
+,Informatik,,34,34,,0,2,3,27,0,2,,23,2,3,4,0,2
+"Fakultät für Wirtschaftswissenschaften",,,,,,,,,,,,,,,,,,
+,Volkswirtschaft,,19,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,Techn.Volkswirtschaftslehre,,,1,,0,1,0,0,0,0,,0,1,0,0,0,0
+,Wirtschaftsingenieurwesen,,,18,,0,6,7,3,2,0,,3,7,6,0,1,1
+"Fakultät für Maschinenbau + Elektrotechnik und Informationstechnik",,,,,,,,,,,,,,,,,,
+,Mechatronik,,0,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+"Fakultät für Informatik + Wirtschaftswissenschaften",,,,,,,,,,,,,,,,,,
+,Informationswirtschaft,,6,6,,0,0,1,2,3,0,,0,1,1,2,2,0
+§PAGEBREAK
+"Statistik 4 - (Studienanfänger nach dem 1.Studienfach - [1.Studiengang]) "
+,,,,,,,,,,,,
+Fakultät,Fach,,Insgesamt,,davon,Deutsche,,,Ausländer,,,,männlich,,,weiblich,,
+,,,Fakultät,Fach,,Erst-immatr.,Neuimmatrikulierte,,Erst-immatr.,Neuimmatrikulierte,,,Erst-immatr.,Neuimmatrikulierte,,Erst-immatr.,Neuimmatrikulierte,
+,,,,,,,1.FSem.,höh.Sem.,,1.FSem.,höh.Sem.,,,1.FSem.,höh.Sem.,,1.FSem.,höh.Sem.
+"International Department",,,,,,,,,,,,,,,,,,
+,"Management of Product Development",,0,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,"Production and Operations Management",,0,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,"Information Engineering",,0,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,"Financial Engineering",,0,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+,"Integrated Circuit and System Technology",,0,0,,0,0,0,0,0,0,,0,0,0,0,0,0
+"Keiner Fakultät angehörend",,,,,,,,,,,,,,,,,,
+,Studienkolleg,,56,56,,1,0,0,53,1,1,,32,1,0,22,0,1
+,,,,,,,,,,,,,,,,,,
+,insgesamt,,443,,,81,91,64,176,12,19,,179,64,51,78,39,32
+§PAGEBREAK
+"Statistik 5 - (Studentinnen nach dem 1.Studienfach - [1.Studiengang]) "
+Fakultät,Fach,"                  Gesamt",,davon,"Rück-
+melder","Erst-
+immatr.","        Neuimmatrikulierte",,,beurlaubt
+,,Fakultät,Fach,,,,1.FachSem.,höh.Fachsem.,,
+,,,,,,,,,,,,,,,,,
+"Fakultät für Mathematik",,,,,,,,,,,,,,,,,
+,Mathematik,365,199,,190,1,0,1,,7,,,,,,,
+,Technomathematik,,24,,23,0,0,0,,1,,,,,,,
+,Wirtschaftsmathematik,,0,,0,0,0,0,,0,,,,,,,
+,"Wissensch. Rechnen",,142,,127,0,0,1,,14,,,,,,,
+"Fakultät für Physik",,,,,,,,,,,,,,,,,
+,Physik,238,153,,143,1,3,0,,6,,,,,,,
+,Geophysik,,38,,27,5,4,0,,2,,,,,,,
+,Meteorologie,,47,,43,3,1,0,,0,,,,,,,
+"Fakultät für Chemie und Biowissenschaften",,,,,,,,,,,,,,,,,
+,Chemie,576,207,,190,5,6,0,,6,,,,,,,
+,Biologie,,268,,258,1,3,3,,3,,,,,,,
+,Lebensmittelchemie,,101,,91,6,1,1,,2,,,,,,,
+"Fakultät für Geistes- und Sozialwissenschaften",,,,,,,,,,,,,,,,,,,,,
+,Berufspädagogik,665,0,,0,0,0,0,,0,,,,,,,
+,"Europ. Kult./Ideengeschichte",,110,,102,2,1,0,,5,,,,,,,
+,"Germanistik BA bis SS04
+und Lehramt",,118,,114,1,1,2,,0
+,Germanistik,,171,,158,1,5,0,,7
+,"Geschichte bis SS04",,0,,0,0,0,0,,0
+,Geschichte,,38,,32,0,2,4,,0
+,Literaturwissenschaft,,5,,5,0,0,0,,0,,,,,,,
+,Mediävistik,,0,,0,0,0,0,,0,,,,,,,
+,Musikwissenschaft,,1,,1,0,0,0,,0,,,,,,,
+,"Pädagogik bis SS04",,0,,0,0,0,0,,0
+,"Pädagogik        ",,125,,114,0,6,1,,4
+,Philosophie,,6,,6,0,0,0,,0,,,,,,,
+,Soziologie,,4,,4,0,0,0,,0,,,,,,,
+,Sportpädagogik,,28,,28,0,0,0,,0,,,,,,,
+,"Sportwissenschaft bis SS04",,1,,1,0,0,0,,0
+,Sportwissenschaft,,58,,53,0,1,0,,4
+"Fakultät für Architektur",,,,,,,,,,,,,,,,,,,,,
+,Architektur,545,413,,374,3,0,1,,35,,,,,,,
+,Altbauinstandsetzung,,7,,7,0,0,0,,0,,,,,,,
+,"Kunstgeschichte SS04",,2,,2,0,0,0,,0
+,Kunstgeschichte,,123,,112,0,0,2,,9
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 5 - (Studentinnen nach dem 1.Studienfach - [1.Studiengang]) "
+Fakultät,Fach,Gesamt,,davon,"Rück-
+melder","Erst-
+immatr.","        Neuimmatrikulierte",,,beurlaubt
+,,Fakultät,Fach,,,,1.FSem.,höh.Sem.,,
+,,,,,,,,,,,,,,,,,
+"Fakultät für Bauingenieur-, Geo- und Umweltwissenschaften",,,,,,,,,,,,,,,,,
+,"Angewandte Geowissenschaft",438,19,,16,0,0,1,,2,,,,,,,
+,Bauingenieurwesen,,210,,194,4,0,5,,7,,,,,,,
+,"Geodäsie und Geoinformatik",,26,,25,1,0,0,,0,,,,,,,
+,Geographie,,34,,33,0,0,0,,1,,,,,,,
+,Geologie,,17,,17,0,0,0,,0,,,,,,,
+,Geoökologie,,100,,92,0,0,1,,7,,,,,,,
+,Mineralogie,,6,,6,0,0,0,,0,,,,,,,
+,Regionalwissenschaft,,16,,14,0,0,1,,1,,,,,,,
+,"Resources Engineering",,10,,10,0,0,0,,0,,,,,,,
+"Fakultät für Maschinenbau",,,,,,,,,,,,,,,,,
+,Maschinenbau,254,254,,243,7,1,2,,1,,,,,,,
+"Fakultät für Chemieingenieurwesen und Verfahrenstechnik",,,,,,,,,,,,,,,,,
+,Bioingenieurwesen,260,90,,88,0,0,0,,2,,,,,,,
+,"Chemieingenieurwesen
+und Verfahrenstechnik",,168,,159,5,1,0,,3,,,,,,,
+,"Utilities and Waste - Sustainable Processing",,2,,2,0,0,0,,0,,,,,,,
+"Fakultät für Elektrotechnik und Informationstechnik",,,,,,,,,,,,,,,,,
+,"Elektrotechnik und Informationstechnik",161,153,,144,4,0,2,,3,,,,,,,
+,"Optics and Photonics",,1,,1,0,0,0,,0,,,,,,,
+,"Electrical Engineering and Information Technologies",,7,,7,0,0,0,,0,,,,,,,
+"Fakultät für Informatik",,,,,,,,,,,,,,,,,
+,Informatik,207,207,,197,4,0,2,,4,,,,,,,
+"Fakultät für Wirtschaftswissenschaften",,,,,,,,,,,,,,,,,
+,Volkswirtschaft,586,0,,0,0,0,0,,0,,,,,,,
+,Techn.Volkswirtschaftslehre,,48,,48,0,0,0,,0,,,,,,,
+,Wirtschaftsingenieurwesen,,538,,526,0,1,1,,10,,,,,,,
+"Fakultät für Maschinenbau + Elektrotechnik und Informationstechnik",,,,,,,,,,,,,,,,,,,,,
+,Mechatronik,4,4,,4,0,0,0,,0,,,,,,,,,,,
+"Fakultät für Informatik + Wirtschaftswissenschaften",,,,,,,,,,,,,,,,,,,,,
+,Informationswirtschaft,105,105,,97,2,2,0,,4,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 5 - (Studentinnen nach dem 1.Studienfach - [1.Studiengang]) "
+Fakultät,Fach,Gesamt,,davon,"Rück-
+melder","Erst-
+immatr.","        Neuimmatrikulierte",,,beurlaubt
+,,Fakultät,Fach,,,,1.FSem.,höh.Sem.,,
+,,,,,,,,,,,,,,,,,
+"International Department",,,,,,,,,,,,,,,,,
+,"Management of Product Development",1,1,,1,0,0,0,,0,,,,,,,
+,"Production and Operations Management",0,0,,0,0,0,0,,0,,,,,,,
+,"Information Engineering",1,1,,1,0,0,0,,0,,,,,,,
+,"Financial Engineering",2,2,,2,0,0,0,,0,,,,,,,
+,"Integrated Circuit and System Technology",0,0,,0,0,0,0,,0,,,,,,,
+"Keiner Fakultät angehörend",,,,,,,,,,,,,,,,,,,,,
+,Studienkolleg,47,47,,24,22,0,1,,0,,,,,,,
+,,,,,,,,,,,,,,,,,
+,insgesamt,4455,,,4156,78,39,32,,150,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 6 - (Studierende nach Fächergruppen)"
+Fach,Gesamt,davon,,,,,,,,,,,,beurlaubt
+,,"Rück-
+melder","Erst-
+immatr.","      Neuimmatrikulierte",,,Deutsche,,,Ausländer,,,,
+,,,,1.FSem.,höh.Sem.,,männlich,weiblich,Gesamt,männlich,weiblich,Gesamt,,
+,,,,,,,,,,,,,,
+"Sprach- und Kulturwissenschaften",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Berufspädagogik,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,
+"Europ. Kult./Ideengeschichte",147,139,2,1,0,0,37,99,136,0,11,11,0,5,,,
+"Germanistik BA bis SS04
+und Lehramt",175,169,1,1,2,0,57,117,174,0,1,1,0,2,,,
+Germanistik,231,212,2,7,0,0,56,150,206,4,21,25,0,10,,,
+"Geschichte bis SS04",2,2,0,0,0,0,1,0,1,1,0,1,0,0,,,
+Geschichte,77,69,0,4,4,0,38,36,74,1,2,3,0,0,,,
+Literaturwissenschaft,7,7,0,0,0,0,2,5,7,0,0,0,0,0,,,
+Mediävistik,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,
+"Pädagogik bis SS04",1,1,0,0,0,0,0,0,0,1,0,1,0,0,,,
+"Pädagogik        ",142,128,0,8,1,0,14,117,131,3,8,11,0,5,,,
+Philosophie,14,13,0,1,0,0,6,3,9,2,3,5,0,0,,,
+,796,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Sport,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Sportpädagogik,80,79,0,0,0,0,52,28,80,0,0,0,0,1,,,
+"Sportwissenschaft bis SS04",3,3,0,0,0,0,0,1,1,4,3,7,0,0,,,
+Sportwissenschaft,134,125,0,1,2,0,72,55,127,2,0,2,0,6,,,
+,217,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+"Rechts-, Wirtschafts- und Sozialwissenschaften",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Informationswirtschaft,473,458,2,3,1,0,341,61,402,27,44,71,0,9,,,
+Soziologie,4,4,0,0,0,0,0,0,0,0,4,4,0,0,,,
+Volkswirtschaft,1,1,0,0,0,0,0,0,0,1,0,1,0,0,,,
+Techn.Volkswirtschaftslehre,145,142,0,1,0,0,85,36,121,12,12,24,0,2,,,
+Wirtschaftsingenieurwesen,2399,2309,3,8,7,0,1720,388,2108,141,150,291,0,72,,,
+,3022,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,
+§PAGEBREAK
+"Statistik 6 - (Studierende nach Fächergruppen)"
+Fach,Gesamt,davon,,,,,,,,,,,,beurlaubt
+,,"Rück-
+melder","Erst-
+immatr.","      Neuimmatrikulierte",,,Deutsche,,,Ausländer,,,,
+,,,,1.FSem.,höh.Sem.,,männlich,weiblich,Gesamt,männlich,weiblich,Gesamt,,
+"Mathematik, Naturwissenschaften",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+"Angewandte Geowissenschaft",68,65,0,0,1,,46,17,63,3,2,5,,2,,,
+Biologie,507,470,17,10,3,,272,175,447,28,32,60,,7,,,
+Chemie,394,377,4,5,4,0,113,251,364,13,17,30,,4,,,
+Geographie,64,62,0,0,0,0,30,33,63,0,1,1,,2,,,
+Geologie,42,40,0,0,0,0,22,16,38,3,1,4,,2,,,
+Geoökologie,142,130,0,0,2,0,40,92,132,2,8,10,,10,,,
+Geophysik,99,92,5,2,0,0,52,44,96,0,3,3,,0
+Informatik,2080,2019,27,2,5,0,1451,87,1538,422,120,542,,27
+Lebensmittelchemie,126,114,7,2,1,0,24,92,116,1,9,10,,2
+Mathematik,462,445,3,1,4,0,234,181,415,29,18,47,,9,,,
+Meteorologie,97,65,13,15,1,0,55,31,86,4,7,11,,3,,,
+Mineralogie,9,9,0,0,0,0,3,4,7,0,2,2,,0,,,
+Physik,1019,924,50,20,5,0,806,124,930,60,29,89,,20,,,
+Technomathematik,131,121,0,0,0,0,96,23,119,11,1,12,,10,,,
+"Wissensch. Rechnen",1,1,0,0,0,0,1,0,1,0,0,0,,0,,,
+Wirtschaftsmathematik,338,313,0,0,2,0,171,93,264,25,49,74,,23,,,
+,5579,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Ingenieurwissenschaften,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Architektur,10,10,0,0,0,0,2,6,8,1,1,2,,0,,,
+Altbauinstandsetzung,725,665,4,1,2,0,264,323,587,48,90,138,,53,,,
+Bauingenieurwesen,732,696,7,0,8,0,409,149,558,113,61,174,,21,,,
+Bioingenieurwesen,174,170,1,0,0,0,76,85,161,8,5,13,,3,,,
+"Chemieing. u. Verf.technik",595,570,8,4,5,0,336,110,446,91,58,149,,8,,,
+"Utilities and Waste - Sustainable Processing",5,5,0,0,0,,0,0,0,3,2,5,,0,,,
+"Elektro- u. Inf.-Technik",1563,1523,15,1,6,0,1019,77,1096,391,76,467,,18,,,
+"Electrical Engineering and Information Technologies",28,28,0,0,0,,0,0,0,21,7,28,,0,,,
+"Optics and Photonics",11,11,0,0,0,,3,0,3,7,1,8,,0,,,
+"Financial Engineering",4,4,0,0,0,,2,1,3,0,1,1,,0,,,
+"Geodäsie und Geoinformatik",86,84,1,0,0,0,50,23,73,10,3,13,,1,,,
+"Information Engineering",3,3,0,0,0,,0,1,1,2,0,2,,0,,,
+"Integrated Circuit and
+System Technology",3,3,0,0,0,,1,0,1,2,0,2,,0,,,
+"Mgmt of Product Developm.",9,9,0,0,0,,8,0,8,0,1,1,,0,,,
+Maschinenbau,2799,2729,31,4,13,,2009,184,2193,536,70,606,,22,,,
+Mechatronik,51,51,0,0,0,0,31,1,32,16,3,19,,0,,,
+"Prod. and Operations Mgmt",4,4,0,0,0,,2,0,2,2,0,2,,0,,,
+Regionalwissenschaft,38,36,0,0,1,0,6,3,9,16,13,29,,1,,,
+"Resources Engineering",22,22,0,0,0,0,1,0,1,11,10,21,,0,,,
+,6862,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 6 - (Studierende nach Fächergruppen)"
+Fach,Gesamt,davon,,,,,,,,,,,,beurlaubt
+,,"Rück-
+melder","Erst-
+immatr.","      Neuimmatrikulierte",,,Deutsche,,,Ausländer,,,,
+,,,,1.FSem.,höh.Sem.,,männlich,weiblich,Gesamt,männlich,weiblich,Gesamt,,
+"Kunst, Kunstwissenschaft",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+"Kunstgeschichte bis SS04",2,2,0,0,0,0,0,2,2,0,0,0,0,0,,,
+Kunstgeschichte,138,127,0,0,2,0,13,108,121,2,15,17,0,9,,,
+Musikwissenschaft,1,1,0,0,0,0,0,0,0,0,1,1,0,0,,,
+,141,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+"Sonstige Fächer",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Studienkolleg,137,81,54,1,1,,2,1,3,88,46,134,,0,,,
+,,,,,,,,,,,,,,,,,
+insgesamt,16754,15942,257,103,83,0,10131,3433,13564,2168,1022,3190,,369,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Mathematik,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,265,1,52,4,48,2,30,6,37,4,38,1,16,26,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Master (Magister)",HF,12,0,7,1,3,0,0,0,0,0,1,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,185,0,44,0,44,1,38,1,27,3,20,0,2,5,
+,2.HF,88,0,16,0,27,0,20,0,14,1,6,0,3,1
+,3.HF,0,,,,,,,,,,,,,
+,NF,16,0,0,1,5,0,4,1,2,1,2,0,0,0
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,6,1,0,0,2,0,3,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,7,0,0,0,0,1,1,0,4,0,1,0,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,20,3,2,3,5,4,1,0,0,0,1,0,0,1
+,,,,,,,,,,,,,,,
+Gesamt,HF,577,4,121,8,127,8,90,7,82,8,67,1,21,33
+,NF,16,0,0,1,5,0,4,1,2,1,2,0,0,0
+,WBF,6,1,0,0,2,0,3,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+,,,,,,,,,,",,"
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Technomathematik,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,132,0,21,0,21,2,20,7,17,1,17,7,7,12
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Master (Magister)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,132,0,21,0,21,2,20,7,17,1,17,7,7,12
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Wirtschaftsmathematik,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,341,3,74,3,75,0,49,12,40,12,31,3,12,27,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,1,,,,,,1,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,342,3,74,3,75,0,50,12,40,12,31,3,12,27
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Wissenschaftliches Rechnen",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,1,0,0,0,0,0,0,0,0,0,0,0,1,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,1,0,0,0,0,0,0,0,0,0,0,0,1,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Physik,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,919,50,139,66,114,34,129,41,131,25,84,28,47,31
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,27,0,4,2,3,0,4,1,7,0,3,0,1,2,,
+,2.HF,67,0,13,1,17,0,18,0,8,1,6,0,1,2,,
+,3.HF,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+,NF,6,0,0,0,3,0,0,1,1,0,0,0,0,1
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,2,0,0,0,1,0,0,0,1,0,0,0,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,83,20,11,13,8,10,10,6,1,1,1,0,0,2,
+,,,,,,,,,,,,,,,
+Gesamt,HF,1099,70,167,82,143,44,161,48,149,27,94,28,49,37
+,NF,6,0,0,0,3,0,0,1,1,0,0,0,0,1
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Geophysik,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,97,40,15,4,9,0,11,1,6,3,6,0,1,1
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,97,40,15,4,9,0,11,1,6,3,6,0,1,1
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Meteorologie,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,96,7,24,2,13,8,7,2,10,6,6,1,6,4
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,3,0,1,0,0,1,1,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,99,7,25,2,13,9,8,2,10,6,6,1,6,4
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Chemie,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,404,21,58,25,79,22,55,15,38,19,40,6,11,15
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,44,0,8,1,15,2,6,2,6,1,0,1,0,2
+,2.HF,49,0,12,0,11,3,12,0,4,1,6,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,4,0,0,0,0,0,0,0,3,1,0,0,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,55,7,8,4,8,9,8,5,1,0,1,0,2,2
+,,,,,,,,,,,,,,,
+Gesamt,HF,556,28,86,30,113,36,81,22,52,22,47,7,13,19
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Biologie,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,257,0,1,1,72,5,63,3,39,4,46,1,14,8
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,58,0,58,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,2,2,0,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,33,0,5,0,4,0,10,2,4,1,3,1,2,1
+,2.HF,14,0,4,0,0,0,2,1,5,0,0,0,1,1
+,3.HF,0,,,,,,,,,,,,,
+,NF,9,1,0,0,6,2,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,45,7,11,2,9,9,3,2,0,1,0,0,1,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,409,9,79,3,85,14,78,8,48,6,49,2,18,10
+,NF,9,1,0,0,6,2,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Lebensmittelchemie,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+"Diplomprüfung  *",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt  *",HF,121,10,14,2,14,7,15,7,13,6,18,8,5,2
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,5,0,1,0,1,0,2,1,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,126,10,15,2,15,7,17,8,13,6,18,8,5,2
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"* Mit dem erfolgreichen Abschluss des 2. Staatsexamens besteht für die Studierenden die Möglichkeit, gleichzeitig den Diplomgrad zu erwerben.",,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Berufspädagogik,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Germanistik - Studiengang BA bis SS 04 und Germanistik",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,155,0,30,3,47,1,19,3,12,6,17,1,9,7
+,2.HF,64,0,17,2,10,1,10,1,4,1,8,2,4,4
+,3.HF,0,,,,,,,,,,,,,
+,NF,14,0,2,1,0,0,4,3,1,1,0,0,2,0
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,12,1,0,1,1,0,0,3,3,0,1,0,2,0
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,3,0,0,0,0,0,0,2,0,0,1,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,222,0,47,5,57,2,29,6,16,7,26,3,13,11
+,NF,14,0,2,1,0,0,4,3,1,1,0,0,2,0
+,WBF,12,1,0,1,1,0,0,3,3,0,1,0,2,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Germanistik,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,169,1,56,1,43,2,29,8,13,1,5,0,3,7
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,56,10,7,8,9,8,5,7,1,0,1,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,2,0,0,0,1,0,0,0,1,0,0,0,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,4,0,0,0,0,3,0,0,0,0,0,0,0,1
+,,,,,,,,,,,,,,,
+Gesamt,HF,231,11,63,9,53,13,34,15,15,1,6,0,3,8
+,NF,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Geschichte - Studiengang bis SS 04",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,1,0,0,0,0,0,0,0,0,0,1,0,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+,,,,,,,,,,,,,,,
+Gesamt,HF,2,0,0,0,0,0,0,0,0,0,1,0,0,1
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Geschichte,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,50,0,8,0,16,1,15,2,5,0,2,0,0,1
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,22,3,3,7,5,3,1,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,5,1,2,0,0,1,1,0,0,0,0,0,0,0,
+,,,,,,,,,,,,,,,
+Gesamt,HF,77,4,13,7,21,5,17,2,5,0,2,0,0,1
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Literaturwissenschaft,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,7,0,0,0,0,2,1,0,0,0,0,1,1,2
+,,,,,,,,,,,,,,,
+Gesamt,HF,7,0,0,0,0,2,1,0,0,0,0,1,1,2
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Mediävistik,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Musikwissenschaft,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,1,0,0,0,0,0,0,0,0,0,0,0,1,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,1,0,0,0,0,0,0,0,0,0,0,0,1,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Pädagogik - Studiengang bis SS 04",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+,,,,,,,,,,,,,,,
+Gesamt,HF,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Pädagogik,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,102,0,20,3,40,1,33,3,0,0,0,0,2,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,39,7,4,8,8,5,4,2,0,0,1,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,3,2,0,1,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,144,9,24,12,48,6,37,5,0,0,1,0,2,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Philosophie,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,2,0,0,0,0,0,0,0,0,0,0,0,0,2
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,1,0,0,0,0,1,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,10,1,0,2,1,0,2,0,1,0,0,1,1,1
+,,,,,,,,,,,,,,,
+Gesamt,HF,14,1,0,2,1,1,2,0,2,0,0,1,1,3
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Europ. Kultur u. Ideengeschichte",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,127,0,40,1,31,4,35,6,9,1,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,17,3,7,4,2,1,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,3,0,0,0,0,0,0,0,3,0,0,0,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,1,0,0,0,0,1,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,148,3,47,5,33,6,35,6,12,1,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Soziologie,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,4,0,0,3,1,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,4,0,0,3,1,0,0,0,0,0,0,0,0,0
+,NF,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Sportpädagogik,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,77,0,15,0,15,0,12,0,11,0,10,0,8,6
+,2.HF,55,0,13,0,5,1,6,0,17,1,10,0,0,2
+,3.HF,3,0,1,0,1,1,0,0,0,0,0,0,0,0
+,NF,4,0,1,0,2,0,1,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,3,0,2,0,1,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,135,0,29,0,21,2,18,0,28,1,20,0,8,8
+,NF,4,0,1,0,2,0,1,0,0,0,0,0,0,0
+,WBF,3,0,2,0,1,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Sportwissenschaft - Studiengang bis SS 04",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,2,0,0,0,0,0,0,0,0,0,2,0,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,3,0,0,0,0,0,0,1,0,0,2,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Sportwissenschaft,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,103,0,24,2,30,3,24,1,9,0,7,1,2,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,28,4,10,8,4,0,0,0,1,0,0,1,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,3,0,1,0,0,0,0,0,0,0,0,2,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,134,4,35,10,34,3,24,1,10,0,7,4,2,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Multimedia in den Geistes- und Sozialwissenschaften",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,NF,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Angewandte Kulturwissenschaft",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Journalismus und Technik der elektron. Medien",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Gesundheits- und Fitnessmanagement",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Architektur,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,667,2,120,0,76,2,79,11,73,16,87,42,59,100
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,36,0,2,0,2,0,6,0,8,2,15,0,1,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,22,2,4,0,3,1,2,0,1,1,2,1,0,5
+,,,,,,,,,,,,,,,
+Gesamt,HF,725,4,126,0,81,3,87,11,82,19,104,43,60,105
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Baugeschichte,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Altbauinstandsetzung,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,10,0,10,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,10,0,10,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Kunstgeschichte - Studiengang bis SS 04",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,2,0,0,1,0,0,1,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,2,0,0,1,0,0,1,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Kunstgeschichte,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,99,0,37,1,21,3,23,3,6,1,2,1,0,1
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,34,2,10,7,9,3,3,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,1,0,0,0,0,0,0,0,0,1,0,0,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,4,0,1,0,0,3,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,138,2,48,8,30,9,26,3,6,2,2,1,0,1
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Bauingenieurwesen,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,676,9,220,2,114,5,79,12,70,17,55,6,25,62,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,12,0,1,0,3,1,0,1,4,0,1,0,1,0
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschluss im Ausland",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,21,0,0,1,3,1,3,1,4,2,2,2,2,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,22,0,3,3,4,4,3,1,1,1,0,0,0,2
+,,,,,,,,,,,,,,,
+Gesamt,HF,732,9,225,6,124,11,85,15,79,20,58,8,28,64
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Geodäsie und Geoinformatik",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,83,1,20,0,17,0,18,0,13,3,7,0,1,3
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,2,0,0,0,0,2,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,86,1,20,1,17,2,18,0,13,3,7,0,1,3
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Angewandte Geowissenschaften",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,70,2,46,1,21,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,70,2,46,1,21,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Geographie,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,56,0,11,2,17,2,8,1,2,3,5,2,3,0
+,2.HF,196,0,46,2,54,4,22,1,19,3,23,2,10,10
+,3.HF,0,,,,,,,,,,,,,
+,NF,8,0,1,0,5,0,0,0,0,1,0,0,0,1
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,7,0,0,0,4,2,0,1,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,252,0,57,4,71,6,30,2,21,6,28,4,13,10
+,NF,8,0,1,0,5,0,0,0,0,1,0,0,0,1
+,WBF,7,0,0,0,4,2,0,1,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Geologie,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,42,0,0,0,0,0,0,0,13,1,7,1,9,11
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,42,0,0,0,0,0,0,0,13,1,7,1,9,11
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Geoökologie,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,140,0,22,0,20,1,26,3,15,14,12,5,11,11
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,2,0,0,0,0,0,1,0,0,0,0,0,0,1
+,,,,,,,,,,,,,,,
+Gesamt,HF,142,0,22,0,20,1,27,3,15,14,12,5,11,12
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Mineralogie,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,6,0,0,0,0,0,1,1,0,1,2,0,0,1
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,3,0,0,0,1,1,0,0,1,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,9,0,0,0,1,1,1,1,1,1,2,0,0,1
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Regionalwissenschaft,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,31,1,9,2,13,0,4,0,2,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,2,0,0,0,0,0,0,0,0,0,0,0,1,1
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,5,0,5,0,0,0,0,0,0,0,0,0,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,38,1,14,2,13,0,4,0,2,0,0,0,1,1
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Resources Engineering",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,21,0,0,0,21,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,1,0,0,0,1,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,22,0,0,0,22,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Maschinenbau,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,2562,8,569,11,526,29,384,38,318,39,305,23,159,153
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,23,0,7,0,3,0,2,2,2,1,2,0,1,3
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,114,0,38,0,27,4,13,0,16,1,7,1,2,5
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,76,0,1,1,5,4,9,14,14,4,22,0,2,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,24,5,4,2,5,1,4,1,0,0,0,0,1,1
+,,,,,,,,,,,,,,,
+Gesamt,HF,2800,13,620,14,566,38,412,55,350,45,336,24,165,162
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Chemieingenieurwesen und Verfahrenstechnik",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,548,4,174,0,92,7,81,14,52,6,48,10,21,39
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,2,1,0,0,1,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,34,0,1,0,2,0,1,2,9,2,15,0,2,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,11,3,1,1,0,3,1,1,0,0,0,0,0,1
+,,,,,,,,,,,,,,,
+Gesamt,HF,595,8,176,1,95,10,83,17,61,8,63,10,23,40
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Utilities and Waste - Sustainable Processing",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,5,0,0,0,5,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,5,0,0,0,5,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Bioingenieurwesen,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,174,0,42,0,32,2,28,2,24,2,26,3,9,4
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,174,0,42,0,32,2,28,2,24,2,26,3,9,4
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Elektrotechnik und Informationstechnik",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,1164,0,0,0,186,7,212,13,193,19,219,15,140,160,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,26,0,3,0,1,0,4,1,10,2,1,0,1,3
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,266,2,253,0,1,2,2,0,1,0,1,1,1,2
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,42,2,5,4,9,1,8,3,1,2,4,0,0,3
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,39,0,1,0,0,2,6,0,5,10,14,1,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,32,2,4,4,6,1,3,4,2,1,2,0,1,2
+,,,,,,,,,,,,,,,
+Gesamt,HF,1569,6,266,8,203,13,235,21,212,34,241,17,143,170
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Electrical Engineering and Information Technologies",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,28,0,9,0,12,3,3,0,0,1,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,28,0,9,0,12,3,3,0,0,1,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Optics and Photonics",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,9,0,9,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,2,0,2,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,11,0,11,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Informatik,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,2044,3,260,9,294,2,260,29,222,30,280,22,181,452
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,3,3,0,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,8,1,1,0,0,3,1,0,0,1,0,0,1,0
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,23,3,0,0,0,1,5,1,5,1,7,0,0,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,13,3,2,2,4,1,0,1,0,0,0,0,0,0,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,2091,13,263,11,298,7,266,31,227,32,287,22,182,452
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Volkswirtschaftslehre,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+,,,,,,,,,,,,,,,
+Gesamt,HF,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Techn. Volkswirtschaftslehre",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,113,0,0,0,25,4,25,2,19,4,15,4,9,6
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,30,0,30,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,145,1,30,0,25,4,25,2,20,4,15,4,9,6
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Wirtschaftsingenieurwesen,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,1826,0,1,0,344,9,387,99,274,92,231,84,123,182
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,472,5,467,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,18,8,10,0,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,32,0,0,1,8,4,9,1,6,0,0,0,0,3
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,29,0,0,1,0,1,6,2,11,1,6,0,1,0
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,23,2,2,4,4,3,0,3,0,0,3,0,0,2
+,,,,,,,,,,,,,,,
+Gesamt,HF,2400,15,480,6,356,17,402,105,291,93,240,84,124,187
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Mechatronik,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,51,0,1,0,0,0,2,2,8,4,17,4,5,8
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,51,0,1,0,0,0,2,2,8,4,17,4,5,8
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Informationswirtschaft,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,137,0,0,0,0,0,1,3,45,4,28,4,24,28
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,313,0,127,1,81,5,89,2,5,0,0,0,1,2
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,22,5,11,3,3,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,3,0,1,1,1,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+Gesamt,HF,475,5,139,5,85,5,90,5,50,4,28,4,25,30
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Management of Product Development",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,9,0,0,8,0,0,1,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,9,0,0,8,0,0,1,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Production and Operations Management",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,4,0,0,4,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,4,0,0,4,0,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Financial Engineering",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,4,0,0,4,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,4,0,0,4,0,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Information Engineering",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,3,0,0,3,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,3,0,0,3,0,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+"Integrated Circuit and System Technology",,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,3,0,1,2,0,0,0,0,0,0,0,0,0,0
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,3,0,1,2,0,0,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 7 - (Studienfachbelegung nach Abschlusszielen) ",
+Studienkolleg,,,,,,,,,,,,,,,
+,,,Fachsemester,,,,,,,,,,,,
+angestr.Abschlussprüfung,,Summe,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Diplomprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Dipl.-Ing. Pädagoge",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Bakkalaureat (Bachelor)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Magister (Master)",HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Magister-Artium,1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Lizentiatenprüfung,HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Staatsexamen o.Lehramt",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an Gymnasien",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,3.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Lehramt an berufl.Schulen",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Künstl.Lehramt,WBF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Aufbaustudium,HF,137,55,65,9,6,2,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+"Abschlussprüfung n.mögl.",1.HF,0,,,,,,,,,,,,,
+,2.HF,0,,,,,,,,,,,,,
+,NF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Promotion m.ASP",HF,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Gesamt,HF,137,55,65,9,6,2,0,0,0,0,0,0,0,0
+,NF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,WBF,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,
+§PAGEBREAK
+"Statistik 8 - (Beurlaubte nach Beurlaubungsgrund)",,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Urlaubsgrund,,Gesamt,Fachsemester,,,,,,,,,,,,
+,,,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+Krankheit,,36,8,1,9,1,3,2,1,3,3,0,1,1,3
+"davon männlich",,21,4,1,6,1,2,1,,2,1,,1,,2
+weiblich,,15,4,,3,,1,1,1,1,2,,,1,1
+,,,,,,,,,,,,,,,
+Prüfungsvorbereitung,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"davon männlich",,0,,,,,,,,,,,,,,
+weiblich,,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Praktikum,,97,3,2,4,1,6,6,26,2,24,11,7,1,4
+"davon männlich",,57,,1,1,,3,4,20,2,14,4,4,1,3,
+weiblich,,40,3,1,3,1,3,2,6,,10,7,3,,1
+,,,,,,,,,,,,,,,
+Auslandsaufenthalt,,166,5,0,0,6,9,76,24,25,11,3,5,0,2
+"davon männlich",,112,1,,,1,6,51,16,19,9,2,5,,2,,
+weiblich,,54,4,,,5,3,25,8,6,2,1,,,
+,,,,,,,,,,,,,,,
+Wehr-/Zivildienst,,5,5,0,0,0,0,0,0,0,0,0,0,0,0
+"davon männlich",,5,5,,,,,,,,,,,,
+weiblich,,0,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Mutterschutz/Erzieh.,,33,3,5,7,1,2,2,3,2,1,0,3,1,3
+"davon männlich",,2,1,,,,,,,1,,,,,
+weiblich,,31,2,5,7,1,2,2,3,1,1,,3,1,3
+,,,,,,,,,,,,,,,
+"sonst. Gründe",,32,30,0,0,0,0,0,0,0,0,1,0,0,1
+"davon männlich",,22,20,,,,,,,,,1,,,1
+weiblich,,10,10,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+insgesamt,,369,54,8,20,9,20,86,54,32,39,15,16,3,13
+"davon männlich",,219,31,2,7,2,11,56,36,24,24,7,10,1,8
+weiblich,,150,23,6,13,7,9,30,18,8,15,8,6,2,5
+§PAGEBREAK
+"Statistik 9 - (Exmatrikulierte zum Ende des Wintersemester 2007/08)",,,,,,,,,,
+Grund,,Gesamt,Fachsemester,,,,,,,,,,,,
+,,,1,2,3,4,5,6,7,8,9,10,11,12,>12
+,,,,,,,,,,,,,,,
+"Landesrechtliche Bestimmungen",,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+"davon männlich",,0,,,,,,,,,,,,,,
+weiblich,,0,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+"Beendigung nach best. Prüfung",,864,0,2,19,14,13,27,34,7,77,67,258,60,286,
+"davon männlich",,602,,2,6,3,8,10,19,3,51,52,181,39,228,
+weiblich,,262,,,13,11,5,17,15,4,26,15,77,21,58,
+,,,,,,,,,,,,,,,,
+"Prüfung nicht abgeschlossen",,5,0,0,0,0,0,0,0,1,0,1,1,1,1,
+"davon männlich",,4,,,,,,,,1,,1,1,1,,
+weiblich,,1,,,,,,,,,,,,,1,
+,,,,,,,,,,,,,,,,
+"Beendigung ohne Prüfung",,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+"davon männlich",,0,,,,,,,,,,,,,,
+weiblich,,0,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+Hochschulwechsel,,163,60,3,57,6,23,1,8,0,3,2,0,0,0,
+"davon männlich",,140,53,3,47,5,21,1,7,,2,1,,,,
+weiblich,,23,7,,10,1,2,,1,,1,1,,,,
+,,,,,,,,,,,,,,,,
+"Wehr- oder Zivildienst",,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+"davon männlich",,0,,,,,,,,,,,,,,
+weiblich,,0,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+"Aufgabe oder Unterbrechung",,227,102,9,56,5,24,6,5,2,4,2,2,0,10,
+"davon männlich",,165,69,8,42,2,20,3,4,1,4,2,2,,8,
+weiblich,,62,33,1,14,3,4,3,1,1,,,,,2,
+,,,,,,,,,,,,,,,,
+"fehlende Rückmeldung",,666,85,23,100,9,88,31,88,17,51,7,63,10,94,
+"davon männlich",,516,55,11,80,6,77,24,76,9,36,6,51,5,80,
+weiblich,,150,30,12,20,3,11,7,12,8,15,1,12,5,14,
+,,,,,,,,,,,,,,,,
+"endgültig nicht best. Prüfung",,66,1,0,31,0,9,2,19,2,2,0,0,0,0,
+"davon männlich",,56,1,,24,,9,2,17,2,1,,,,,
+weiblich,,10,,,7,,,,2,,1,,,,,
+,,,,,,,,,,,,,,,
+"sonstige Gründe",,48,7,2,4,2,1,2,1,4,11,1,10,2,1,
+"davon männlich",,20,2,1,2,,,,1,3,6,,3,1,1,
+weiblich,,28,5,1,2,2,1,2,,1,5,1,7,1,,
+,,,,,,,,,,,,,,,
+insgesamt,,2039,255,39,267,36,158,69,155,33,148,80,334,73,392
+"davon männlich",,1503,180,25,201,16,135,40,124,19,100,62,238,46,317
+weiblich,,536,75,14,66,20,23,29,31,14,48,18,96,27,75
+§PAGEBREAK
+"Statistik 10 - (Studierende nach Nationalitäten)",,
+Land,,,,davon,,,,,,,,,
+,Gesamt,"
+männl.",weibl.,"Erstimm.
+männl.",weibl.,"Neuimm.
+männl.",weibl.,"Rückm.
+männl.",weibl.,"beurlaubt
+männl.",weibl.," St.Kol.
+männl.",weibl.
+Europa,
+,
+Albanien,13,9,4,1,0,0,0,8,3,0,1,2,0
+Belgien,7,3,4,0,0,0,0,3,4,0,0,0,0
+Bosnien-Herzegowina,21,13,8,0,0,0,0,12,8,1,0,0,0
+Bulgarien,198,132,66,5,4,0,0,126,59,1,3,2,1,,
+Dänemark,2,2,0,2,0,0,0,0,0,0,0,0,0
+Deutschland,13564,10131,3433,61,20,99,56,9781,3245,190,112,2,1,,
+Estland,2,1,1,0,0,0,0,1,1,0,0,0,0
+Finnland,8,5,3,1,1,0,0,4,2,0,0,0,0
+Frankreich,154,118,36,4,5,0,0,113,31,1,0,0,0,,
+Griechenland,38,26,12,4,0,0,0,22,12,0,0,0,0
+Irland,0,0,0,0,0,0,0,0,0,0,0,0,0
+Island,6,5,1,1,0,0,0,4,1,0,0,0,0
+Italien,50,36,14,8,0,1,0,27,14,0,0,0,0,,
+Jugoslawien,0,0,0,0,0,0,0,0,0,0,0,0,0
+Kroatien,37,26,11,0,0,0,0,25,11,1,0,0,0
+Lettland,2,1,1,0,0,0,0,1,1,0,0,0,0
+Liechtenstein,1,0,1,0,0,0,0,0,1,0,0,0,0
+Litauen,2,1,1,0,0,1,1,0,0,0,0,1,0
+Luxemburg,71,58,13,1,0,0,0,57,13,0,0,0,0
+Malta,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mazedonien,4,4,0,0,0,0,0,4,0,0,0,0,0
+Moldawien,7,4,3,0,0,0,0,4,3,0,0,0,0
+Niederlande,11,11,0,0,0,1,0,10,0,0,0,0,0
+Norwegen,5,4,1,0,0,0,0,4,1,0,0,0,0,
+Österreich,11,9,2,0,0,0,0,8,2,1,0,0,0
+Polen,65,30,35,0,2,0,0,28,29,2,4,0,2
+§PAGEBREAK
+"Statistik 10 - (Studierende nach Nationalitäten)",,
+Land,,,,davon,,,,,,,,,
+,Gesamt,"
+männl.",weibl.,"Erstimm.
+männl.",weibl.,"Neuimm.
+männl.",weibl.,"Rückm.
+männl.",weibl.,"beurlaubt
+männl.",weibl.,"St.Kol.
+männl.",weibl.
+Europa,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Portugal,8,7,1,1,0,0,0,6,1,0,0,0,0
+Rumänien,45,19,26,0,1,0,0,19,25,0,0,0,1
+"Russ. Föderation",118,46,72,2,3,0,2,44,62,0,5,2,4
+Schweden,11,5,6,1,1,1,0,3,5,0,0,0,0
+Schweiz,11,7,4,1,0,0,0,6,4,0,0,1,0
+Serbien,11,8,3,0,1,0,0,8,2,0,0,0,1
+"Serbien u. Montenegro",9,6,3,0,0,0,0,6,3,0,0,0,0
+Slowakei,3,2,1,0,0,0,0,2,1,0,0,0,0
+Slowenien,2,2,0,0,0,0,0,2,0,0,0,0,0
+Spanien,73,50,23,5,3,0,0,44,19,1,1,0,0
+Tschechien,12,7,5,0,0,0,0,7,4,0,1,0,0
+Türkei,243,186,57,5,4,1,0,176,52,4,1,8,4
+Ukraine,55,25,30,0,0,0,1,25,25,0,4,1,0
+Ungarn,24,17,7,5,0,4,3,8,4,0,0,0,0
+Verein.KR,15,11,4,0,0,0,0,11,4,0,0,0,0
+Weißrußland,13,4,9,0,0,0,0,4,8,0,1,0,0
+Zypern,3,1,2,0,0,0,0,1,2,0,0,0,0
+,,,,,,,,,,,,,
+Summe,14935,11032,3903,108,45,108,63,10614,3662,202,133,19,14
+"Gesamt Europa",,14935,,153,,171,,14276,,335,,33,
+§PAGEBREAK
+"Statistik 10 - (Studierende nach Nationalitäten)",
+Land,,,,davon,,,,,,,,,
+,Gesamt,"
+männl.",weibl.,"Erstimm.
+männl.",weibl.,"Neuimm.
+männl.",weibl.,"Rückm.
+männl.",weibl.,"beurlaubt
+männl.",weibl.,"St.Kol.
+männl.",weibl.
+Afrika,
+,
+Ägypten,11,8,3,2,0,0,0,6,3,0,0,0,0
+Algerien,9,6,3,0,1,0,0,6,2,0,0,0,1
+Äthiopien,2,2,0,0,0,0,0,2,0,0,0,0,0
+Angola,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Benin (Dahome)",7,6,1,0,0,0,0,6,1,0,0,0,0
+Botswana,0,0,0,0,0,0,0,0,0,0,0,0,0,
+"Burkina Faso",0,0,0,0,0,0,0,0,0,0,0,0,0,
+Dschibuti,0,0,0,0,0,0,0,0,0,0,0,0,0,
+Elfenbeinküste,1,1,0,1,0,0,0,0,0,0,0,1,0
+Eritrea,1,0,1,0,0,0,0,0,1,0,0,0,0
+Gabun,1,1,0,0,0,0,0,1,0,0,0,0,0
+Gambia,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ghana,5,2,3,0,0,0,0,2,3,0,0,0,0
+Guinea,0,0,0,0,0,0,0,0,0,0,0,0,0
+Kamerun,108,91,17,10,1,1,1,78,11,2,4,10,1
+Kenia,7,4,3,0,0,0,0,4,2,0,1,0,0
+"Kongo, Volksrepublik",3,3,0,0,0,0,0,3,0,0,0,0,0
+Libyen,2,2,0,0,0,0,0,2,0,0,0,0,0
+Madagaskar,0,0,0,0,0,0,0,0,0,0,0,0,0
+Malawi,1,1,0,0,0,0,0,1,0,0,0,0,0
+Mali,1,1,0,0,0,0,0,1,0,0,0,0,0
+Marokko,98,88,10,2,0,0,0,82,10,4,0,8,0
+Mauretanien,1,1,0,0,0,0,0,0,0,1,0,0,0
+Niger,1,1,0,0,0,0,0,1,0,0,0,0,0
+Nigeria,2,2,0,0,0,0,0,2,0,0,0,0,0
+§PAGEBREAK
+"Statistik 10 - (Studierende nach Nationalitäten)",
+Land,,,,davon,,,,,,,,,
+,Gesamt,"
+männl.",weibl.,"Erstimm.
+männl.",weibl.,"Neuimm.
+männl.",weibl.,"Rückm.
+männl.",weibl.,"beurlaubt
+männl.",weibl.,"St.Kol.
+männl.",weibl.
+Afrika,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Ruanda,2,2,0,0,0,0,0,2,0,0,0,0,0
+Senegal,3,2,1,2,0,0,0,0,1,0,0,0,0
+Sambia,0,0,0,0,0,0,0,0,0,0,0,0,0
+Seychellen,0,0,0,0,0,0,0,0,0,0,0,0,0
+Simbabwe,1,1,0,0,0,0,0,1,0,0,0,0,0
+Somalia,0,0,0,0,0,0,0,0,0,0,0,0,0
+Südafrika,5,5,0,0,0,0,0,5,0,0,0,0,0
+Sudan,1,0,1,0,0,0,1,0,0,0,0,0,0
+Tansania,1,1,0,0,0,0,0,1,0,0,0,0,0
+Togo,7,7,0,0,0,0,0,7,0,0,0,0,0
+Tschad,1,1,0,0,0,0,0,1,0,0,0,0,0
+Tunesien,112,86,26,9,1,0,2,76,22,1,1,6,4
+Uganda,3,2,1,0,0,0,0,2,1,0,0,0,0
+Zaire,0,0,0,,,,,,,,,,
+,,,,,,,,,,,,,
+Summe,397,327,70,26,3,1,4,292,57,8,6,25,6
+"Gesamt Afrika",,397,,29,,5,,349,,14,,31,
+,
+,
+§PAGEBREAK
+"Statistik 10 - (Studierende nach Nationalitäten)",
+Land,,,,davon,,,,,,,,,
+,Gesamt,"
+männl.",weibl.,"Erstimm.
+männl.",weibl.,"Neuimm.
+männl.",weibl.,"Rückm.
+männl.",weibl.,"beurlaubt
+männl.",weibl.,"St.Kol.
+männl.",weibl.
+Amerika,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Argentinien,11,6,5,0,1,0,0,6,4,0,0,0,0
+Belize,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bolivien,5,5,0,0,0,0,0,5,0,0,0,0,0
+Brasilien,47,29,18,2,4,0,0,27,14,0,0,1,2
+"Britische Jungferninseln",0,0,0,0,0,0,0,0,0,0,0,0,0
+Chile,12,7,5,1,1,0,0,6,4,0,0,0,1
+"Costa Rica",1,1,0,0,0,0,0,1,0,0,0,0,0
+Dominik.Rep.,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ecuador,28,22,6,2,0,0,0,20,5,0,1,7,2
+"El Salvador",2,2,0,0,0,0,0,2,0,0,0,0,0
+Guatemala,1,1,0,0,0,0,0,1,0,0,0,0,0
+Haiti,0,0,0,0,0,0,0,0,0,0,0,0,0
+Kanada,5,2,3,0,1,0,0,2,2,0,0,0,1
+Kolumbien,11,5,6,1,0,0,0,4,6,0,0,0,1
+Kuba,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mexiko,36,21,15,0,0,0,0,21,15,0,0,1,0
+Nicaragua,0,0,0,0,0,0,0,0,0,0,0,0,0
+Panama,1,1,0,0,0,0,0,1,0,0,0,0,0
+Paraguay,0,0,0,0,0,0,0,0,0,0,0,0,0
+Peru,17,11,6,0,0,0,0,11,6,0,0,2,0
+"Saint Lucia",1,0,1,0,0,0,0,0,1,0,0,0,0
+St.Kitts,0,0,0,0,0,0,0,0,0,0,0,0,0
+Surinam,0,0,0,0,0,0,0,0,0,0,0,0,0
+USA,23,17,6,2,1,1,0,14,5,0,0,0,0,
+Uruguay,0,0,0,0,0,0,0,0,0,0,0,0,0
+Venezuela,13,8,5,0,0,0,0,8,5,0,0,2,0
+,,,,,,,,,,,,,
+Summe,214,138,76,8,8,1,0,129,67,0,1,13,7
+"Gesamt Amerika",,214,,16,,1,,196,,1,,20,
+§PAGEBREAK
+"Statistik 10 - (Studierende nach Nationalitäten)",
+Land,,,,davon,,,,,,,,,
+,Gesamt,"
+männl.",weibl.,"Erstimm.
+männl.",weibl.,"Neuimm.
+männl.",weibl.,"Rückm.
+männl.",weibl.,"beurlaubt
+männl.",weibl.,"St.Kol.
+männl.",weibl.
+Asien,
+,
+Afghanistan,1,1,0,0,0,0,0,1,0,0,0,0,0
+Armenien,3,2,1,0,0,0,0,2,1,0,0,0,0
+Aserbaidschan,2,1,1,0,0,0,0,1,1,0,0,0,0
+Bahrain,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bangladesch,6,6,0,0,0,0,0,6,0,0,0,1,0
+Birma/Myanmar,2,0,2,0,0,0,0,0,2,0,0,0,0
+"China Taiwan",1,0,1,0,0,0,0,0,1,0,0,0,0
+"China VR (einschl. Tibet)",687,426,261,26,16,3,2,396,239,1,4,20,11
+Georgien,23,7,16,1,1,0,1,6,13,0,1,1,2
+Indien,36,30,6,1,1,0,0,29,5,0,0,0,0
+Indonesien,62,40,22,1,0,0,0,38,21,1,1,2,2
+Irak,13,9,4,0,0,0,0,9,4,0,0,1,0
+Iran,45,26,19,5,0,0,0,19,18,2,1,1,2,
+Israel,4,1,3,0,1,0,1,1,1,0,0,0,1,
+Japan,10,9,1,0,0,0,0,9,1,0,0,0,0
+Jemen,3,3,0,0,0,0,0,3,0,0,0,0,0
+Jordanien,7,6,1,0,0,0,0,6,0,0,1,0,0
+Kambodscha,0,0,0,0,0,0,0,0,0,0,0,0,0
+Kasachstan,11,8,3,0,0,0,0,8,3,0,0,1,0
+Kirgisien,4,1,3,0,2,0,0,1,1,0,0,0,1
+"Korea, Republik",23,13,10,0,0,1,0,12,10,0,0,1,0
+Kuwait,0,0,0,0,0,0,0,0,0,0,0,0,0
+,
+§PAGEBREAK
+"Statistik 10 - (Studierende nach Nationalitäten)",
+Land,,,,davon,,,,,,,,,
+,Gesamt,"
+männl.",weibl.,"Erstimm.
+männl.",weibl.,"Neuimm.
+männl.",weibl.,"Rückm.
+männl.",weibl.,"beurlaubt
+männl.",weibl.,"St.Kol.
+männl.",weibl.
+Asien,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+"Laotische Dem. Volksrep.",1,1,0,0,0,0,0,1,0,0,0,0,0
+Libanon,82,81,1,0,0,0,0,78,1,3,0,2,0
+Macau,5,4,1,0,0,0,0,4,1,0,0,0,0
+Malaysia,1,1,0,0,0,0,0,1,0,0,0,0,0
+Mongolei,11,4,7,0,0,0,0,4,6,0,1,0,0
+Nepal,6,4,2,0,0,1,0,3,2,0,0,0,0
+"Nord Korea",0,0,0,0,0,0,0,0,0,0,0,0,0
+"Pakistan, Islamische Rep.",20,17,3,0,0,0,0,17,3,0,0,0,0
+Palästina,0,0,0,0,0,0,0,0,0,0,0,0,0
+Philippinen,3,1,2,0,0,0,0,1,2,0,0,0,0
+Saudi-Arabien,1,1,0,0,0,0,0,1,0,0,0,0,0
+Singapur,2,2,0,0,0,0,0,2,0,0,0,0,0
+"Sri Lanka (Ceylon)",3,1,2,0,0,0,0,1,2,0,0,0,0
+Syrien,21,20,1,0,0,0,0,20,1,0,0,2,0
+"Süd Korea",0,0,0,0,0,0,0,0,0,0,0,0,0
+Tadschikistan,1,0,1,0,0,0,0,0,1,0,0,0,0
+Taiwan,9,5,4,0,0,0,0,5,4,0,0,0,0
+Thailand,16,14,2,0,0,0,0,14,2,0,0,0,0
+Turkmenien,0,0,0,0,0,0,0,0,0,0,0,0,0
+Usbekistan,16,9,7,1,1,0,0,8,6,0,0,0,0
+"Vereinigte Arab. Emirate",0,0,0,0,0,0,0,0,0,0,0,0,0
+Vietnam,57,42,15,0,0,0,0,41,14,1,1,0,1
+"übr. Asien",0,0,0,0,0,0,0,0,0,0,0,0,0,
+,,,,,,,,,,,,,
+Summe,1198,796,402,35,22,5,4,748,366,8,10,32,20
+"Gesamt Asien",,1198,,57,,9,,1114,,18,,52,
+§PAGEBREAK
+"Statistik 10 - (Studierende nach Nationalitäten)",
+Land,,,,davon,,,,,,,,,
+,Gesamt,"
+männl.",weibl.,"Erstimm.
+männl.",weibl.,"Neuimm.
+männl.",weibl.,"Rückm.
+männl.",weibl.,"beurlaubt
+männl.",weibl.,"St.Kol.
+männl.",weibl.
+Australien,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Australien,7,5,2,2,0,0,0,2,2,1,0,0,0
+Neuseeland,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,
+Summe,7,5,2,2,0,0,0,2,2,1,0,0,0
+Gesamt,,7,,2,,0,,4,,1,,0,
+,,,,,,,,,,,,,
+"ohne Angabe",0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,
+staatenlos,1,0,1,0,0,0,0,0,1,0,0,0,0
+,,,,,,,,,,,,,
+ungeklärt,2,1,1,0,0,0,0,1,1,0,0,1,0
+,,,,,,,,,,,,,
+Summe,3,1,2,0,0,0,0,1,2,0,0,1,0
+Gesamt,,3,,0,,0,,3,,0,,1,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Gesamtsumme,16754,12299,4455,179,78,115,71,11786,4156,219,150,90,47
+Insgesamt,,16754,,257,,186,,15942,,369,,137,
+,
+,
+,
+,
+§PAGEBREAK
+"Statistik 11 - (Studierende nach Bundesländern - Heimatanschrift -)"
+Bundesland,,Deutsche,,,,Ausländer,,,,Gesamt,,
+,,männlich,weiblich,Gesamt,,männlich,weiblich,Gesamt,,männlich,weiblich,Gesamt
+,,,,,,,,,,,,
+Schleswig-Holstein,,34,5,39,,,,0,,34,5,39
+Hamburg,,19,3,22,,,1,1,,19,4,23
+Niedersachsen,,118,25,143,,1,,1,,119,25,144
+Bremen,,8,2,10,,,,0,,8,2,10
+Nordrhein-Westfalen,,259,48,307,,4,4,8,,263,52,315
+Hessen,,184,74,258,,11,5,16,,195,79,274
+Rheinland-Pfalz,,769,219,988,,35,13,48,,804,232,1036
+Baden-Württemberg,,8243,2885,11128,,1844,899,2743,,10087,3784,13871
+Bayern,,284,98,382,,14,5,19,,298,103,401
+Saarland,,80,24,104,,2,,2,,82,24,106
+Berlin,,19,9,28,,2,,2,,21,9,30
+Brandenburg,,18,6,24,,,,0,,18,6,24
+Mecklenburg-Vorpommern,,8,3,11,,,1,1,,8,4,12
+Sachsen,,12,7,19,,,,0,,12,7,19
+Sachsen-Anhalt,,13,1,14,,,,0,,13,1,14
+Thüringen,,29,10,39,,1,1,2,,30,11,41
+"nicht in Deutschland",,34,14,48,,254,93,347,,288,107,395
+,,,,,,,,,,,,
+Insgesamt,,10131,3433,13564,,2168,1022,3190,,12299,4455,16754
+§PAGEBREAK

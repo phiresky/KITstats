@@ -1,10 +1,16 @@
 /// <reference path="../lib/jquery.d.ts" />
 /// <reference path="../lib/sprintf.d.ts" />
 /// <reference path="../lib/d3.d.ts" />
+/// <reference path="eqparser.ts" />
+/// <reference path="filters.ts" />
+/// <reference path="kitparser.ts" />
+/// <reference path="contingency.ts" />
 
 var config = {
-	"basename":"data/csv/Statistik_SS2014.pdf-%03d.csv",
-	"container":"#outp"
+	"filenames":["data/csv/Studierende_2014_1HJ.csv"],
+	//"basename":"data/csv/Statistik_SS2014.pdf-%03d.csv",
+	"container":"#outp",
+	"headlines":[2,2,2,3,2,3,999,2,2,2,2]
 };
 
 function mostlyequals(a,b) {
@@ -17,44 +23,41 @@ function toTable(arr,header=false) {
 	return arr.map(tr => $("<tr>").append(tr.map(td => $(header?"<th>":"<td>").text(td))));
 }
 
+var data:string[][][] = [];
+var cont:Contingency;
+
 $(()=> {
+	Category.categories = [
+		new Category("gender",[new Filter("female"),new Filter("male")]),
+		new Category("subject",[new Filter("Informatik"),new Filter("Maschinenbau")]),
+		new DiscreteCategory("semester","sem",1,10)
+	];
+
 	var status = $("#status");
 	function log(x) { status.text(x);}
-	var data:string[][][] = [];
 	var parsedata = function(data:string[][][]) {
 		console.log("parsing");
-		console.log(data);
+		_b=data;
 		var statistics:string[][][][] = [];
 		var statnames:string[] = []; 
-		var headlines:string[][][] = [];
 		data.forEach((page:string[][]) => {
 			var header = page[0][0];
 			var match = header.match(/Statistik (\d+) - \((.*)\)/)
 			if(match === null) return; // ignore pages without statistic header
-			var statid = +match[1];
+			var statid = +match[1]-1;
 			statnames[statid] = match[2];
 			page.shift(); //remove header
-			if(statistics[statid]===undefined) statistics[statid] = [page];
-			else {
-				if(statistics[statid].length===1) {
-					// find headers
-					var firstpage = statistics[statid][0];
-					headlines[statid]=[];
-					while(mostlyequals(firstpage[0],page[0])) {
-						headlines[statid].push(firstpage.shift());
-						page.shift();
-					}
-				}
-				statistics[statid].push(page.slice(headlines[statid].length));
-			}
+			if(statistics[statid]===undefined) {
+				statistics[statid] = [page];
+			} else
+				statistics[statid].push(page.slice(config.headlines[statid]));
 		});
-		window['_a']=statistics;
 		log("Loaded "+statistics.length+" Statistics");
 		var drawtable = function(inx) {
 			$("<table class=table>")
-				.append(
+				/*.append(
 					toTable(headlines[inx]||[],true)
-				).append(
+				)*/.append(
 					toTable(statistics[inx].reduce((a,b) => a.concat(b), []))
 				).replaceAll($('> table',config.container));
 		};
@@ -62,10 +65,10 @@ $(()=> {
 			statnames.map((name,inx)=>$("<option>").val(""+inx).text(inx+": "+name))
 		).change(function(evt){drawtable(this.value)})
 			.replaceAll($('> select', config.container));
-		drawtable(1);
-
+		drawtable(0);
+		cont = KITParser.parse(statnames, statistics);
 	};
-	var getdata = function(pattern:string, inx:number) {
+	var getpageddata = function(pattern:string, inx:number) {
 		var fname = sprintf(pattern,inx);
 		log("Loading page "+inx);
 		$.get(fname, response => {
@@ -73,7 +76,7 @@ $(()=> {
 				// remove empty lines
 				return d.some(x=>x.length>0)?d:false;
 			}));
-			getdata(pattern, inx+1);
+			getpageddata(fname, pattern, inx+1);
 		}).fail(error => {
 			if(error.status === 404) {
 				parsedata(data);
@@ -83,7 +86,42 @@ $(()=> {
 		
 		});
 	};
+	var getsingledata = function(fname:string) {
+		log("Loading");
+		$.get(fname, response => 
+			parsedata(response.split("\n§PAGEBREAK\n").map(
+				page => d3.csv.parseRows(page, d => 
+					// remove empty lines
+					d.some(x=>x.trim().length>0)?d:false
+				)
+			).filter(page => page.length > 0))
+		).fail(error => {
+			throw new Error("error getting file "+fname);
+		});
+	}
 
-	getdata(config.basename,1);
+	//getdata(config.basename,1);
+	getsingledata(config.filenames[0]);
 
+	$("#parseeq").click(event => {
+		var eq = $("#equation").val();	
+		var queue = EqParser.EqParser.parse(eq);
+		var args:Operand[] = [];
+		while(queue.length > 0) {
+			if(queue[0].is(EqParser.TokenType.OPERATOR)) {
+				var c = args.length;
+				if(c<2) throw new Error("Invalid argument count: "+c);
+				var arg2 = args.pop(), arg1 = args.pop();
+				var op = queue.shift().val + arg2.type;
+				var opfn = arg1.operator[op];
+				if(!opfn)
+					throw new Error("Could not find operator "+op+" for "+arg1.type);
+				args.push(opfn.apply(arg1, [arg2]));
+			} else args.push(Operand.make(queue.shift()));
+		}
+		if(args.length > 1) throw new Error("Invalid arguments remaining at end");
+		if(args.length == 0) args = [findFilter("")];
+		var query:Filter = <any>args.pop();
+		console.log(query.name+"="+cont.get(query.name));
+	});
 });

@@ -1,9 +1,359 @@
+var EqParser;
+(function (_EqParser) {
+    (function (TokenType) {
+        TokenType[TokenType["INVALID"] = 0] = "INVALID";
+        TokenType[TokenType["LBRACKET"] = 1] = "LBRACKET";
+        TokenType[TokenType["LPAREN"] = 2] = "LPAREN";
+        TokenType[TokenType["LBRACE"] = 3] = "LBRACE";
+        TokenType[TokenType["RBRACKET"] = 4] = "RBRACKET";
+        TokenType[TokenType["RPAREN"] = 5] = "RPAREN";
+        TokenType[TokenType["RBRACE"] = 6] = "RBRACE";
+        TokenType[TokenType["IDENTIFIER"] = 7] = "IDENTIFIER";
+        TokenType[TokenType["OPERATOR"] = 8] = "OPERATOR";
+        TokenType[TokenType["NUMBER"] = 9] = "NUMBER";
+        TokenType[TokenType["COMMA"] = 10] = "COMMA";
+    })(_EqParser.TokenType || (_EqParser.TokenType = {}));
+    var TokenType = _EqParser.TokenType;
+    var Token = (function () {
+        function Token(val, begin, end, type) {
+            this.val = val;
+            this.begin = begin;
+            this.end = end;
+            this.type = type;
+        }
+        Token.prototype.toString = function () {
+            return TokenType[this.type] + ": " + this.val;
+        };
+        Token.prototype.is = function () {
+            var arr = [];
+            for (var _i = 0; _i < (arguments.length - 0); _i++) {
+                arr[_i] = arguments[_i + 0];
+            }
+            return arr.indexOf(this.type) >= 0;
+        };
+        return Token;
+    })();
+    _EqParser.Token = Token;
+    var Operator = (function () {
+        function Operator(precedence, leftAss) {
+            this.precedence = precedence;
+            this.leftAss = leftAss;
+        }
+        Operator.operators = {
+            '+': new Operator(4, true),
+            '-': new Operator(4, true),
+            '*': new Operator(5, true),
+            '/': new Operator(5, true),
+            '&': new Operator(3, true)
+        };
+        return Operator;
+    })();
+    var EqParser = (function () {
+        function EqParser(inp) {
+            this.pos = 0;
+            this.inp = inp;
+        }
+        EqParser.prototype.hasTokens = function () {
+            return this.pos < this.inp.length;
+        };
+
+        EqParser.prototype.readToken = function () {
+            while (" \t\r\n".indexOf(this.inp[this.pos]) >= 0)
+                this.pos++;
+            var subinp = this.inp.substr(this.pos);
+            var token;
+            var regexes = [
+                [/^[0-9]+/, 9 /* NUMBER */],
+                [/^[a-z][a-z0-9]*(:[a-z0-9.]+)?/i, 7 /* IDENTIFIER */],
+                [/^[+*/&-]/, 8 /* OPERATOR */],
+                [/^\(/, 2 /* LPAREN */],
+                [/^\[/, 1 /* LBRACKET */],
+                [/^\{/, 3 /* LBRACE */],
+                [/^\)/, 5 /* RPAREN */],
+                [/^\]/, 4 /* RBRACKET */],
+                [/^\}/, 6 /* RBRACE */]
+            ];
+            for (var i = 0; i < regexes.length; i++) {
+                var match = subinp.match(regexes[i][0]);
+                if (match) {
+                    token = new Token(this.inp.substring(this.pos, this.pos + match[0].length), this.pos, this.pos + match[0].length, regexes[i][1]);
+                    this.pos += match[0].length;
+                    break;
+                }
+            }
+            if (!token) {
+                token = new Token(this.inp[this.pos], this.pos, ++this.pos, 0 /* INVALID */);
+            }
+            return token;
+        };
+
+        EqParser.prototype.interpret = function () {
+            var queue = [];
+            var stack = [];
+            function peek() {
+                if (stack.length > 0)
+                    return stack[stack.length - 1];
+            }
+            while (this.hasTokens()) {
+                var token = this.readToken();
+                if (token.is(9 /* NUMBER */, 7 /* IDENTIFIER */))
+                    queue.push(token);
+                else if (token.is(2 /* LPAREN */, 3 /* LBRACE */, 1 /* LBRACKET */))
+                    stack.push(token);
+                else if (token.is(10 /* COMMA */)) {
+                    while (!peek().is(3 /* LBRACE */)) {
+                        queue.push(stack.pop());
+                    }
+                } else if (token.is(8 /* OPERATOR */)) {
+                    var op = Operator.operators[token.val];
+                    while (stack.length > 0) {
+                        var top = peek();
+                        var op2 = Operator.operators[top.val];
+                        if (top.is(8 /* OPERATOR */) && ((op.leftAss && op.precedence <= op2.precedence) || op.precedence < op2.precedence)) {
+                            queue.push(stack.pop());
+                        } else
+                            break;
+                    }
+                    stack.push(token);
+                } else if (token.is(5 /* RPAREN */, 6 /* RBRACE */, 4 /* RBRACKET */)) {
+                    while (!peek().is(2 /* LPAREN */, 3 /* LBRACE */, 1 /* LBRACKET */))
+                        queue.push(stack.pop());
+                    stack.pop();
+                } else
+                    throw new Error("Unknown Token: " + token.toString());
+            }
+            while (stack.length > 0) {
+                if (!peek().is(8 /* OPERATOR */))
+                    throw new Error("invalid token remaining: " + peek().toString());
+                else
+                    queue.push(stack.pop());
+            }
+            return queue;
+        };
+
+        EqParser.parse = function (inp) {
+            return new EqParser(inp).interpret();
+        };
+        return EqParser;
+    })();
+    _EqParser.EqParser = EqParser;
+})(EqParser || (EqParser = {}));
+var __extends = this.__extends || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    __.prototype = b.prototype;
+    d.prototype = new __();
+};
+var Operand = (function () {
+    function Operand(type) {
+        this.type = type;
+        this.operator = {};
+    }
+    Operand.make = function (token) {
+        if (token.is(7 /* IDENTIFIER */))
+            return findFilter(token.val);
+        if (token.is(9 /* NUMBER */))
+            return new NumberOp(+token.val);
+    };
+    return Operand;
+})();
+
+var NumberOp = (function (_super) {
+    __extends(NumberOp, _super);
+    function NumberOp(val) {
+        _super.call(this, "number");
+        this.val = val;
+    }
+    return NumberOp;
+})(Operand);
+
+var Filter = (function (_super) {
+    __extends(Filter, _super);
+    function Filter(name) {
+        var _this = this;
+        _super.call(this, "filter");
+        this.name = name;
+        this.operator['&filter'] = function (b) {
+            return new CombinedFilter(_this, b);
+        };
+    }
+    return Filter;
+})(Operand);
+
+/// A category is a set of filters creating the whole group eg (male ∪ female)
+var Category = (function () {
+    function Category(name, values) {
+        this.name = name;
+        this.values = values;
+    }
+    Category.find = function (name) {
+        for (var i = 0; i < Category.categories.length; i++) {
+            if (Category.categories[i].name === name)
+                return Category.categories[i];
+        }
+        throw new Error("Unknown category " + name);
+    };
+    Category.prototype.findValue = function (name) {
+        for (var i = 0; i < this.values.length; i++) {
+            if (this.values[i].name === name)
+                return this.values[i];
+        }
+        throw new Error("Unknown value " + name + " in category " + this.name);
+    };
+    return Category;
+})();
+
+var DiscreteFilter = (function (_super) {
+    __extends(DiscreteFilter, _super);
+    function DiscreteFilter(index) {
+        var _this = this;
+        _super.call(this, index + "");
+        this.index = index;
+        console.log("created " + index);
+        this.operator['+number'] = function (num) {
+            return new DiscreteFilter(_this.index + num.val);
+        };
+    }
+    return DiscreteFilter;
+})(Filter);
+
+var CombinedFilter = (function (_super) {
+    __extends(CombinedFilter, _super);
+    function CombinedFilter() {
+        var filters = [];
+        for (var _i = 0; _i < (arguments.length - 0); _i++) {
+            filters[_i] = arguments[_i + 0];
+        }
+        _super.call(this, "");
+        this.filters = filters;
+        this.name = filters.map(function (f) {
+            return f.name;
+        }).join("&");
+    }
+    return CombinedFilter;
+})(Filter);
+
+var DiscreteCategory = (function (_super) {
+    __extends(DiscreteCategory, _super);
+    function DiscreteCategory(name, prefix, min, max) {
+        _super.call(this, name, []);
+        this.name = name;
+    }
+    DiscreteCategory.prototype.findValue = function (name) {
+        return new DiscreteFilter(+name);
+    };
+    return DiscreteCategory;
+})(Category);
+
+function findFilter(fullname) {
+    return new Filter(fullname);
+    /*var name = fullname.split(":");
+    if(name.length !== 2) {
+    throw new Error("Unknown Filter "+name);
+    }
+    var filter = Category.find(name[0]).findValue(name[1]);
+    if(filter === undefined) throw new Error("Unknown Filter "+name);
+    return filter;*/
+}
+var TUtil = {
+    nth_col: function (data, col) {
+        return data.map(function (row) {
+            return row[col];
+        });
+    },
+    /// submatrix from x to x2 (upper exclusive)
+    sub: function (data, x, y, x2, y2) {
+        return data.slice(y, y2).map(function (row) {
+            return row.slice(x, x2);
+        });
+    }
+};
+
+var KITParser = (function () {
+    function KITParser() {
+    }
+    KITParser.parse = function (statnames, data) {
+        var ct = new Contingency();
+
+        //Gesamtstatistik (1)
+        var s1 = data[0][0];
+        s1 = s1.slice(2, 11); //ignore studienkolleg for now
+        s1 = s1.filter(function (r) {
+            return r[0].length > 0;
+        });
+        var yfilter = TUtil.nth_col(s1, 0).map(function (x) {
+            return "Status:" + x;
+        });
+        var xfilter = ["", "gender:male", "gender:female", "foreign:no&gender:male", "foreign:no&gender:female", "foreign:no", "foreign:yes&gender:male", "foreign:yes&gender:female", "foreign:yes"];
+        ct.putAll(xfilter, yfilter, s1, 1, 0);
+
+        // Abschlussziele
+        var s2 = data[1][0];
+        ct.putAllCat("Fachsemester", "Abschlussziel", s2.slice(1));
+        return ct;
+    };
+    return KITParser;
+})();
+var Contingency = (function () {
+    function Contingency() {
+        this.jargon = {
+            "insgesamt": ""
+        };
+        this.dict = {};
+    }
+    Contingency.prototype.put = function (filters, data) {
+        this.dict[this.normalize(filters)] = data;
+    };
+
+    Contingency.prototype.putAll = function (xfilters, yfilters, data, xoffset, yoffset) {
+        for (var y = 0; y < yfilters.length; y++)
+            for (var x = 0; x < xfilters.length; x++) {
+                this.put(xfilters[x] + "&" + yfilters[y], +data[y + yoffset][x + xoffset]);
+            }
+    };
+
+    Contingency.prototype.putAllCat = function (xcategory, ycategory, data) {
+        var xfilters = [], yfilters = [];
+        for (var y = 1; y < data.length; y++) {
+            yfilters[y - 1] = ycategory + ":" + data[y][0];
+        }
+        for (var x = 1; x < data.length; x++) {
+            xfilters[x - 1] = xcategory + ":" + data[0][x];
+        }
+        this.putAll(xfilters, yfilters, data, 1, 1);
+    };
+
+    Contingency.prototype.normalize = function (filters) {
+        var _this = this;
+        if (filters.length == 0)
+            return "";
+        var split = filters.toLocaleLowerCase().split(/&+/).map(function (x) {
+            return _this.jargon[x] || x;
+        });
+        if (split[0].length == 0)
+            split.shift();
+        if (split[split.length - 1].length == 0)
+            split.pop();
+        return split.sort().join('&');
+    };
+
+    Contingency.prototype.get = function (filters) {
+        return this.dict[this.normalize(filters)];
+    };
+    return Contingency;
+})();
 /// <reference path="../lib/jquery.d.ts" />
 /// <reference path="../lib/sprintf.d.ts" />
 /// <reference path="../lib/d3.d.ts" />
+/// <reference path="eqparser.ts" />
+/// <reference path="filters.ts" />
+/// <reference path="kitparser.ts" />
+/// <reference path="contingency.ts" />
 var config = {
-    "basename": "data/csv/Statistik_SS2014.pdf-%03d.csv",
-    "container": "#outp"
+    "filenames": ["data/csv/Studierende_2014_1HJ.csv"],
+    //"basename":"data/csv/Statistik_SS2014.pdf-%03d.csv",
+    "container": "#outp",
+    "headlines": [2, 2, 2, 3, 2, 3, 999, 2, 2, 2, 2]
 };
 
 function mostlyequals(a, b) {
@@ -21,45 +371,41 @@ function toTable(arr, header) {
     });
 }
 
+var data = [];
+var cont;
+
 $(function () {
+    Category.categories = [
+        new Category("gender", [new Filter("female"), new Filter("male")]),
+        new Category("subject", [new Filter("Informatik"), new Filter("Maschinenbau")]),
+        new DiscreteCategory("semester", "sem", 1, 10)
+    ];
+
     var status = $("#status");
     function log(x) {
         status.text(x);
     }
-    var data = [];
     var parsedata = function (data) {
         console.log("parsing");
-        console.log(data);
+        _b = data;
         var statistics = [];
         var statnames = [];
-        var headlines = [];
         data.forEach(function (page) {
             var header = page[0][0];
             var match = header.match(/Statistik (\d+) - \((.*)\)/);
             if (match === null)
                 return;
-            var statid = +match[1];
+            var statid = +match[1] - 1;
             statnames[statid] = match[2];
             page.shift(); //remove header
-            if (statistics[statid] === undefined)
+            if (statistics[statid] === undefined) {
                 statistics[statid] = [page];
-            else {
-                if (statistics[statid].length === 1) {
-                    // find headers
-                    var firstpage = statistics[statid][0];
-                    headlines[statid] = [];
-                    while (mostlyequals(firstpage[0], page[0])) {
-                        headlines[statid].push(firstpage.shift());
-                        page.shift();
-                    }
-                }
-                statistics[statid].push(page.slice(headlines[statid].length));
-            }
+            } else
+                statistics[statid].push(page.slice(config.headlines[statid]));
         });
-        window['_a'] = statistics;
         log("Loaded " + statistics.length + " Statistics");
         var drawtable = function (inx) {
-            $("<table class=table>").append(toTable(headlines[inx] || [], true)).append(toTable(statistics[inx].reduce(function (a, b) {
+            $("<table class=table>").append(toTable(statistics[inx].reduce(function (a, b) {
                 return a.concat(b);
             }, []))).replaceAll($('> table', config.container));
         };
@@ -68,9 +414,10 @@ $(function () {
         })).change(function (evt) {
             drawtable(this.value);
         }).replaceAll($('> select', config.container));
-        drawtable(1);
+        drawtable(0);
+        cont = KITParser.parse(statnames, statistics);
     };
-    var getdata = function (pattern, inx) {
+    var getpageddata = function (pattern, inx) {
         var fname = sprintf(pattern, inx);
         log("Loading page " + inx);
         $.get(fname, function (response) {
@@ -80,7 +427,7 @@ $(function () {
                     return x.length > 0;
                 }) ? d : false;
             }));
-            getdata(pattern, inx + 1);
+            getpageddata(fname, pattern, inx + 1);
         }).fail(function (error) {
             if (error.status === 404) {
                 parsedata(data);
@@ -89,7 +436,50 @@ $(function () {
             }
         });
     };
+    var getsingledata = function (fname) {
+        log("Loading");
+        $.get(fname, function (response) {
+            return parsedata(response.split("\n§PAGEBREAK\n").map(function (page) {
+                return d3.csv.parseRows(page, function (d) {
+                    return d.some(function (x) {
+                        return x.trim().length > 0;
+                    }) ? d : false;
+                });
+            }).filter(function (page) {
+                return page.length > 0;
+            }));
+        }).fail(function (error) {
+            throw new Error("error getting file " + fname);
+        });
+    };
 
-    getdata(config.basename, 1);
+    //getdata(config.basename,1);
+    getsingledata(config.filenames[0]);
+
+    $("#parseeq").click(function (event) {
+        var eq = $("#equation").val();
+        var queue = EqParser.EqParser.parse(eq);
+        var args = [];
+        while (queue.length > 0) {
+            if (queue[0].is(8 /* OPERATOR */)) {
+                var c = args.length;
+                if (c < 2)
+                    throw new Error("Invalid argument count: " + c);
+                var arg2 = args.pop(), arg1 = args.pop();
+                var op = queue.shift().val + arg2.type;
+                var opfn = arg1.operator[op];
+                if (!opfn)
+                    throw new Error("Could not find operator " + op + " for " + arg1.type);
+                args.push(opfn.apply(arg1, [arg2]));
+            } else
+                args.push(Operand.make(queue.shift()));
+        }
+        if (args.length > 1)
+            throw new Error("Invalid arguments remaining at end");
+        if (args.length == 0)
+            args = [findFilter("")];
+        var query = args.pop();
+        console.log(query.name + "=" + cont.get(query.name));
+    });
 });
 //# sourceMappingURL=kitstats.js.map
