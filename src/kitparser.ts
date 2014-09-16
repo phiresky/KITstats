@@ -11,8 +11,8 @@ class KITParser {
 		var s1 = data[0][0];
 		s1 = s1.slice(2,11); //ignore studienkolleg for now
 		s1 = s1.filter(r => r[0].length > 0);
-		var yfilter = TUtil.nth_col(s1,0).map(x => new SingleFilter("Status",x));
-		var xfilter:Operand[] = ["","gender:male","gender:female","foreign:no&gender:male","foreign:no&gender:female","foreign:no","foreign:yes&gender:male","foreign:yes&gender:female","foreign:yes"].map(x=>makeQuery(x));
+		var yfilter:Operand[] = TUtil.nth_col(s1,0).map(x => ct.findFilter("Status",x));
+		var xfilter:Operand[] = ["","gender:male","gender:female","foreign:no&gender:male","foreign:no&gender:female","foreign:no","foreign:yes&gender:male","foreign:yes&gender:female","foreign:yes"].map(x=>queryToOperand(x));
 		ct.putAll(xfilter, yfilter, s1, 1, 0);
 
 		// Abschlussziele
@@ -23,13 +23,12 @@ class KITParser {
 		while(s3[s3.length-1][1]!=="Insgesamt") s3.pop();
 		s3 = s3.filter(row => row[1].trim().length > 0); //ignore fakultät
 		s3 = TUtil.no_nth_col(s3,5);
-		console.log(s3);
 		_a = s3;
-		var yfilter:any = s3.slice(1).map(row => new SingleFilter("Fach",row[1]).getQuery());
-		var xfilter:Operand[] = [new NoFilter()].concat(["status:rückmelder","status:erstimmatr.","status:neuimmatr-1fsem", "neuimmatr-hsem"].map(x=>new SingleFilter(x.split(":")[0],x.split(":")[1]))).concat(["foreign:no&gender:male","foreign:no&gender:female","foreign:no", "foreign:yes&gender:male","foreign:yes&gender:female","foreign:yes",
+		var yfilter:Operand[] = s3.slice(1).map(row => ct.findFilter("Fach",row[1]));
+		var xfilter:Operand[] = [new NoFilter()].concat(["status:rückmelder","status:erstimmatr.","status_neuimmatr:1fsem", "status_neuimmatr:hsem"].map(x=>ct.findFilter(x.split(":")[0],x.split(":")[1]))).concat(["foreign:no&gender:male","foreign:no&gender:female","foreign:no", "foreign:yes&gender:male","foreign:yes&gender:female","foreign:yes",
 		"status:beurlaubt"]
-				.map(x=>makeQuery(x)));
-			console.log(xfilter);
+				.map(x=>queryToOperand(x)));
+		ct.putAll(xfilter, yfilter, s3, 4, 1);
 		return ct;
 	}
 

@@ -15,11 +15,18 @@ class Operand {
 	getQuery():string {
 		throw new Error("No getQuery on "+this.type);
 	}
+
+	toString():string {
+		return this.getQuery();
+	}
 }
 
 class NumberOp extends Operand {
 	constructor(public val:number) {
 		super("number");
+	}
+	doQuery(cont:Contingency) {
+		return this.val;
 	}
 }
 
@@ -82,15 +89,32 @@ class OperandVector extends Operand {
 	}
 }
 
-
+function getOperator(v1:Operand, op:string, v2:Operand) {
 var operators/*:{[types:string]:(v1:Operand,v2:Operand)=>Operand}*/ = {
 	"filter&filter": (v1:Operand,v2:Operand) => new CombinedFilter(v1,v2),
-	"filter&vector": (v1,v2) => new OperandVector(v2.filters.map(f => doOperator(v1,"&",f))),
-	"vector&filter": (v1,v2) => new OperandVector(v1.filters.map(f => doOperator(f,"&",v2))),
+	"number+number": (v1,v2) => new NumberOp(v1.val+v2.val),
+	"filter+number": (v1,v2) => new NumberOp(v1.val+v2.val),
 };
+	var opid = v1.type+op+v2.type;
+	if(operators.hasOwnProperty(opid)) return operators[opid];
+	if(op===",") {
+		return (v1,v2) => {
+			var left = v1.type === "vector" ? v1.filters : [v1];
+			var right = v2.type === "vector" ? v2.filters : [v2];
+			return new OperandVector(left.concat(right));
+		}
+	}
+	if(v1.type === "vector" && v2.type !== "vector") {
+		return (v1,v2) => new OperandVector(v1.filters.map(f => doOperator(f,op,v2)));
+	}
+	else if(v1.type !== "vector" && v2.type === "vector") {
+		return (v1,v2) => new OperandVector(v2.filters.map(f => doOperator(v1,op,f)));
+	}
+}
 
+// warning: operators do not guarantee 
 function doOperator(v1:Operand, op:string, v2:Operand) {
-	var opfn = operators[v1.type+op+v2.type];
-	if(!opfn) throw new Error("Can't apply "+op+" to "+v1.type+" and "+v2.type);
+	var opfn = getOperator(v1,op,v2);
+	if(!opfn) throw new Error("Can't apply '"+op+"' to "+v1.type+" and "+v2.type);
 	return opfn(v1,v2);
 }

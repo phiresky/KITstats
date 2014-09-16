@@ -40,11 +40,13 @@ var EqParser;
             this.leftAss = leftAss;
         }
         Operator.operators = {
+            // also add new ops in "regexes below"
             '+': new Operator(4, true),
             '-': new Operator(4, true),
             '*': new Operator(5, true),
             '/': new Operator(5, true),
-            '&': new Operator(3, true)
+            '&': new Operator(3, true),
+            ',': new Operator(2, true)
         };
         return Operator;
     })();
@@ -64,8 +66,8 @@ var EqParser;
             var token;
             var regexes = [
                 [/^[0-9]+/, 9 /* NUMBER */],
-                [/^[a-z][a-z0-9]*(:[a-z0-9_]+)?/i, 7 /* IDENTIFIER */],
-                [/^[+*/&-]/, 8 /* OPERATOR */],
+                [/^[a-z][a-z0-9_]*(:[a-z0-9_]+)?/i, 7 /* IDENTIFIER */],
+                [/^[+*/&,-]/, 8 /* OPERATOR */],
                 [/^\(/, 2 /* LPAREN */],
                 [/^\[/, 1 /* LBRACKET */],
                 [/^\{/, 3 /* LBRACE */],
@@ -164,6 +166,10 @@ var Operand = (function () {
     Operand.prototype.getQuery = function () {
         throw new Error("No getQuery on " + this.type);
     };
+
+    Operand.prototype.toString = function () {
+        return this.getQuery();
+    };
     return Operand;
 })();
 
@@ -173,6 +179,9 @@ var NumberOp = (function (_super) {
         _super.call(this, "number");
         this.val = val;
     }
+    NumberOp.prototype.doQuery = function (cont) {
+        return this.val;
+    };
     return NumberOp;
 })(Operand);
 
@@ -258,26 +267,48 @@ var OperandVector = (function (_super) {
     return OperandVector;
 })(Operand);
 
-var operators = {
-    "filter&filter": function (v1, v2) {
-        return new CombinedFilter(v1, v2);
-    },
-    "filter&vector": function (v1, v2) {
-        return new OperandVector(v2.filters.map(function (f) {
-            return doOperator(v1, "&", f);
-        }));
-    },
-    "vector&filter": function (v1, v2) {
-        return new OperandVector(v1.filters.map(function (f) {
-            return doOperator(f, "&", v2);
-        }));
+function getOperator(v1, op, v2) {
+    var operators = {
+        "filter&filter": function (v1, v2) {
+            return new CombinedFilter(v1, v2);
+        },
+        "number+number": function (v1, v2) {
+            return new NumberOp(v1.val + v2.val);
+        },
+        "filter+number": function (v1, v2) {
+            return new NumberOp(v1.val + v2.val);
+        }
+    };
+    var opid = v1.type + op + v2.type;
+    if (operators.hasOwnProperty(opid))
+        return operators[opid];
+    if (op === ",") {
+        return function (v1, v2) {
+            var left = v1.type === "vector" ? v1.filters : [v1];
+            var right = v2.type === "vector" ? v2.filters : [v2];
+            return new OperandVector(left.concat(right));
+        };
     }
-};
+    if (v1.type === "vector" && v2.type !== "vector") {
+        return function (v1, v2) {
+            return new OperandVector(v1.filters.map(function (f) {
+                return doOperator(f, op, v2);
+            }));
+        };
+    } else if (v1.type !== "vector" && v2.type === "vector") {
+        return function (v1, v2) {
+            return new OperandVector(v2.filters.map(function (f) {
+                return doOperator(v1, op, f);
+            }));
+        };
+    }
+}
 
+// warning: operators do not guarantee
 function doOperator(v1, op, v2) {
-    var opfn = operators[v1.type + op + v2.type];
+    var opfn = getOperator(v1, op, v2);
     if (!opfn)
-        throw new Error("Can't apply " + op + " to " + v1.type + " and " + v2.type);
+        throw new Error("Can't apply '" + op + "' to " + v1.type + " and " + v2.type);
     return opfn(v1, v2);
 }
 var TUtil = {
@@ -310,10 +341,10 @@ var KITParser = (function () {
             return r[0].length > 0;
         });
         var yfilter = TUtil.nth_col(s1, 0).map(function (x) {
-            return new SingleFilter("Status", x);
+            return ct.findFilter("Status", x);
         });
         var xfilter = ["", "gender:male", "gender:female", "foreign:no&gender:male", "foreign:no&gender:female", "foreign:no", "foreign:yes&gender:male", "foreign:yes&gender:female", "foreign:yes"].map(function (x) {
-            return makeQuery(x);
+            return queryToOperand(x);
         });
         ct.putAll(xfilter, yfilter, s1, 1, 0);
 
@@ -331,23 +362,24 @@ var KITParser = (function () {
             return row[1].trim().length > 0;
         }); //ignore fakultät
         s3 = TUtil.no_nth_col(s3, 5);
-        console.log(s3);
         _a = s3;
         var yfilter = s3.slice(1).map(function (row) {
-            return new SingleFilter("Fach", row[1]).getQuery();
+            return ct.findFilter("Fach", row[1]);
         });
-        var xfilter = [new NoFilter()].concat(["status:rückmelder", "status:erstimmatr.", "status:neuimmatr-1fsem", "neuimmatr-hsem"].map(function (x) {
-            return new SingleFilter(x.split(":")[0], x.split(":")[1]);
+        var xfilter = [new NoFilter()].concat(["status:rückmelder", "status:erstimmatr.", "status_neuimmatr:1fsem", "status_neuimmatr:hsem"].map(function (x) {
+            return ct.findFilter(x.split(":")[0], x.split(":")[1]);
         })).concat([
             "foreign:no&gender:male", "foreign:no&gender:female", "foreign:no", "foreign:yes&gender:male", "foreign:yes&gender:female", "foreign:yes",
             "status:beurlaubt"].map(function (x) {
-            return makeQuery(x);
+            return queryToOperand(x);
         }));
-        console.log(xfilter);
+        ct.putAll(xfilter, yfilter, s3, 4, 1);
         return ct;
     };
     return KITParser;
 })();
+// represents a multidimensional contingency table (todo)
+// currently only maps data values/categories
 var Contingency = (function () {
     function Contingency() {
         this.val_jargon = {
@@ -359,8 +391,18 @@ var Contingency = (function () {
         // map from category to values
         this.cats = Object.create(null);
     }
+    Contingency.prototype.has = function (query) {
+        return Object.hasOwnProperty.call(this.dict, query);
+    };
+
     Contingency.prototype.put = function (filter, data) {
         var query = this.normalize(filter.getQuery(), true);
+        if (this.has(query)) {
+            if (this.dict[query] !== data)
+                console.warn(sprintf("Warn: overwriting %s=%d with %d", query, this.dict[query], data));
+            else
+                console.debug("consistent double entry of " + query);
+        }
         this.dict[query] = data;
     };
 
@@ -376,7 +418,7 @@ var Contingency = (function () {
         for (var y = 1; y < data.length; y++) {
             yfilters[y - 1] = this.findFilter(ycategory, data[y][0]);
         }
-        for (var x = 1; x < data.length; x++) {
+        for (var x = 1; x < data[0].length; x++) {
             xfilters[x - 1] = this.findFilter(xcategory, data[0][x]);
         }
         this.putAll(xfilters, yfilters, data, 1, 1);
@@ -434,6 +476,9 @@ var Contingency = (function () {
     };
 
     Contingency.prototype.get = function (filter) {
+        var query = this.normalize(filter.getQuery());
+        if (!this.has(query))
+            throw new Error("No data found for " + filter.toString());
         return this.dict[this.normalize(filter.getQuery())];
     };
     return Contingency;
@@ -467,9 +512,11 @@ function toTable(arr, header) {
     });
 }
 
-function makeQuery(eq) {
-    console.log("making query " + eq);
-    var queue = EqParser.EqParser.parse(eq);
+function queryToOperand(eq) {
+    return makeQuery(EqParser.EqParser.parse(eq));
+}
+
+function makeQuery(queue) {
     var args = [];
     while (queue.length > 0) {
         if (queue[0].is(8 /* OPERATOR */)) {
@@ -570,8 +617,22 @@ $(function () {
 
     $("#parseeq").click(function (event) {
         var eq = $("#equation").val();
-        var query = makeQuery(eq);
-        console.log("=" + query.doQuery(cont));
+        var query;
+        try  {
+            var queue = EqParser.EqParser.parse(eq);
+            log("Parsed RPN: " + queue.map(function (x) {
+                return x.val;
+            }).join(" "));
+            query = makeQuery(queue);
+        } catch (e) {
+            $("#eqoutput").text("Equation error: " + e);
+            return;
+        }
+        try  {
+            $("#eqoutput").text("=" + query.doQuery(cont));
+        } catch (e) {
+            $("#eqoutput").text("Query error: " + e);
+        }
     });
 });
 //# sourceMappingURL=kitstats.js.map

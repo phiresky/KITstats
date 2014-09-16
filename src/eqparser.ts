@@ -16,11 +16,13 @@ export class Token {
 class Operator {
 	constructor(public precedence, public leftAss) {}
 	static operators = {
+		// also add new ops in "regexes below"
 		'+':new Operator(4,true),
 		'-':new Operator(4,true),
 		'*':new Operator(5,true),
 		'/':new Operator(5,true),
-		'&':new Operator(3,true)
+		'&':new Operator(3,true),
+		',':new Operator(2,true)
 	}
 }
 export class EqParser {
@@ -38,8 +40,8 @@ export class EqParser {
 		var token:Token;
 		var regexes:any[][] = [
 			[/^[0-9]+/, TokenType.NUMBER],
-			[/^[a-z][a-z0-9]*(:[a-z0-9_]+)?/i, TokenType.IDENTIFIER],
-			[/^[+*/&-]/, TokenType.OPERATOR],
+			[/^[a-z][a-z0-9_]*(:[a-z0-9_]+)?/i, TokenType.IDENTIFIER],
+			[/^[+*/&,-]/, TokenType.OPERATOR],
 			[/^\(/, TokenType.LPAREN],
 			[/^\[/, TokenType.LBRACKET],
 			[/^\{/, TokenType.LBRACE],

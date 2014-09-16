@@ -1,3 +1,5 @@
+// represents a multidimensional contingency table (todo)
+// currently only maps data values/categories
 class Contingency {
 	constructor() {}
 	val_jargon:{[alias:string]:string} = {
@@ -9,8 +11,19 @@ class Contingency {
 	dict:{[filters:string]:number} = Object.create(null);
 	// map from category to values
 	cats:{[category:string]:{[value:string]:boolean}} = Object.create(null);
+
+	private has(query:string) {
+		return Object.hasOwnProperty.call(this.dict, query);
+	}
+
 	put(filter:Operand, data:number) {
 		var query = this.normalize(filter.getQuery(),true);
+		if(this.has(query)) {
+			if(this.dict[query] !== data)
+				console.warn(sprintf("Warn: overwriting %s=%d with %d",
+							query, this.dict[query], data)); 
+			else console.debug("consistent double entry of "+query);
+		}
 		this.dict[query] = data;
 	}
 
@@ -26,7 +39,7 @@ class Contingency {
 		for(var y=1;y<data.length;y++) {
 			yfilters[y-1] = this.findFilter(ycategory,data[y][0]);
 		}
-		for(var x=1;x<data.length;x++) {
+		for(var x=1;x<data[0].length;x++) {
 			xfilters[x-1] = this.findFilter(xcategory,data[0][x]);
 		}
 		this.putAll(xfilters,yfilters,data,1,1);
@@ -78,6 +91,8 @@ class Contingency {
 	}
 
 	get(filter:Operand) {
+		var query = this.normalize(filter.getQuery());
+		if(!this.has(query)) throw new Error("No data found for "+filter.toString());
 		return this.dict[this.normalize(filter.getQuery())];
 	}
 }

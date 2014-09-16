@@ -23,9 +23,11 @@ function toTable(arr,header=false) {
 	return arr.map(tr => $("<tr>").append(tr.map(td => $(header?"<th>":"<td>").text(td))));
 }
 
-function makeQuery(eq:string):Operand {
-	console.log("making query "+eq);
-	var queue = EqParser.EqParser.parse(eq);
+function queryToOperand(eq:string):Operand {
+	return makeQuery(EqParser.EqParser.parse(eq));
+}
+
+function makeQuery(queue:EqParser.Token[]):Operand {
 	var args:Operand[] = [];
 	while(queue.length > 0) {
 		if(queue[0].is(EqParser.TokenType.OPERATOR)) {
@@ -118,7 +120,14 @@ $(()=> {
 
 	$("#parseeq").click(event => {
 		var eq = $("#equation").val();	
-		var query = makeQuery(eq);
-		console.log("="+query.doQuery(cont));
+		var query;
+		try {
+			var queue = EqParser.EqParser.parse(eq);
+			log("Parsed RPN: "+queue.map(x=>x.val).join(" "));
+			query = makeQuery(queue);
+		} catch(e) { $("#eqoutput").text("Equation error: "+e); return; }
+		try {
+			$("#eqoutput").text("="+query.doQuery(cont));
+		} catch(e) { $("#eqoutput").text("Query error: "+e);}
 	});
 });
