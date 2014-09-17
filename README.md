@@ -25,7 +25,7 @@ vec ∩ fil|vec|combines filter seperately with all filters in vector|[x,y,z]∩
 Σ vec|num|sums a vector| Σ 1,2,3 = 6
 
 
-## Getting the data
+## Extracting KIT data from PDFs (old)
 * Get the pdfs
 ```
 wget --mirror --include downloads http://www.kit.edu/kit/6407.php --no-host-directories
