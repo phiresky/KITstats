@@ -93,7 +93,13 @@ function getOperator(v1:Operand, op:string, v2:Operand) {
 var operators/*:{[types:string]:(v1:Operand,v2:Operand)=>Operand}*/ = {
 	"filter&filter": (v1:Operand,v2:Operand) => new CombinedFilter(v1,v2),
 	"number+number": (v1,v2) => new NumberOp(v1.val+v2.val),
-	"filter+number": (v1,v2) => new NumberOp(v1.val+v2.val),
+	"number-number": (v1,v2) => new NumberOp(v1.val-v2.val),
+	"number/number": (v1,v2) => new NumberOp(v1.val/v2.val),
+	"number*number": (v1,v2) => new NumberOp(v1.val*v2.val),
+	//"filter+number": (v1,v2) => new NumberOp(v1.val+v2.val),
+	"filter#":(v) => new NumberOp(v.doQuery(cont)),
+	"vectorΣ":(v) => v.filters.reduce((f1,f2) => doOperator(f1,'+',f2)),
+	//"filter/filter": (v1,v2) => new NumberOp(v1.val/v2.val)
 };
 	var opid = v1.type+op+v2.type;
 	if(operators.hasOwnProperty(opid)) return operators[opid];

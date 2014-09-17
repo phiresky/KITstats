@@ -31,11 +31,15 @@ function makeQuery(queue:EqParser.Token[]):Operand {
 	var args:Operand[] = [];
 	while(queue.length > 0) {
 		if(queue[0].is(EqParser.TokenType.OPERATOR)) {
-			var c = args.length;
-			if(c<2) throw new Error("Invalid argument count: "+c);
-			var arg2 = args.pop(), arg1 = args.pop();
+			var arg2 = args.pop();
 			var op = queue.shift().val;
-			args.push(doOperator(arg1, op, arg2));
+			if(EqParser.Operator.operators[op].unary) //unary operator
+				args.push(doOperator(arg2, op, new Operand("")));
+			else {
+				if(args.length==0) throw new Error("Invalid argument count: "+args.length);
+				var arg1 = args.pop();
+				args.push(doOperator(arg1, op, arg2));
+			}
 		} else args.push(Operand.make(cont, queue.shift()));
 	}
 	if(args.length > 1) throw new Error("Invalid arguments remaining at end");
@@ -125,9 +129,9 @@ $(()=> {
 			var queue = EqParser.EqParser.parse(eq);
 			log("Parsed RPN: "+queue.map(x=>x.val).join(" "));
 			query = makeQuery(queue);
-		} catch(e) { $("#eqoutput").text("Equation error: "+e); return; }
+		} catch(e) { console.log(e); $("#eqoutput").text("Equation error: "+e); return; }
 		try {
 			$("#eqoutput").text("="+query.doQuery(cont));
-		} catch(e) { $("#eqoutput").text("Query error: "+e);}
+		} catch(e) { console.log(e); $("#eqoutput").text("Query error: "+e);}
 	});
 });

@@ -31,28 +31,45 @@ var EqParser;
             }
             return arr.indexOf(this.type) >= 0;
         };
+        Token.prototype.isAny = function (arr) {
+            return arr.indexOf(this.type) >= 0;
+        };
         return Token;
     })();
     _EqParser.Token = Token;
     var Operator = (function () {
-        function Operator(precedence, leftAss) {
+        function Operator(precedence, options) {
+            if (typeof options === "undefined") { options = {}; }
+            var _this = this;
             this.precedence = precedence;
-            this.leftAss = leftAss;
+            this.options = options;
+            ["rightAss", "unary", "postfix", "prefix"].forEach(function (x) {
+                return _this[x] = !!options[x];
+            });
         }
         Operator.operators = {
             // also add new ops in "regexes below"
-            '+': new Operator(4, true),
-            '-': new Operator(4, true),
-            '*': new Operator(5, true),
-            '/': new Operator(5, true),
-            '&': new Operator(3, true),
-            ',': new Operator(2, true)
+            '+': new Operator(4),
+            '-': new Operator(4),
+            '*': new Operator(5),
+            '/': new Operator(5),
+            '&': new Operator(3),
+            ',': new Operator(2),
+            '#': new Operator(5, { unary: true, postfix: true }),
+            'Σ': new Operator(1, { unary: true, prefix: true })
         };
+        Operator.aliases = [
+            { a: /∩/g, b: "&" }
+        ];
         return Operator;
     })();
+    _EqParser.Operator = Operator;
     var EqParser = (function () {
         function EqParser(inp) {
             this.pos = 0;
+            Operator.aliases.forEach(function (r) {
+                return inp = inp.replace(r.a, r.b);
+            });
             this.inp = inp;
         }
         EqParser.prototype.hasTokens = function () {
@@ -67,7 +84,6 @@ var EqParser;
             var regexes = [
                 [/^[0-9]+/, 9 /* NUMBER */],
                 [/^[a-z][a-z0-9_]*(:[a-z0-9_]+)?/i, 7 /* IDENTIFIER */],
-                [/^[+*/&,-]/, 8 /* OPERATOR */],
                 [/^\(/, 2 /* LPAREN */],
                 [/^\[/, 1 /* LBRACKET */],
                 [/^\{/, 3 /* LBRACE */],
@@ -75,6 +91,11 @@ var EqParser;
                 [/^\]/, 4 /* RBRACKET */],
                 [/^\}/, 6 /* RBRACE */]
             ];
+            regexes.push([
+                new RegExp("^[" + Object.keys(Operator.operators).map(function (x) {
+                    return x.replace(/[-\]]/g, "\\$&");
+                }).join("") + "]"),
+                8 /* OPERATOR */]);
             for (var i = 0; i < regexes.length; i++) {
                 var match = subinp.match(regexes[i][0]);
                 if (match) {
@@ -111,7 +132,7 @@ var EqParser;
                     while (stack.length > 0) {
                         var top = peek();
                         var op2 = Operator.operators[top.val];
-                        if (top.is(8 /* OPERATOR */) && ((op.leftAss && op.precedence <= op2.precedence) || op.precedence < op2.precedence)) {
+                        if (top.is(8 /* OPERATOR */) && (!op.unary || op2.unary) && ((!op.rightAss && op.precedence <= op2.precedence) || op.precedence < op2.precedence)) {
                             queue.push(stack.pop());
                         } else
                             break;
@@ -275,8 +296,23 @@ function getOperator(v1, op, v2) {
         "number+number": function (v1, v2) {
             return new NumberOp(v1.val + v2.val);
         },
-        "filter+number": function (v1, v2) {
-            return new NumberOp(v1.val + v2.val);
+        "number-number": function (v1, v2) {
+            return new NumberOp(v1.val - v2.val);
+        },
+        "number/number": function (v1, v2) {
+            return new NumberOp(v1.val / v2.val);
+        },
+        "number*number": function (v1, v2) {
+            return new NumberOp(v1.val * v2.val);
+        },
+        //"filter+number": (v1,v2) => new NumberOp(v1.val+v2.val),
+        "filter#": function (v) {
+            return new NumberOp(v.doQuery(cont));
+        },
+        "vectorΣ": function (v) {
+            return v.filters.reduce(function (f1, f2) {
+                return doOperator(f1, '+', f2);
+            });
         }
     };
     var opid = v1.type + op + v2.type;
@@ -520,12 +556,16 @@ function makeQuery(queue) {
     var args = [];
     while (queue.length > 0) {
         if (queue[0].is(8 /* OPERATOR */)) {
-            var c = args.length;
-            if (c < 2)
-                throw new Error("Invalid argument count: " + c);
-            var arg2 = args.pop(), arg1 = args.pop();
+            var arg2 = args.pop();
             var op = queue.shift().val;
-            args.push(doOperator(arg1, op, arg2));
+            if (EqParser.Operator.operators[op].unary)
+                args.push(doOperator(arg2, op, new Operand("")));
+            else {
+                if (args.length == 0)
+                    throw new Error("Invalid argument count: " + args.length);
+                var arg1 = args.pop();
+                args.push(doOperator(arg1, op, arg2));
+            }
         } else
             args.push(Operand.make(cont, queue.shift()));
     }
@@ -625,12 +665,14 @@ $(function () {
             }).join(" "));
             query = makeQuery(queue);
         } catch (e) {
+            console.log(e);
             $("#eqoutput").text("Equation error: " + e);
             return;
         }
         try  {
             $("#eqoutput").text("=" + query.doQuery(cont));
         } catch (e) {
+            console.log(e);
             $("#eqoutput").text("Query error: " + e);
         }
     });

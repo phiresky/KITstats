@@ -12,23 +12,34 @@ export class Token {
 	is(...arr:TokenType[]) {
 		return arr.indexOf(this.type)>=0;
 	}
+	isAny(arr:TokenType[]) {
+		return arr.indexOf(this.type)>=0;
+	}
 }
-class Operator {
-	constructor(public precedence, public leftAss) {}
+export class Operator {
+	constructor(public precedence, public options={}) {
+		["rightAss","unary","postfix","prefix"].forEach(x => this[x]=!!options[x]);
+	}
 	static operators = {
 		// also add new ops in "regexes below"
-		'+':new Operator(4,true),
-		'-':new Operator(4,true),
-		'*':new Operator(5,true),
-		'/':new Operator(5,true),
-		'&':new Operator(3,true),
-		',':new Operator(2,true)
+		'+':new Operator(4),
+		'-':new Operator(4),
+		'*':new Operator(5),
+		'/':new Operator(5),
+		'&':new Operator(3),
+		',':new Operator(2),
+		'#':new Operator(5,{unary:true,postfix:true}),
+		'Σ':new Operator(1,{unary:true,prefix:true})
 	}
+	static aliases:{a:RegExp;b:string}[] = [
+		{a:/∩/g,b:"&"}
+	];
 }
 export class EqParser {
 	inp:string;
 	pos:number = 0;
 	constructor(inp:string) {
+		Operator.aliases.forEach(r => inp = inp.replace(r.a,r.b));
 		this.inp = inp;
 	}
 
@@ -41,7 +52,6 @@ export class EqParser {
 		var regexes:any[][] = [
 			[/^[0-9]+/, TokenType.NUMBER],
 			[/^[a-z][a-z0-9_]*(:[a-z0-9_]+)?/i, TokenType.IDENTIFIER],
-			[/^[+*/&,-]/, TokenType.OPERATOR],
 			[/^\(/, TokenType.LPAREN],
 			[/^\[/, TokenType.LBRACKET],
 			[/^\{/, TokenType.LBRACE],
@@ -49,6 +59,9 @@ export class EqParser {
 			[/^\]/, TokenType.RBRACKET],
 			[/^\}/, TokenType.RBRACE]
 		];
+		regexes.push([
+				new RegExp("^["+Object.keys(Operator.operators).map(x=>x.replace(/[-\]]/g,"\\$&")).join("")+"]"),
+				TokenType.OPERATOR]);
 		for(var i=0; i<regexes.length;i++) {
 			var match = subinp.match(regexes[i][0]);
 			if(match) {
@@ -83,8 +96,8 @@ export class EqParser {
 				while(stack.length>0) {
 					var top = peek();
 					var op2 = Operator.operators[top.val];
-					if(top.is(TokenType.OPERATOR) &&
-							((op.leftAss && op.precedence <= op2.precedence) ||
+					if(top.is(TokenType.OPERATOR) && (!op.unary||op2.unary) &&
+							((!op.rightAss && op.precedence <= op2.precedence) ||
 							op.precedence < op2.precedence)) {
 						queue.push(stack.pop());
 					} else break;
