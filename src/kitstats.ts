@@ -113,7 +113,6 @@ var cont:Contingency;
 
 $(()=> {
 	urlParameters = parseParameters();
-	if("q" in urlParameters) $("#equation").val(urlParameters["q"]);
 	$("#equation").keyup(evt => evt.keyCode == 13 && $("#parseeq").click());
 	var status = $("#status");
 	function log(x:string) { status.text(x);}
@@ -154,6 +153,10 @@ $(()=> {
 			.replaceAll($('> select', config.container));
 		cont = new Contingency();
 		KITParser.parse(cont, statnames, statistics);
+		if("q" in urlParameters) {
+			$("#equation").val(urlParameters["q"]);
+			$("#parseeq").click();
+		}
 	};
 	var getpageddata = function(pattern:string, inx:number) {
 		var fname = sprintf(pattern,inx);
