@@ -198,6 +198,12 @@ var Operand = (function () {
     return Operand;
 })();
 
+var GraphInfo = (function () {
+    function GraphInfo() {
+    }
+    return GraphInfo;
+})();
+
 var Filter = (function (_super) {
     __extends(Filter, _super);
     function Filter() {
@@ -237,19 +243,18 @@ var SingleFilter = (function (_super) {
     return SingleFilter;
 })(Filter);
 
+// like a filter, but has numerical values allowing addition
 var DiscreteFilter = (function (_super) {
     __extends(DiscreteFilter, _super);
-    function DiscreteFilter(category, value) {
-        _super.call(this);
-        this.category = category;
-        this.value = value;
+    function DiscreteFilter(discrete, value, numval) {
+        _super.call(this, discrete.name, value);
+        this.discrete = discrete;
+        this.numval = numval;
     }
-    DiscreteFilter.prototype.getQuery = function () {
-        return this.category.name + ":" + this.value;
-    };
     return DiscreteFilter;
-})(Filter);
+})(SingleFilter);
 
+// a category of discrete filters
 var Discrete = (function () {
     function Discrete(name, max, names) {
         this.name = name;
@@ -259,7 +264,7 @@ var Discrete = (function () {
     Discrete.prototype.getByValue = function (val) {
         if (val < 0 || val > this.max)
             throw new Error(this.name + " out of bounds: " + val);
-        return new DiscreteFilter(this, val);
+        return new DiscreteFilter(this, this.names[val], val);
     };
     Discrete.prototype.getByName = function (name) {
         return this.getByValue(this.names.indexOf(name.trim()));
@@ -310,12 +315,80 @@ var OperandVector = (function (_super) {
     function OperandVector(ops) {
         _super.call(this, "vector");
         this.ops = ops;
-        console.log(ops);
     }
     OperandVector.prototype.doQuery = function (cont) {
         return this.ops.map(function (op) {
             return op.doQuery(cont);
         });
+    };
+
+    // nobody will ever understand this again
+    OperandVector.prototype.getGraphInfo = function () {
+        var _this = this;
+        if (!this.ops.every(function (op) {
+            return op instanceof Filter;
+        })) {
+            return new GraphInfo();
+        }
+        var reduceFilter = function (vec, filter) {
+            return vec.concat((filter instanceof CombinedFilter) ? filter.filters.reduce(reduceFilter, []) : [filter]);
+        };
+        var filters = this.ops.map(function (op) {
+            return reduceFilter([], op);
+        });
+        var occurrences = {};
+        filters.forEach(function (fs) {
+            return fs.forEach(function (f) {
+                var fstr = f.toString();
+                if (!(fstr in occurrences))
+                    occurrences[fstr] = { filter: f, count: 1 };
+                else
+                    occurrences[fstr].count++;
+            });
+        });
+
+        // filters that exist on all elements
+        var all = Object.keys(occurrences).filter(function (key) {
+            return occurrences[key].count == _this.ops.length;
+        }).map(function (key) {
+            return occurrences[key].filter;
+        });
+        console.log(this.ops.length);
+        filters = filters.map(function (fs) {
+            return fs.filter(function (f) {
+                return all.indexOf(f) < 0;
+            });
+        });
+        var xtitle = undefined;
+        var subtitle = undefined;
+        var xaxis = undefined;
+        var title = all.length > 0 ? all.join(", ") : undefined;
+
+        // if all filters are single and have the same category
+        var allcat = filters[0][0].category;
+        if (filters.every(function (f) {
+            return f.length == 1 && f[0].category == allcat;
+        })) {
+            xtitle = allcat;
+            if (title === undefined)
+                title = allcat;
+            else
+                subtitle = "nach " + allcat;
+            console.log(allcat);
+            xaxis = filters.map(function (f) {
+                return f[0].value;
+            });
+        } else
+            xaxis = filters.map(function (f) {
+                return f.join(" ∩ ");
+            });
+        return {
+            title: title,
+            subtitle: subtitle,
+            xaxis: xaxis,
+            xtitle: xtitle,
+            ytitle: "Studenten"
+        };
     };
     return OperandVector;
 })(Operand);
@@ -339,7 +412,7 @@ var operators = {
     "filter+number": function (filter, num) {
         if (!(filter instanceof DiscreteFilter))
             throw new Error("Cannot add number to non-discrete filter");
-        return filter.category.getByValue(filter.value + num.val);
+        return filter.discrete.getByValue(filter.numval + num.val);
     },
     "filter#": function (v) {
         return new NumberOp(v.doQuery(cont));
@@ -601,6 +674,7 @@ var config = {
 
 // parsed url parameter map
 var urlParameters = {};
+var LANG = navigator.language || navigator.userLanguage || "de";
 
 function parseParameters() {
     var params = Object.create(null);
@@ -640,15 +714,18 @@ function queryToOperand(eq) {
     return makeQuery(EqParser.EqParser.parse(eq));
 }
 
-function visualizeOutput(output) {
+function visualizeOutput(input, output) {
     var outp = $("#eqoutput");
     if ($.isArray(output)) {
+        var graphInfo = input.getGraphInfo();
         var chart = outp.highcharts({
             chart: { type: 'column' },
-            title: { text: "test" },
-            subtitle: { text: "a" },
-            xAxis: {},
-            yAxis: { min: 0, title: "test" },
+            title: { text: graphInfo.title },
+            subtitle: { text: graphInfo.subtitle },
+            xAxis: {
+                categories: graphInfo.xaxis
+            },
+            yAxis: { min: 0, title: { text: graphInfo.ytitle } },
             tooltip: {
                 formatter: function () {
                     return this.points[0].key;
@@ -658,7 +735,7 @@ function visualizeOutput(output) {
             plotOptions: {
                 column: { showInLegend: true }
             },
-            series: [{ data: output }]
+            series: [{ data: output, name: graphInfo.xtitle }]
         });
     } else if (output instanceof Error) {
         outp.text(output).append($("<pre>").text(output.stack));
@@ -744,7 +821,6 @@ $(function () {
         log("Loading page " + inx);
         $.get(fname, function (response) {
             data.push(d3.csv.parseRows(response, function (d) {
-                // remove empty lines
                 return d.some(function (x) {
                     return x.length > 0;
                 }) ? d : false;
@@ -790,14 +866,14 @@ $(function () {
             urlParameters["q"] = eq;
             setParameters();
         } catch (e) {
-            visualizeOutput(e);
+            visualizeOutput(null, e);
             throw e;
             return;
         }
         try  {
-            visualizeOutput(query.doQuery(cont));
+            visualizeOutput(query, query.doQuery(cont));
         } catch (e) {
-            visualizeOutput(e);
+            visualizeOutput(null, e);
             throw e;
         }
     });

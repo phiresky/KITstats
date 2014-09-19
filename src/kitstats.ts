@@ -16,6 +16,7 @@ var config = {
 
 // parsed url parameter map
 var urlParameters:{[param:string]:string} = {};
+var LANG = navigator.language||navigator.userLanguage||"de";
 
 function parseParameters() {
 	var params = Object.create(null);
@@ -47,17 +48,19 @@ function queryToOperand(eq:string):Operand {
 	return makeQuery(EqParser.EqParser.parse(eq));
 }
 
-function visualizeOutput(output:any) {
+function visualizeOutput(input:Operand, output:any) {
 	var outp = $("#eqoutput");
 	if($.isArray(output)) {
+		var graphInfo = input.getGraphInfo();
 		var chart = outp.highcharts({
 			chart: {type: 'column'},
-			title: { text: "test" },
-			subtitle: { text: "a" },
+			title: { text: graphInfo.title },
+			subtitle: { text: graphInfo.subtitle },
 			xAxis: {
-				//categories: ["a","b"],
+				categories: graphInfo.xaxis,
+				//title: {text: graphInfo.xtitle }
 			},
-			yAxis: { min:0, title:"test"},
+			yAxis: { min:0, title:{text:graphInfo.ytitle}},
 			tooltip: {
 				formatter: function() { return this.points[0].key },
 				shared: true,
@@ -66,7 +69,7 @@ function visualizeOutput(output:any) {
 			plotOptions: {
 				column: { showInLegend: true}
 			},
-			series:[{data:output}]
+			series:[{data:output,name:graphInfo.xtitle}]
 		});
 	} else if(output instanceof Error) {
 		outp.text(output).append($("<pre>").text(output.stack));
@@ -143,10 +146,9 @@ $(()=> {
 		var fname = sprintf(pattern,inx);
 		log("Loading page "+inx);
 		$.get(fname, response => {
-			data.push(d3.csv.parseRows(response, d => {
-				// remove empty lines
-				return d.some(x=>x.length>0)?d:false;
-			}));
+			data.push(d3.csv.parseRows(response, d => 
+				d.some(x=>x.length>0)?d:false) // remove empty lines
+			);
 			getpageddata(fname, pattern, inx+1);
 		}).fail(error => {
 			if(error.status === 404) {
@@ -157,7 +159,7 @@ $(()=> {
 		
 		});
 	};
-	var getsingledata = function(fname:string) {
+	var getsingledata = (fname:string) => {
 		log("Loading");
 		$.get(fname, response => 
 			parsedata(response.split("\n§PAGEBREAK\n").map(
@@ -183,9 +185,9 @@ $(()=> {
 			query = makeQuery(queue);
 			urlParameters["q"] = eq;
 			setParameters();
-		} catch(e) { visualizeOutput(e); throw e; return; }
+		} catch(e) { visualizeOutput(null, e); throw e; return; }
 		try {
-			visualizeOutput(query.doQuery(cont));
-		} catch(e) { visualizeOutput(e);throw e}
+			visualizeOutput(query, query.doQuery(cont));
+		} catch(e) { visualizeOutput(null, e);throw e}
 	});
 });

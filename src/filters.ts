@@ -21,6 +21,15 @@ class Operand {
 	}
 }
 
+class GraphInfo {
+	xaxis:string[];
+	ytitle:string;
+	xtitle:string;
+	title:string;
+	subtitle:string;
+}
+	
+
 class Filter extends Operand {
 	constructor() { super("filter"); }
 	doQuery(cont:Contingency):any {
@@ -47,21 +56,20 @@ class SingleFilter extends Filter {
 	}
 }
 
-class DiscreteFilter extends Filter {
-	constructor(public category:Discrete, public value:number) {
-		super();
-	}
-	getQuery() {
-		return this.category.name+":"+this.value;
+// like a filter, but has numerical values allowing addition
+class DiscreteFilter extends SingleFilter {
+	constructor(public discrete:Discrete, value:string, public numval:number) {
+		super(discrete.name, value);
 	}
 }
 
+// a category of discrete filters
 class Discrete {
 	constructor(public name:string, public max:number, public names:string[]) {
 	}
 	getByValue(val:number) {
 		if(val<0||val>this.max) throw new Error(this.name+" out of bounds: "+val);
-		return new DiscreteFilter(this, val);
+		return new DiscreteFilter(this, this.names[val], val);
 	}
 	getByName(name:string) {
 		return this.getByValue(this.names.indexOf(name.trim()));
@@ -95,10 +103,50 @@ class CombinedFilter extends Filter {
 class OperandVector extends Operand {
 	constructor(public ops:Operand[]) {
 		super("vector");
-		console.log(ops);
 	}
 	doQuery(cont:Contingency) {
 		return this.ops.map(op => op.doQuery(cont));
+	}
+
+	// nobody will ever understand this again
+	getGraphInfo():GraphInfo {
+		if(!this.ops.every(op => op instanceof Filter)) {
+			return new GraphInfo();
+		}
+		var reduceFilter = (vec:Filter[], filter:Filter) => 
+			<SingleFilter[]> vec.concat((filter instanceof CombinedFilter)?
+					(<CombinedFilter>filter).filters.reduce(reduceFilter,[]):[filter]);
+		var filters = this.ops.map(op => reduceFilter([],op));
+		var occurrences:{[filter:string]:{filter:Filter;count:number}} = {};
+		filters.forEach(fs => fs.forEach(f => {
+			var fstr = f.toString();
+			if(!(fstr in occurrences)) occurrences[fstr]={filter:f,count:1};
+			else occurrences[fstr].count++;
+		}));
+		// filters that exist on all elements
+		var all:Filter[] = Object.keys(occurrences).filter(key => occurrences[key].count == this.ops.length).map(key => occurrences[key].filter);
+		console.log(this.ops.length);
+		filters = filters.map(fs => fs.filter(f => all.indexOf(f) < 0));
+		var xtitle:string = undefined;
+		var subtitle:string = undefined;
+		var xaxis:string[] = undefined;
+		var title = all.length>0?all.join(", "): undefined;
+		// if all filters are single and have the same category
+		var allcat:string = filters[0][0].category;
+		if(filters.every(f => f.length==1&&f[0].category == allcat)) {
+			xtitle = allcat;
+			if(title === undefined) title = allcat;
+			else subtitle = "nach "+allcat;
+			console.log(allcat);
+			xaxis = filters.map(f => f[0].value)
+		} else xaxis = filters.map(f => f.join(" ∩ "));
+		return {
+			title:title,
+			subtitle:subtitle,
+			xaxis:xaxis,
+			xtitle:xtitle,
+			ytitle:"Studenten"
+		};
 	}
 }
 
@@ -110,7 +158,7 @@ var operators:{[types:string]:(v1:any,v2:any)=>Operand} = {
 	"number*number": (v1,v2) => new NumberOp(v1.val*v2.val),
 	"filter+number": (filter,num) => {
 		if(!(filter instanceof DiscreteFilter)) throw new Error("Cannot add number to non-discrete filter");
-		return filter.category.getByValue(filter.value+num.val);
+		return filter.discrete.getByValue(filter.numval+num.val);
 	},
 
 	"filter#":(v) => new NumberOp(v.doQuery(cont)),
