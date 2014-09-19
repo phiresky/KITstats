@@ -3,17 +3,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>kit stats</title>
 <link rel="stylesheet" href="lib/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
 <script src="lib/d3.js" charset="utf-8"></script>
 <script src="lib/jquery.min.js"></script>
 <script src="lib/bootstrap.min.js"></script>
 <script src="lib/sprintf.min.js"></script>
+<script src="lib/highcharts.js"></script>
 <script src="bin/kitstats.js"></script>
 <div class="container">
 	<!--<div class="page-header nonlight"><h2>KIT student stats</h2></div>-->
 	<p><code>Status: <span id="status">hi</status></code></p>
-	Equation: <input size="80" id="equation" value="status:beurlaubt ∩ [gender:all]"/><button id="parseeq">Parse</button> Output: <code><span id=eqoutput></span></code>
+	<p><h4>Equation: </h4>
+	<div class="input-group">
+		<div class="input-group-btn">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				Samples <span class="caret"></span></button>
+			<ul class="dropdown-menu" role="menu" id="onclickquery">
+				<li><a href="#">status:beurlaubt ∩ [gender:all]</a>
+				<li><a href="#">fachsemester:2 + (0,2,4,6,8,10)</a>
+				<li><a href="#">#gender:male / (#gender:male + #gender:female)</a>
+				<li><a href="#">Σ #gender:all / #gender:insgesamt</a>
+				<li><a href="#">abschlussziel:diplom</a>
+				<li><a href="#">abschlussziel:all</a>
+				<li><a href="#">Σ 1,2,3,4</a>
+				<li><a href="#"></a>
+			</ul>
+		</div>
+		<input type="text" size="80" id="equation"
+			class="form-control" placeholder="Enter query" />
+		<span class="input-group-btn">
+			<button class="btn btn-default" type="button" id="parseeq">Parse</button>
+		</span>
+	</div>
+	</p>
+	<p><h4>Output:</h4>
+		<div id=eqoutput class="well"></div>
+	</p>
 	<p><div id="outp"><select></select><table></table></div></p>
 </div>
 

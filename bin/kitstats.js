@@ -43,6 +43,10 @@ var EqParser;
             var _this = this;
             this.precedence = precedence;
             this.options = options;
+            this.unary = false;
+            this.rightAss = false;
+            this.prefix = false;
+            this.postfix = false;
             ["rightAss", "unary", "postfix", "prefix"].forEach(function (x) {
                 return _this[x] = !!options[x];
             });
@@ -83,7 +87,7 @@ var EqParser;
             var token;
             var regexes = [
                 [/^[0-9]+/, 9 /* NUMBER */],
-                [/^[a-z][a-z0-9_]*(:[a-z0-9_]+)?/i, 7 /* IDENTIFIER */],
+                [/^[a-z][a-z0-9_]*(:\s*[äöüßa-z0-9_]+)?/i, 7 /* IDENTIFIER */],
                 [/^\(/, 2 /* LPAREN */],
                 [/^\[/, 1 /* LBRACKET */],
                 [/^\{/, 3 /* LBRACE */],
@@ -194,6 +198,17 @@ var Operand = (function () {
     return Operand;
 })();
 
+var Filter = (function (_super) {
+    __extends(Filter, _super);
+    function Filter() {
+        _super.call(this, "filter");
+    }
+    Filter.prototype.doQuery = function (cont) {
+        return cont.get(this);
+    };
+    return Filter;
+})(Operand);
+
 var NumberOp = (function (_super) {
     __extends(NumberOp, _super);
     function NumberOp(val) {
@@ -203,55 +218,72 @@ var NumberOp = (function (_super) {
     NumberOp.prototype.doQuery = function (cont) {
         return this.val;
     };
+    NumberOp.prototype.toString = function () {
+        return this.val + "";
+    };
     return NumberOp;
 })(Operand);
 
 var SingleFilter = (function (_super) {
     __extends(SingleFilter, _super);
     function SingleFilter(category, value) {
-        _super.call(this, "filter");
+        _super.call(this);
         this.category = category;
         this.value = value;
     }
     SingleFilter.prototype.getQuery = function () {
         return this.category + ":" + this.value;
     };
-    SingleFilter.prototype.doQuery = function (cont) {
-        return cont.get(this);
-    };
     return SingleFilter;
-})(Operand);
+})(Filter);
+
+var DiscreteFilter = (function (_super) {
+    __extends(DiscreteFilter, _super);
+    function DiscreteFilter(category, value) {
+        _super.call(this);
+        this.category = category;
+        this.value = value;
+    }
+    DiscreteFilter.prototype.getQuery = function () {
+        return this.category.name + ":" + this.value;
+    };
+    return DiscreteFilter;
+})(Filter);
+
+var Discrete = (function () {
+    function Discrete(name, max, names) {
+        this.name = name;
+        this.max = max;
+        this.names = names;
+    }
+    Discrete.prototype.getByValue = function (val) {
+        if (val < 0 || val > this.max)
+            throw new Error(this.name + " out of bounds: " + val);
+        return new DiscreteFilter(this, val);
+    };
+    Discrete.prototype.getByName = function (name) {
+        return this.getByValue(this.names.indexOf(name.trim()));
+    };
+    Discrete.prototype.getAll = function () {
+        var arr = [];
+        for (var i = 0; i <= this.max; i++)
+            arr.push(this.getByValue(i));
+        return arr;
+    };
+    return Discrete;
+})();
+
 var NoFilter = (function (_super) {
     __extends(NoFilter, _super);
     function NoFilter() {
-        _super.call(this, "filter");
+        _super.call(this);
     }
     NoFilter.prototype.getQuery = function () {
         return "";
     };
-    NoFilter.prototype.doQuery = function (cont) {
-        cont.get(this);
-    };
     return NoFilter;
-})(Operand);
+})(Filter);
 
-/// A category is a set of filters creating the whole group eg (male ∪ female)
-/*class Category {
-constructor(public name:string, public values:Filter[]) {}
-static categories:Category[];
-static find(name:string) {
-for(var i=0;i<Category.categories.length;i++) {
-if(Category.categories[i].name===name) return Category.categories[i];
-}
-throw new Error("Unknown category "+name);
-}
-findValue(name:string) {
-for(var i=0;i<this.values.length;i++) {
-if(this.values[i].name===name) return this.values[i];
-}
-throw new Error("Unknown value "+name+" in category "+this.name);
-}
-}*/
 var CombinedFilter = (function (_super) {
     __extends(CombinedFilter, _super);
     function CombinedFilter() {
@@ -259,7 +291,7 @@ var CombinedFilter = (function (_super) {
         for (var _i = 0; _i < (arguments.length - 0); _i++) {
             filters[_i] = arguments[_i + 0];
         }
-        _super.call(this, "filter");
+        _super.call(this);
         this.filters = filters;
     }
     CombinedFilter.prototype.getQuery = function () {
@@ -271,69 +303,73 @@ var CombinedFilter = (function (_super) {
         return cont.get(this);
     };
     return CombinedFilter;
-})(Operand);
+})(Filter);
 
 var OperandVector = (function (_super) {
     __extends(OperandVector, _super);
-    function OperandVector(filters) {
+    function OperandVector(ops) {
         _super.call(this, "vector");
-        this.filters = filters;
-        console.log(filters);
+        this.ops = ops;
+        console.log(ops);
     }
     OperandVector.prototype.doQuery = function (cont) {
-        return this.filters.map(function (filter) {
-            return filter.doQuery(cont);
+        return this.ops.map(function (op) {
+            return op.doQuery(cont);
         });
     };
     return OperandVector;
 })(Operand);
 
+var operators = {
+    "filter&filter": function (v1, v2) {
+        return new CombinedFilter(v1, v2);
+    },
+    "number+number": function (v1, v2) {
+        return new NumberOp(v1.val + v2.val);
+    },
+    "number-number": function (v1, v2) {
+        return new NumberOp(v1.val - v2.val);
+    },
+    "number/number": function (v1, v2) {
+        return new NumberOp(v1.val / v2.val);
+    },
+    "number*number": function (v1, v2) {
+        return new NumberOp(v1.val * v2.val);
+    },
+    "filter+number": function (filter, num) {
+        if (!(filter instanceof DiscreteFilter))
+            throw new Error("Cannot add number to non-discrete filter");
+        return filter.category.getByValue(filter.value + num.val);
+    },
+    "filter#": function (v) {
+        return new NumberOp(v.doQuery(cont));
+    },
+    "vectorΣ": function (v) {
+        return v.ops.reduce(function (f1, f2) {
+            return doOperator(f1, '+', f2);
+        });
+    }
+};
 function getOperator(v1, op, v2) {
-    var operators = {
-        "filter&filter": function (v1, v2) {
-            return new CombinedFilter(v1, v2);
-        },
-        "number+number": function (v1, v2) {
-            return new NumberOp(v1.val + v2.val);
-        },
-        "number-number": function (v1, v2) {
-            return new NumberOp(v1.val - v2.val);
-        },
-        "number/number": function (v1, v2) {
-            return new NumberOp(v1.val / v2.val);
-        },
-        "number*number": function (v1, v2) {
-            return new NumberOp(v1.val * v2.val);
-        },
-        //"filter+number": (v1,v2) => new NumberOp(v1.val+v2.val),
-        "filter#": function (v) {
-            return new NumberOp(v.doQuery(cont));
-        },
-        "vectorΣ": function (v) {
-            return v.filters.reduce(function (f1, f2) {
-                return doOperator(f1, '+', f2);
-            });
-        }
-    };
     var opid = v1.type + op + v2.type;
     if (operators.hasOwnProperty(opid))
         return operators[opid];
     if (op === ",") {
         return function (v1, v2) {
-            var left = v1.type === "vector" ? v1.filters : [v1];
-            var right = v2.type === "vector" ? v2.filters : [v2];
+            var left = v1.type === "vector" ? v1.ops : [v1];
+            var right = v2.type === "vector" ? v2.ops : [v2];
             return new OperandVector(left.concat(right));
         };
     }
     if (v1.type === "vector" && v2.type !== "vector") {
         return function (v1, v2) {
-            return new OperandVector(v1.filters.map(function (f) {
+            return new OperandVector(v1.ops.map(function (f) {
                 return doOperator(f, op, v2);
             }));
         };
     } else if (v1.type !== "vector" && v2.type === "vector") {
         return function (v1, v2) {
-            return new OperandVector(v2.filters.map(function (f) {
+            return new OperandVector(v2.ops.map(function (f) {
                 return doOperator(v1, op, f);
             }));
         };
@@ -370,6 +406,24 @@ var KITParser = (function () {
     function KITParser() {
     }
     KITParser.parse = function (ct, statnames, data) {
+        ct.cat_aliases = {
+            "geschlecht": "gender"
+        };
+        ct.val_aliases = {
+            gender: {
+                aliases: { "männlich": "male" },
+                readable: { male: "Männlich" }
+            },
+            fachsemester: {
+                discrete: new Discrete("fachsemester", 12, ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", ">12"]),
+                aliases: {}, readable: {}
+            },
+            abschlussziel: {
+                aliases: { "diplom (u)": "diplom" },
+                readable: {}
+            }
+        };
+
         //Gesamtstatistik (1)
         var s1 = data[0][0];
         s1 = s1.slice(2, 11); //ignore studienkolleg for now
@@ -379,7 +433,7 @@ var KITParser = (function () {
         var yfilter = TUtil.nth_col(s1, 0).map(function (x) {
             return ct.findFilter("Status", x);
         });
-        var xfilter = ["", "gender:male", "gender:female", "foreign:no&gender:male", "foreign:no&gender:female", "foreign:no", "foreign:yes&gender:male", "foreign:yes&gender:female", "foreign:yes"].map(function (x) {
+        var xfilter = ["", "gender:male", "gender:female", "foreign:no&geschlecht:männlich", "foreign:no&gender:female", "foreign:no", "foreign:yes&gender:male", "foreign:yes&gender:female", "foreign:yes"].map(function (x) {
             return queryToOperand(x);
         });
         ct.putAll(xfilter, yfilter, s1, 1, 0);
@@ -398,7 +452,6 @@ var KITParser = (function () {
             return row[1].trim().length > 0;
         }); //ignore fakultät
         s3 = TUtil.no_nth_col(s3, 5);
-        _a = s3;
         var yfilter = s3.slice(1).map(function (row) {
             return ct.findFilter("Fach", row[1]);
         });
@@ -414,15 +467,16 @@ var KITParser = (function () {
     };
     return KITParser;
 })();
-// represents a multidimensional contingency table (todo)
+// represents a multidimensional contingency table
 // currently only maps data values/categories
 var Contingency = (function () {
     function Contingency() {
-        this.val_jargon = {
+        this.global_val_jargon = {
             "insgesamt": "",
             "gesamt": ""
         };
-        this.cat_jargon = {};
+        this.cat_aliases = Object.create(null);
+        this.val_aliases = Object.create(null);
         this.dict = Object.create(null);
         // map from category to values
         this.cats = Object.create(null);
@@ -436,8 +490,7 @@ var Contingency = (function () {
         if (this.has(query)) {
             if (this.dict[query] !== data)
                 console.warn(sprintf("Warn: overwriting %s=%d with %d", query, this.dict[query], data));
-            else
-                console.debug("consistent double entry of " + query);
+            //else console.debug("consistent double entry of "+query+data+"+" +this.dict[query]);
         }
         this.dict[query] = data;
     };
@@ -461,25 +514,41 @@ var Contingency = (function () {
     };
 
     Contingency.prototype.findFilter = function (category, value) {
+        console.log("finding " + category + ":" + value);
+        category = category.toLocaleLowerCase();
         if (value === "all")
             return new OperandVector(this.getAll(category));
-        return new SingleFilter(category, value);
-        /*var name = fullname.split(":");
-        if(name.length !== 2) {
-        throw new Error("Unknown Filter "+name);
+        value = value.toLocaleLowerCase();
+        if (value in this.global_val_jargon)
+            value = this.global_val_jargon[value];
+        if (category in this.cat_aliases)
+            category = this.cat_aliases[category];
+        if (value.length == 0 || category.length == 0)
+            return new NoFilter();
+        if (category in this.val_aliases) {
+            var catinfo = this.val_aliases[category];
+            if (catinfo.aliases.hasOwnProperty(value)) {
+                value = catinfo.aliases[value];
+            }
+            if (catinfo.discrete) {
+                return catinfo.discrete.getByName(value);
+            }
         }
-        var filter = Category.find(name[0]).findValue(name[1]);
-        if(filter === undefined) throw new Error("Unknown Filter "+name);
-        return filter;*/
+        category = category.replace(/[^a-z0-9]+/g, "_");
+        value = value.replace(/[^a-z0-9]+/g, "_");
+        return new SingleFilter(category, value);
     };
 
     Contingency.prototype.getAll = function (category) {
         var _this = this;
-        return Object.keys(this.cats[category]).map(function (val) {
-            if (val === "all")
-                throw new Error("!3");
-            return _this.findFilter(category, val);
-        });
+        if (this.val_aliases[category] && this.val_aliases[category].discrete) {
+            return this.val_aliases[category].discrete.getAll();
+        } else
+            return Object.keys(this.cats[category]).map(function (val) {
+                if (val === "all")
+                    throw new Error("!pvouf3");
+                return _this.findFilter(category, val);
+            });
     };
 
     // normalize list and add values to this.cats
@@ -488,16 +557,12 @@ var Contingency = (function () {
         if (typeof addvalstocats === "undefined") { addvalstocats = false; }
         if (filters.length == 0)
             return "";
-        var split = filters.toLocaleLowerCase().split(/&+/).filter(function (x) {
+        var split = filters.split(/&+/).filter(function (x) {
             return x.length > 0;
         }).map(function (x) {
             var sp = x.trim().split(":");
-            var cat = sp[0].replace(/[^a-z0-9]+/g, "_");
-            var val = sp[1].replace(/[^a-z0-9]+/g, "_");
-            if (_this.val_jargon.hasOwnProperty(sp[1]))
-                val = _this.val_jargon[sp[1]];
-            if (_this.cat_jargon.hasOwnProperty(sp[0]))
-                cat = _this.cat_jargon[sp[0]];
+            var cat = sp[0];
+            var val = sp[1];
             if (cat.length == 0 || val.length == 0)
                 return "";
             if (addvalstocats) {
@@ -514,7 +579,7 @@ var Contingency = (function () {
     Contingency.prototype.get = function (filter) {
         var query = this.normalize(filter.getQuery());
         if (!this.has(query))
-            throw new Error("No data found for " + filter.toString());
+            throw new Error("INSUFFICIENT DATA FOR MEANINGFUL ANSWER " + filter.toString());
         return this.dict[this.normalize(filter.getQuery())];
     };
     return Contingency;
@@ -522,6 +587,7 @@ var Contingency = (function () {
 /// <reference path="../lib/jquery.d.ts" />
 /// <reference path="../lib/sprintf.d.ts" />
 /// <reference path="../lib/d3.d.ts" />
+/// <reference path="../lib/highcharts.d.ts" />
 /// <reference path="eqparser.ts" />
 /// <reference path="filters.ts" />
 /// <reference path="kitparser.ts" />
@@ -533,10 +599,32 @@ var config = {
     "headlines": [2, 2, 2, 3, 2, 3, 999, 2, 2, 2, 2]
 };
 
+// parsed url parameter map
+var urlParameters = {};
+
+function parseParameters() {
+    var params = Object.create(null);
+    if (location.hash.length == 0)
+        return params;
+    location.hash.substr(1).split("&").forEach(function (param) {
+        var split = param.split("=");
+        var attr = decodeURIComponent(split[0]);
+        if (param.length == 1)
+            params[attr] = null;
+        else
+            params[attr] = decodeURIComponent(split[1]);
+    });
+    return params;
+}
+function setParameters() {
+    location.hash = Object.keys(urlParameters).map(function (key) {
+        return encodeURIComponent(key) + "=" + encodeURIComponent(urlParameters[key]);
+    }).join("&");
+}
+
 function mostlyequals(a, b) {
     var ignore = /[^A-Za-z0-9]/g;
     return a.join('').replace(ignore, '') === b.join('').replace(ignore, '');
-    //return a.every((cell,inx)=>cell===b[inx]);
 }
 
 function toTable(arr, header) {
@@ -550,6 +638,32 @@ function toTable(arr, header) {
 
 function queryToOperand(eq) {
     return makeQuery(EqParser.EqParser.parse(eq));
+}
+
+function visualizeOutput(output) {
+    var outp = $("#eqoutput");
+    if ($.isArray(output)) {
+        var chart = outp.highcharts({
+            chart: { type: 'column' },
+            title: { text: "test" },
+            subtitle: { text: "a" },
+            xAxis: {},
+            yAxis: { min: 0, title: "test" },
+            tooltip: {
+                formatter: function () {
+                    return this.points[0].key;
+                },
+                shared: true
+            },
+            plotOptions: {
+                column: { showInLegend: true }
+            },
+            series: [{ data: output }]
+        });
+    } else if (output instanceof Error) {
+        outp.text(output).append($("<pre>").text(output.stack));
+    } else
+        outp.text(output);
 }
 
 function makeQuery(queue) {
@@ -580,10 +694,17 @@ var data = [];
 var cont;
 
 $(function () {
+    urlParameters = parseParameters();
+    if ("q" in urlParameters)
+        $("#equation").val(urlParameters["q"]);
     var status = $("#status");
     function log(x) {
         status.text(x);
     }
+    $("#onclickquery a").click(function (e) {
+        $("#equation").val(e.target.textContent);
+        $("#parseeq").click();
+    });
     var parsedata = function (data) {
         console.log("parsing");
         var statistics = [];
@@ -603,16 +724,18 @@ $(function () {
         });
         log("Loaded " + statistics.length + " Statistics");
         var drawtable = function (inx) {
-            $("<table class=table>").append(toTable(statistics[inx].reduce(function (a, b) {
-                return a.concat(b);
-            }, []))).replaceAll($('> table', config.container));
+            if (isNaN(+inx))
+                $("<table>").replaceAll($('> table', config.container));
+            else
+                $("<table class=table>").append(toTable(statistics[inx].reduce(function (a, b) {
+                    return a.concat(b);
+                }, []))).replaceAll($('> table', config.container));
         };
-        $("<select>").append(statnames.map(function (name, inx) {
+        $("<select>").append("<option>Tabelle anzeigen</option>").append(statnames.map(function (name, inx) {
             return $("<option>").val("" + inx).text(inx + ": " + name);
         })).change(function (evt) {
             drawtable(this.value);
         }).replaceAll($('> select', config.container));
-        drawtable(0);
         cont = new Contingency();
         KITParser.parse(cont, statnames, statistics);
     };
@@ -664,16 +787,18 @@ $(function () {
                 return x.val;
             }).join(" "));
             query = makeQuery(queue);
+            urlParameters["q"] = eq;
+            setParameters();
         } catch (e) {
-            console.log(e);
-            $("#eqoutput").text("Equation error: " + e);
+            visualizeOutput(e);
+            throw e;
             return;
         }
         try  {
-            $("#eqoutput").text("=" + query.doQuery(cont));
+            visualizeOutput(query.doQuery(cont));
         } catch (e) {
-            console.log(e);
-            $("#eqoutput").text("Query error: " + e);
+            visualizeOutput(e);
+            throw e;
         }
     });
 });

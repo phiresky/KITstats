@@ -1,6 +1,7 @@
 /// <reference path="../lib/jquery.d.ts" />
 /// <reference path="../lib/sprintf.d.ts" />
 /// <reference path="../lib/d3.d.ts" />
+/// <reference path="../lib/highcharts.d.ts" />
 /// <reference path="eqparser.ts" />
 /// <reference path="filters.ts" />
 /// <reference path="kitparser.ts" />
@@ -13,18 +14,64 @@ var config = {
 	"headlines":[2,2,2,3,2,3,999,2,2,2,2]
 };
 
-function mostlyequals(a,b) {
-	var ignore = /[^A-Za-z0-9]/g;
-	return a.join('').replace(ignore,'')===b.join('').replace(ignore,'');
-	//return a.every((cell,inx)=>cell===b[inx]);
+// parsed url parameter map
+var urlParameters:{[param:string]:string} = {};
+
+function parseParameters() {
+	var params = Object.create(null);
+	if(location.hash.length == 0) return params;
+	location.hash.substr(1).split("&").forEach(param => {
+		var split = param.split("=");
+		var attr = decodeURIComponent(split[0]);
+		if(param.length==1) params[attr]=null;
+		else params[attr] = decodeURIComponent(split[1]);
+	});
+	return params;
+}
+function setParameters() {
+	location.hash = Object.keys(urlParameters).map(key => 
+			encodeURIComponent(key)+"="+encodeURIComponent(urlParameters[key]))
+		.join("&");
 }
 
-function toTable(arr,header=false) {
+function mostlyequals(a:string[],b:string[]) {
+	var ignore = /[^A-Za-z0-9]/g;
+	return a.join('').replace(ignore,'')===b.join('').replace(ignore,'');
+}
+
+function toTable(arr:string[][],header=false) {
 	return arr.map(tr => $("<tr>").append(tr.map(td => $(header?"<th>":"<td>").text(td))));
 }
 
 function queryToOperand(eq:string):Operand {
 	return makeQuery(EqParser.EqParser.parse(eq));
+}
+
+function visualizeOutput(output:any) {
+	var outp = $("#eqoutput");
+	if($.isArray(output)) {
+		var chart = outp.highcharts({
+			chart: {type: 'column'},
+			title: { text: "test" },
+			subtitle: { text: "a" },
+			xAxis: {
+				//categories: ["a","b"],
+			},
+			yAxis: { min:0, title:"test"},
+			tooltip: {
+				formatter: function() { return this.points[0].key },
+				shared: true,
+				//useHTML:true
+			},
+			plotOptions: {
+				column: { showInLegend: true}
+			},
+			series:[{data:output}]
+		});
+	} else if(output instanceof Error) {
+		outp.text(output).append($("<pre>").text(output.stack));
+	} else 
+		outp.text(output);
 }
 
 function makeQuery(queue:EqParser.Token[]):Operand {
@@ -51,9 +98,14 @@ var data:string[][][] = [];
 var cont:Contingency;
 
 $(()=> {
-
+	urlParameters = parseParameters();
+	if("q" in urlParameters) $("#equation").val(urlParameters["q"]);
 	var status = $("#status");
-	function log(x) { status.text(x);}
+	function log(x:string) { status.text(x);}
+	$("#onclickquery a").click((e:any) => {
+		$("#equation").val(e.target.textContent);
+		$("#parseeq").click();
+	});
 	var parsedata = function(data:string[][][]) {
 		console.log("parsing");
 		var statistics:string[][][][] = [];
@@ -71,19 +123,19 @@ $(()=> {
 				statistics[statid].push(page.slice(config.headlines[statid]));
 		});
 		log("Loaded "+statistics.length+" Statistics");
-		var drawtable = function(inx) {
-			$("<table class=table>")
+		var drawtable = function(inx:number) {
+			if(isNaN(+inx)) $("<table>").replaceAll($('> table',config.container));
+			else $("<table class=table>")
 				/*.append(
 					toTable(headlines[inx]||[],true)
 				)*/.append(
 					toTable(statistics[inx].reduce((a,b) => a.concat(b), []))
 				).replaceAll($('> table',config.container));
 		};
-		$("<select>").append(
+		$("<select>").append("<option>Tabelle anzeigen</option>").append(
 			statnames.map((name,inx)=>$("<option>").val(""+inx).text(inx+": "+name))
 		).change(function(evt){drawtable(this.value)})
 			.replaceAll($('> select', config.container));
-		drawtable(0);
 		cont = new Contingency();
 		KITParser.parse(cont, statnames, statistics);
 	};
@@ -109,11 +161,11 @@ $(()=> {
 		log("Loading");
 		$.get(fname, response => 
 			parsedata(response.split("\n§PAGEBREAK\n").map(
-				page => d3.csv.parseRows(page, d => 
+				(page:string) => d3.csv.parseRows(page, (d:any) => 
 					// remove empty lines
-					d.some(x=>x.trim().length>0)?d:false
+					d.some((x:string) => x.trim().length>0)?d:false
 				)
-			).filter(page => page.length > 0))
+			).filter((page:string[][]) => page.length > 0))
 		).fail(error => {
 			throw new Error("error getting file "+fname);
 		});
@@ -124,14 +176,16 @@ $(()=> {
 
 	$("#parseeq").click(event => {
 		var eq = $("#equation").val();	
-		var query;
+		var query:Operand;
 		try {
 			var queue = EqParser.EqParser.parse(eq);
 			log("Parsed RPN: "+queue.map(x=>x.val).join(" "));
 			query = makeQuery(queue);
-		} catch(e) { console.log(e); $("#eqoutput").text("Equation error: "+e); return; }
+			urlParameters["q"] = eq;
+			setParameters();
+		} catch(e) { visualizeOutput(e); throw e; return; }
 		try {
-			$("#eqoutput").text("="+query.doQuery(cont));
-		} catch(e) { console.log(e); $("#eqoutput").text("Query error: "+e);}
+			visualizeOutput(query.doQuery(cont));
+		} catch(e) { visualizeOutput(e);throw e}
 	});
 });

@@ -17,10 +17,11 @@ export class Token {
 	}
 }
 export class Operator {
-	constructor(public precedence, public options={}) {
-		["rightAss","unary","postfix","prefix"].forEach(x => this[x]=!!options[x]);
+	unary = false; rightAss = false; prefix = false; postfix = false;
+	constructor(public precedence:number, public options:any={}) {
+		["rightAss","unary","postfix","prefix"].forEach(x => (<any>this)[x]=!!options[x]);
 	}
-	static operators = {
+	static operators:{[op:string]:Operator} = {
 		// also add new ops in "regexes below"
 		'+':new Operator(4),
 		'-':new Operator(4),
@@ -51,7 +52,7 @@ export class EqParser {
 		var token:Token;
 		var regexes:any[][] = [
 			[/^[0-9]+/, TokenType.NUMBER],
-			[/^[a-z][a-z0-9_]*(:[a-z0-9_]+)?/i, TokenType.IDENTIFIER],
+			[/^[a-z][a-z0-9_]*(:\s*[äöüßa-z0-9_]+)?/i, TokenType.IDENTIFIER],
 			[/^\(/, TokenType.LPAREN],
 			[/^\[/, TokenType.LBRACKET],
 			[/^\{/, TokenType.LBRACE],
