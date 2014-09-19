@@ -13,16 +13,34 @@ class KITParser {
 		ct.val_aliases = {
 			gender:{
 				aliases:{"männlich":"male"},
-				readable:{male:"Männlich"}
+				readable_vals:{male:"Männlich",female:"Weiblich"},
+				readable:"Geschlecht",
 			},
 			fachsemester:{
 				discrete:new Discrete("fachsemester",12,["1","2","3","4","5","6","7","8","9","10","11","12",">12"]),
-				aliases:{},readable:{},
+				aliases:{},readable:"Fachsemester",
+				readable_vals:{}
 			},
 			abschlussziel:{
-				aliases:{"diplom (u)":"diplom"},
-				readable:{},
+				aliases:{"Diplom (U)":"diplom"},
+				readable:"Abschlussziel",
+				readable_vals:{},
 			},
+			status:{
+				readable:"Status",
+				aliases:{"erstimmatr.":"erst","neuimmatr.":"neu","rückmelder":"rueck"},
+				readable_vals:{
+					beurlaubt:"Beurlaubt",
+					"erst":"Erstimmatrikuliert",
+					"neu":"Neuimmatrikuliert",
+					"rueck":"Rückmelder"
+				},
+			},
+			foreign:{
+				readable:" ",
+				aliases:{},
+				readable_vals:{"no":"Deutsch","yes":"Ausländisch"}
+			}
 		};
 		//Gesamtstatistik (1)
 		var s1 = data[0][0];

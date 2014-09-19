@@ -23,7 +23,7 @@ class Operand {
 
 class GraphInfo {
 	xaxis:string[];
-	ytitle:string;
+	ytitle:string="Studenten";
 	xtitle:string;
 	title:string;
 	subtitle:string;
@@ -109,37 +109,41 @@ class OperandVector extends Operand {
 	}
 
 	// nobody will ever understand this again
-	getGraphInfo():GraphInfo {
-		if(!this.ops.every(op => op instanceof Filter)) {
+	getGraphInfo(cont:Contingency):GraphInfo {
+		if(this.ops.some(op => !(op instanceof Filter))) {
 			return new GraphInfo();
 		}
-		var reduceFilter = (vec:Filter[], filter:Filter) => 
-			<SingleFilter[]> vec.concat((filter instanceof CombinedFilter)?
-					(<CombinedFilter>filter).filters.reduce(reduceFilter,[]):[filter]);
+		var reduceFilter = (vec:Filter[], filter:Filter) => {
+			var arr = [filter];
+			if(filter instanceof CombinedFilter)
+				arr = (<CombinedFilter>filter).filters.reduce(reduceFilter,[]);
+			if(filter instanceof OperandVector)
+				arr = (<OperandVector>filter).ops.reduce(reduceFilter,[]);
+			return <SingleFilter[]> vec.concat(arr);
+		}
 		var filters = this.ops.map(op => reduceFilter([],op));
-		var occurrences:{[filter:string]:{filter:Filter;count:number}} = {};
+		var occurrences:{[filter:string]:{filter:SingleFilter;count:number}} = {};
 		filters.forEach(fs => fs.forEach(f => {
 			var fstr = f.toString();
 			if(!(fstr in occurrences)) occurrences[fstr]={filter:f,count:1};
 			else occurrences[fstr].count++;
 		}));
 		// filters that exist on all elements
-		var all:Filter[] = Object.keys(occurrences).filter(key => occurrences[key].count == this.ops.length).map(key => occurrences[key].filter);
+		var all:SingleFilter[] = Object.keys(occurrences).filter(key => occurrences[key].count == this.ops.length).map(key => occurrences[key].filter);
 		console.log(this.ops.length);
 		filters = filters.map(fs => fs.filter(f => all.indexOf(f) < 0));
 		var xtitle:string = undefined;
 		var subtitle:string = undefined;
 		var xaxis:string[] = undefined;
-		var title = all.length>0?all.join(", "): undefined;
+		var title = all.length>0?all.map(f => sprintf("%(cat)s: %(val)s",cont.stringify(f))).join(", "): undefined;
 		// if all filters are single and have the same category
 		var allcat:string = filters[0][0].category;
 		if(filters.every(f => f.length==1&&f[0].category == allcat)) {
-			xtitle = allcat;
-			if(title === undefined) title = allcat;
-			else subtitle = "nach "+allcat;
-			console.log(allcat);
-			xaxis = filters.map(f => f[0].value)
-		} else xaxis = filters.map(f => f.join(" ∩ "));
+			xtitle = cont.stringify(filters[0][0]).cat;
+			if(title === undefined) title = xtitle;
+			else subtitle = "nach "+xtitle;
+			xaxis = filters.map(f => cont.stringify(f[0]).val)
+		} else xaxis = filters.map(fs => fs.map(f => {var v=cont.stringify(f);return v.cat+": "+v.val;}).join(" ∩ "));
 		return {
 			title:title,
 			subtitle:subtitle,
@@ -175,7 +179,7 @@ function getOperator(v1:Operand, op:string, v2:Operand):(v1:Operand,v2:Operand)=
 			return new OperandVector(left.concat(right));
 		}
 	}
-	if(v1.type === "vector" && v2.type !== "vector") {
+	if(v1.type === "vector") {// && v2.type !== "vector") {
 		return (v1,v2) => new OperandVector((<OperandVector>v1).ops.map(f => doOperator(f,op,v2)));
 	}
 	else if(v1.type !== "vector" && v2.type === "vector") {

@@ -30,6 +30,7 @@ function parseParameters() {
 	return params;
 }
 function setParameters() {
+	console.log("setting params");
 	location.hash = Object.keys(urlParameters).map(key => 
 			encodeURIComponent(key)+"="+encodeURIComponent(urlParameters[key]))
 		.join("&");
@@ -51,14 +52,24 @@ function queryToOperand(eq:string):Operand {
 function visualizeOutput(input:Operand, output:any) {
 	var outp = $("#eqoutput");
 	if($.isArray(output)) {
-		var graphInfo = input.getGraphInfo();
+		var multidim = $.isArray(output[0]);
+		if(!multidim) output = [output];
+		//console.log(_a=output);
+		console.log(input.ops[0]);
+		//if(multidim) output = output[0].map((x,i) => output.map(y => y[i]));
+		console.log(_a=output);
+		var graphInfo = (<OperandVector>input).getGraphInfo(cont);
+		if(multidim) {
+			graphInfo = input.ops[0].getGraphInfo(cont);
+			if(graphInfo.title) graphInfo.title = graphInfo.title.split(":")[0];//TODO
+		}
 		var chart = outp.highcharts({
 			chart: {type: 'column'},
 			title: { text: graphInfo.title },
 			subtitle: { text: graphInfo.subtitle },
 			xAxis: {
 				categories: graphInfo.xaxis,
-				//title: {text: graphInfo.xtitle }
+				title: {text: graphInfo.xtitle }
 			},
 			yAxis: { min:0, title:{text:graphInfo.ytitle}},
 			tooltip: {
@@ -67,9 +78,9 @@ function visualizeOutput(input:Operand, output:any) {
 				//useHTML:true
 			},
 			plotOptions: {
-				column: { showInLegend: true}
+				column: { showInLegend: multidim }
 			},
-			series:[{data:output,name:graphInfo.xtitle}]
+			series:output.map((s,i) => ({data:s,name:multidim?input.ops[i].getGraphInfo(cont).title:graphInfo.xtitle}))
 		});
 	} else if(output instanceof Error) {
 		outp.text(output).append($("<pre>").text(output.stack));
@@ -103,11 +114,13 @@ var cont:Contingency;
 $(()=> {
 	urlParameters = parseParameters();
 	if("q" in urlParameters) $("#equation").val(urlParameters["q"]);
+	$("#equation").keyup(evt => evt.keyCode == 13 && $("#parseeq").click());
 	var status = $("#status");
 	function log(x:string) { status.text(x);}
 	$("#onclickquery a").click((e:any) => {
 		$("#equation").val(e.target.textContent);
 		$("#parseeq").click();
+		return false;
 	});
 	var parsedata = function(data:string[][][]) {
 		console.log("parsing");

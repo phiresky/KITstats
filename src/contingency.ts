@@ -3,12 +3,13 @@
 class Contingency {
 	constructor() {}
 	global_val_jargon:{[alias:string]:string} = {
-		"insgesamt":"",
-		"gesamt":""
+		"Insgesamt":"",
+		"Gesamt":""
 	};
 	cat_aliases:{[alias:string]:string} = Object.create(null);
 	val_aliases:{[cat:string]:{
-		readable:{[value:string]:string};
+		readable:string;
+		readable_vals:{[value:string]:string};
 		aliases:{[str:string]:string};
 		discrete?:Discrete;
 	}} = Object.create(null);
@@ -50,26 +51,42 @@ class Contingency {
 		this.putAll(xfilters,yfilters,data,1,1);
 	}
 	
-	findFilter(category:string, value:string):Operand {
-		console.log("finding "+category+":" +value);
-		category = category.toLocaleLowerCase();
-		if(value === "all") return new OperandVector(this.getAll(category));
-		value = value.toLocaleLowerCase();
-		if(value in this.global_val_jargon) value = this.global_val_jargon[value];
-		if(category in this.cat_aliases) category = this.cat_aliases[category];
-		if(value.length==0||category.length==0) return new NoFilter();
-		if(category in this.val_aliases) {
-			var catinfo = this.val_aliases[category];
-			if(catinfo.aliases.hasOwnProperty(value)) {
-				value = catinfo.aliases[value];
-			}
-			if(catinfo.discrete) {
-				return catinfo.discrete.getByName(value);
+	findFilter(readable_category:string, readable_value:string):Operand {
+		var norm_category = readable_category.toLocaleLowerCase();
+		if(readable_category in this.cat_aliases) {
+			norm_category = this.cat_aliases[readable_category];
+			if(norm_category.replace(/[^a-z0-9]+/g,"_")!==norm_category) {
+				throw new Error("Category "+norm_category+" is not normalized");
 			}
 		}
-		category = category.replace(/[^a-z0-9]+/g,"_");
-		value = value.replace(/[^a-z0-9]+/g,"_");
-		return new SingleFilter(category, value);
+		norm_category = norm_category.replace(/[^a-z0-9]+/g,"_");
+		var norm_value = readable_value.toLocaleLowerCase();
+		if(readable_value in this.global_val_jargon) norm_value = this.global_val_jargon[readable_value];
+		if(norm_value === "all") return new OperandVector(this.getAll(norm_category));
+		norm_value = norm_value.replace(/[^a-z0-9]+/g,"_");
+		if(norm_value.length==0||norm_category.length==0) return new NoFilter();
+		if(norm_category in this.val_aliases) {
+			var catinfo = this.val_aliases[norm_category];
+			if(readable_value in catinfo.aliases) {
+				norm_value = catinfo.aliases[readable_value];
+				if(norm_value.replace(/[^a-z0-9]+/g,"_")!==norm_value)
+					throw new Error("Value "+norm_value+" is not normalized");
+			}
+			if(catinfo.discrete) {
+				return catinfo.discrete.getByName(readable_value);
+			}
+		}
+
+		if(!(norm_category in this.val_aliases)) {
+			this.val_aliases[norm_category] = {
+				readable:readable_category,
+				readable_vals:{},
+				aliases:{}
+			}
+		}
+		var tmp = this.val_aliases[norm_category].readable_vals;
+		tmp[norm_value] = tmp[norm_value] || readable_value;
+		return new SingleFilter(norm_category, norm_value);
 	}
 
 	getAll(category:string):Operand[] {
@@ -80,6 +97,17 @@ class Contingency {
 				if(val === "all") throw new Error("!pvouf3");
 				return this.findFilter(category, val)
 			});
+	}
+
+	stringify(filter:SingleFilter):{cat:string;val:string;} {
+		var cat = filter.category;
+		var val = filter.value;
+		if(cat in this.val_aliases) {
+			var info = this.val_aliases[filter.category];
+			cat = info.readable || cat;
+			val = info.readable_vals[val]||val;
+		}
+		return {cat:cat,val:val};
 	}
 
 
