@@ -55,6 +55,7 @@ var EqParser;
             // also add new ops in "regexes below"
             '+': new Operator(4),
             '-': new Operator(4),
+            '^': new Operator(6),
             '*': new Operator(5),
             '/': new Operator(5),
             '&': new Operator(3),
@@ -290,6 +291,15 @@ var NoFilter = (function (_super) {
     return NoFilter;
 })(Filter);
 
+// when encountered while importing, ignore the column
+var IgnoreFilter = (function (_super) {
+    __extends(IgnoreFilter, _super);
+    function IgnoreFilter() {
+        _super.call(this);
+    }
+    return IgnoreFilter;
+})(Filter);
+
 var CombinedFilter = (function (_super) {
     __extends(CombinedFilter, _super);
     function CombinedFilter() {
@@ -373,6 +383,9 @@ var OperandVector = (function (_super) {
         }).join(", ") : undefined;
 
         // if all filters are single and have the same category
+        console.log(filters);
+        if (filters[0].length === 0)
+            return new GraphInfo();
         var allcat = filters[0][0].category;
         if (filters.every(function (f) {
             return f.length == 1 && f[0].category == allcat;
@@ -412,6 +425,9 @@ var operators = {
     },
     "number-number": function (v1, v2) {
         return new NumberOp(v1.val - v2.val);
+    },
+    "number^number": function (v1, v2) {
+        return new NumberOp(Math.pow(v1.val, v2.val));
     },
     "number/number": function (v1, v2) {
         return new NumberOp(v1.val / v2.val);
@@ -510,7 +526,7 @@ var KITParser = (function () {
             },
             status: {
                 readable: "Status",
-                aliases: { "erstimmatr.": "erst", "neuimmatr.": "neu", "rückmelder": "rueck" },
+                aliases: { "Erstimmatr.": "erst", "Neuimmatr.": "neu", "Rückmelder": "rueck" },
                 readable_vals: {
                     beurlaubt: "Beurlaubt",
                     "erst": "Erstimmatrikuliert",
@@ -539,11 +555,11 @@ var KITParser = (function () {
         });
         ct.putAll(xfilter, yfilter, s1, 1, 0);
 
-        // Abschlussziele
+        // Abschlussziele (2)
         var s2 = data[1][0];
         ct.putAllCat("Fachsemester", "Abschlussziel", s2.slice(1));
 
-        // Studienfach
+        // Studienfach (3)
         var s3 = data[2].reduce(function (p1, p2) {
             return p1.concat(p2);
         });
@@ -556,7 +572,7 @@ var KITParser = (function () {
         var yfilter = s3.slice(1).map(function (row) {
             return ct.findFilter("Fach", row[1]);
         });
-        var xfilter = [new NoFilter()].concat(["status:rückmelder", "status:erstimmatr.", "status_neuimmatr:1fsem", "status_neuimmatr:hsem"].map(function (x) {
+        var xfilter = [new NoFilter()].concat(["status:rückmelder", "status:erst", "status_neuimmatr:1fsem", "status_neuimmatr:hsem"].map(function (x) {
             return ct.findFilter(x.split(":")[0], x.split(":")[1]);
         })).concat([
             "foreign:no&gender:male", "foreign:no&gender:female", "foreign:no", "foreign:yes&gender:male", "foreign:yes&gender:female", "foreign:yes",
@@ -564,6 +580,24 @@ var KITParser = (function () {
             return queryToOperand(x);
         }));
         ct.putAll(xfilter, yfilter, s3, 4, 1);
+
+        // Studienanfänger (4)
+        var s4 = data[3].reduce(function (p1, p2) {
+            return p1.concat(p2);
+        });
+        while (s4[s4.length - 1][1] !== "Insgesamt")
+            s4.pop();
+        s4 = s4.filter(function (row) {
+            return row[1].trim().length > 0;
+        }); //ignore fakultät
+        var yfilter = s4.slice(1).map(function (row) {
+            return new CombinedFilter(ct.findFilter("Fach", row[1]), ct.findFilter("Anfaenger", "ja"));
+        });
+        var xfilter = [new NoFilter(), new IgnoreFilter()].concat(["foreign:no&status:erst", "foreign:no&status_neuimmatr:1fsem", "foreign:no&status_neuimmatr:hsem", "foreign:yes&status:erst", "foreign:yes&status_neuimmatr:1fsem", "foreign:yes&status_neuimmatr:hsem", "gender:male&status:erst", "gender:male&status_neuimmatr:1fsem", "gender:male&status_neuimmatr:hsem", "gender:female&status:erst", "gender:female&status_neuimmatr:1fsem", "gender:female&status_neuimmatr:hsem"].map(function (x) {
+            return queryToOperand(x);
+        }));
+        ct.putAll(xfilter, yfilter, s4, 3, 1);
+
         return ct;
     };
     return KITParser;
@@ -597,10 +631,15 @@ var Contingency = (function () {
     };
 
     Contingency.prototype.putAll = function (xfilters, yfilters, data, xoffset, yoffset) {
-        for (var y = 0; y < yfilters.length; y++)
+        for (var y = 0; y < yfilters.length; y++) {
+            if (yfilters[y] instanceof IgnoreFilter)
+                continue;
             for (var x = 0; x < xfilters.length; x++) {
+                if (xfilters[x] instanceof IgnoreFilter)
+                    continue;
                 this.put(doOperator(xfilters[x], "&", yfilters[y]), +data[y + yoffset][x + xoffset]);
             }
+        }
     };
 
     Contingency.prototype.putAllCat = function (xcategory, ycategory, data) {
@@ -659,12 +698,15 @@ var Contingency = (function () {
         var _this = this;
         if (this.val_aliases[category] && this.val_aliases[category].discrete) {
             return this.val_aliases[category].discrete.getAll();
-        } else
+        } else if (category in this.cats) {
             return Object.keys(this.cats[category]).map(function (val) {
                 if (val === "all")
                     throw new Error("!pvouf3");
                 return _this.findFilter(category, val);
             });
+        } else {
+            throw new Error("no values found for " + category);
+        }
     };
 
     Contingency.prototype.stringify = function (filter) {
@@ -706,7 +748,7 @@ var Contingency = (function () {
     Contingency.prototype.get = function (filter) {
         var query = this.normalize(filter.getQuery());
         if (!this.has(query))
-            throw new Error("INSUFFICIENT DATA FOR MEANINGFUL ANSWER " + filter.toString());
+            throw new Error("INSUFFICIENT DATA FOR MEANINGFUL ANSWER of " + filter.toString());
         return this.dict[this.normalize(filter.getQuery())];
     };
     return Contingency;
@@ -719,6 +761,8 @@ var Contingency = (function () {
 /// <reference path="filters.ts" />
 /// <reference path="kitparser.ts" />
 /// <reference path="contingency.ts" />
+var ga;
+
 var config = {
     "filenames": ["data/csv/Studierende_2014_1HJ.csv"],
     //"basename":"data/csv/Statistik_SS2014.pdf-%03d.csv",
@@ -883,7 +927,7 @@ $(function () {
                 }, []))).replaceAll($('> table', config.container));
         };
         $("<select>").append("<option>Tabelle anzeigen</option>").append(statnames.map(function (name, inx) {
-            return $("<option>").val("" + inx).text(inx + ": " + name);
+            return $("<option>").val("" + inx).text((inx + 1) + ": " + name);
         })).change(function (evt) {
             drawtable(this.value);
         }).replaceAll($('> select', config.container));
@@ -934,6 +978,7 @@ $(function () {
 
     $("#parseeq").click(function (event) {
         var eq = $("#equation").val();
+        ga('send', 'event', 'equation', 'do', eq);
         var query;
         try  {
             var queue = EqParser.EqParser.parse(eq);
@@ -947,11 +992,13 @@ $(function () {
             visualizeOutput(null, e);
             throw e;
             return;
+            ga('send', 'event', 'equation', 'parseerror', eq);
         }
         try  {
             visualizeOutput(query, query.doQuery(cont));
         } catch (e) {
             visualizeOutput(null, e);
+            ga('send', 'event', 'equation', 'execerror', eq);
             throw e;
         }
     });

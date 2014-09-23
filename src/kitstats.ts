@@ -7,6 +7,8 @@
 /// <reference path="kitparser.ts" />
 /// <reference path="contingency.ts" />
 
+var ga:any;
+
 var config = {
 	"filenames":["data/csv/Studierende_2014_1HJ.csv"],
 	//"basename":"data/csv/Statistik_SS2014.pdf-%03d.csv",
@@ -148,7 +150,7 @@ $(()=> {
 				).replaceAll($('> table',config.container));
 		};
 		$("<select>").append("<option>Tabelle anzeigen</option>").append(
-			statnames.map((name,inx)=>$("<option>").val(""+inx).text(inx+": "+name))
+			statnames.map((name,inx)=>$("<option>").val(""+inx).text((inx+1)+": "+name))
 		).change(function(evt){drawtable(this.value)})
 			.replaceAll($('> select', config.container));
 		cont = new Contingency();
@@ -194,6 +196,7 @@ $(()=> {
 
 	$("#parseeq").click(event => {
 		var eq = $("#equation").val();	
+		ga('send','event','equation','do',eq);
 		var query:Operand;
 		try {
 			var queue = EqParser.EqParser.parse(eq);
@@ -201,9 +204,16 @@ $(()=> {
 			query = makeQuery(queue);
 			urlParameters["q"] = eq;
 			setParameters();
-		} catch(e) { visualizeOutput(null, e); throw e; return; }
+		} catch(e) {
+			visualizeOutput(null, e); throw e; return;
+			ga('send','event','equation','parseerror',eq);
+		}
 		try {
 			visualizeOutput(query, query.doQuery(cont));
-		} catch(e) { visualizeOutput(null, e);throw e}
+		} catch(e) {
+			visualizeOutput(null, e);
+			ga('send','event','equation','execerror',eq);
+			throw e;
+		}
 	});
 });

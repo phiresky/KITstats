@@ -28,7 +28,7 @@ class KITParser {
 			},
 			status:{
 				readable:"Status",
-				aliases:{"erstimmatr.":"erst","neuimmatr.":"neu","rückmelder":"rueck"},
+				aliases:{"Erstimmatr.":"erst","Neuimmatr.":"neu","Rückmelder":"rueck"},
 				readable_vals:{
 					beurlaubt:"Beurlaubt",
 					"erst":"Erstimmatrikuliert",
@@ -50,19 +50,27 @@ class KITParser {
 		var xfilter:Operand[] = ["","gender:male","gender:female","foreign:no&geschlecht:männlich","foreign:no&gender:female","foreign:no","foreign:yes&gender:male","foreign:yes&gender:female","foreign:yes"].map(x=>queryToOperand(x));
 		ct.putAll(xfilter, yfilter, s1, 1, 0);
 
-		// Abschlussziele
+		// Abschlussziele (2)
 		var s2 = data[1][0];
 		ct.putAllCat("Fachsemester","Abschlussziel",s2.slice(1));
-		// Studienfach
+		// Studienfach (3)
 		var s3 = data[2].reduce((p1,p2)=>p1.concat(p2));
 		while(s3[s3.length-1][1]!=="Insgesamt") s3.pop();
 		s3 = s3.filter(row => row[1].trim().length > 0); //ignore fakultät
 		s3 = TUtil.no_nth_col(s3,5);
 		var yfilter:Operand[] = s3.slice(1).map(row => ct.findFilter("Fach",row[1]));
-		var xfilter:Operand[] = [new NoFilter()].concat(["status:rückmelder","status:erstimmatr.","status_neuimmatr:1fsem", "status_neuimmatr:hsem"].map(x=>ct.findFilter(x.split(":")[0],x.split(":")[1]))).concat(["foreign:no&gender:male","foreign:no&gender:female","foreign:no", "foreign:yes&gender:male","foreign:yes&gender:female","foreign:yes",
+		var xfilter:Operand[] = [new NoFilter()].concat(["status:rückmelder","status:erst","status_neuimmatr:1fsem", "status_neuimmatr:hsem"].map(x=>ct.findFilter(x.split(":")[0],x.split(":")[1]))).concat(["foreign:no&gender:male","foreign:no&gender:female","foreign:no", "foreign:yes&gender:male","foreign:yes&gender:female","foreign:yes",
 		"status:beurlaubt"]
 				.map(x=>queryToOperand(x)));
 		ct.putAll(xfilter, yfilter, s3, 4, 1);
+		// Studienanfänger (4)
+		var s4 = data[3].reduce((p1,p2) => p1.concat(p2));
+		while(s4[s4.length-1][1]!=="Insgesamt") s4.pop();
+		s4 = s4.filter(row => row[1].trim().length > 0); //ignore fakultät
+		var yfilter:Operand[] = s4.slice(1).map(row => new CombinedFilter(ct.findFilter("Fach",row[1]),ct.findFilter("Anfaenger","ja")));
+		var xfilter:Operand[] = [new NoFilter(),new IgnoreFilter()].concat(["foreign:no&status:erst","foreign:no&status_neuimmatr:1fsem","foreign:no&status_neuimmatr:hsem","foreign:yes&status:erst","foreign:yes&status_neuimmatr:1fsem","foreign:yes&status_neuimmatr:hsem","gender:male&status:erst","gender:male&status_neuimmatr:1fsem","gender:male&status_neuimmatr:hsem","gender:female&status:erst","gender:female&status_neuimmatr:1fsem","gender:female&status_neuimmatr:hsem"].map(x=>queryToOperand(x)));
+		ct.putAll(xfilter, yfilter, s4, 3, 1);
+
 		return ct;
 	}
 

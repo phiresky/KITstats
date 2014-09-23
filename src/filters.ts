@@ -56,6 +56,7 @@ class SingleFilter extends Filter {
 	}
 }
 
+
 // like a filter, but has numerical values allowing addition
 class DiscreteFilter extends SingleFilter {
 	constructor(public discrete:Discrete, value:string, public numval:number) {
@@ -84,6 +85,10 @@ class Discrete {
 class NoFilter extends Filter {
 	constructor() {super();}
 	getQuery() { return ""; }
+}
+// when encountered while importing, ignore the column
+class IgnoreFilter extends Filter {
+	constructor() {super();}
 }
 
 class CombinedFilter extends Filter {
@@ -137,6 +142,8 @@ class OperandVector extends Operand {
 		var xaxis:string[] = undefined;
 		var title = all.length>0?all.map(f => sprintf("%(cat)s: %(val)s",cont.stringify(f))).join(", "): undefined;
 		// if all filters are single and have the same category
+		console.log(filters);
+		if(filters[0].length === 0) return new GraphInfo();
 		var allcat:string = filters[0][0].category;
 		if(filters.every(f => f.length==1&&f[0].category == allcat)) {
 			xtitle = cont.stringify(filters[0][0]).cat;
@@ -158,6 +165,7 @@ var operators:{[types:string]:(v1:any,v2:any)=>Operand} = {
 	"filter&filter": (v1:Operand,v2:Operand) => new CombinedFilter(v1,v2),
 	"number+number": (v1,v2) => new NumberOp(v1.val+v2.val),
 	"number-number": (v1,v2) => new NumberOp(v1.val-v2.val),
+	"number^number": (v1,v2) => new NumberOp(Math.pow(v1.val,v2.val)),
 	"number/number": (v1,v2) => new NumberOp(v1.val/v2.val),
 	"number*number": (v1,v2) => new NumberOp(v1.val*v2.val),
 	"filter+number": (filter,num) => {

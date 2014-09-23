@@ -25,6 +25,7 @@ export class Operator {
 		// also add new ops in "regexes below"
 		'+':new Operator(4),
 		'-':new Operator(4),
+		'^':new Operator(6),
 		'*':new Operator(5),
 		'/':new Operator(5),
 		'&':new Operator(3),

@@ -34,10 +34,13 @@ class Contingency {
 
 	putAll(xfilters:Operand[],yfilters:Operand[],data:string[][],
 			xoffset:number,yoffset:number) {
-		for(var y=0;y<yfilters.length;y++)
+		for(var y=0;y<yfilters.length;y++) {
+			if(yfilters[y] instanceof IgnoreFilter) continue;
 			for(var x=0;x<xfilters.length;x++) {
+				if(xfilters[x] instanceof IgnoreFilter) continue;
 				this.put(doOperator(xfilters[x],"&",yfilters[y]), +data[y+yoffset][x+xoffset]);
 			}
+		}
 	}
 
 	putAllCat(xcategory:string,ycategory:string,data:string[][]) {
@@ -92,11 +95,15 @@ class Contingency {
 	getAll(category:string):Operand[] {
 		if(this.val_aliases[category]&&this.val_aliases[category].discrete) {
 			return this.val_aliases[category].discrete.getAll();
-		} else return Object.keys(this.cats[category]).map(
+		} else if(category in this.cats) {
+			return Object.keys(this.cats[category]).map(
 			val => {
 				if(val === "all") throw new Error("!pvouf3");
 				return this.findFilter(category, val)
 			});
+		} else {
+			throw new Error("no values found for "+category);
+		}
 	}
 
 	stringify(filter:SingleFilter):{cat:string;val:string;} {
@@ -133,7 +140,7 @@ class Contingency {
 
 	get(filter:Operand) {
 		var query = this.normalize(filter.getQuery());
-		if(!this.has(query)) throw new Error("INSUFFICIENT DATA FOR MEANINGFUL ANSWER "+filter.toString());
+		if(!this.has(query)) throw new Error("INSUFFICIENT DATA FOR MEANINGFUL ANSWER of "+filter.toString());
 		return this.dict[this.normalize(filter.getQuery())];
 	}
 }
